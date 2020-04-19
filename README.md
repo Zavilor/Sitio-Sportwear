@@ -10,7 +10,8 @@ de un estilo de vida saludable.
 Nuestros referentes son:
 Adidas
 Nike
-Puma
+Ebay
 Solo Deportes
-Reebook
+MercadoLibre
 
+Estas paginas las consideramos como ejemplo ya que son las que apuntan a nuestro publico o son las referentes para la creacion de nuestro sitio web.
