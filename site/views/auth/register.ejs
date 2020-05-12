@@ -1,0 +1,42 @@
+<%- include('../partial/header'); %>
+
+<section>
+    <h1>Registrate</h1>
+
+    <form class="formulario" action="registro" method="POST">
+        <div>
+            <label>Nombre</label>
+            <input type="text" class="nombreUsuario" id="nombre" name="name">
+        </div>
+        <div>
+            <div class="formRegistro">
+               <label>Apellido</label>
+            </div>
+           <input type="text" class="apellido" id="apellido" name="apelido">
+        </div>
+        <div>
+            <div class="formRegistro">
+               <label>Correo electronico</label>
+            </div>
+            <input type="email" class="email" id="email" name="email">
+        </div>
+        <div>
+            <div class="formRegistro">
+               <label>Contrasenia</label>
+            </div>
+            <input type="password" class="form-control" id="password" name="password">
+        </div>
+        <div>
+            <div class="formRegistro">
+               <label>Confir Contrasenia</label>
+            </div>
+            <input type="password" class="form-control" id="password" name="confirmarPAssword">     
+        </div> 
+        <div class="botonRegistro">
+            <button type="submit" class="botonRegistro">Crear Cuenta</button>
+        </div>
+    </form>
+</section>
+</div>
+
+<%- include('../partials/footer'); %>
