@@ -1,16 +1,43 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 25px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: lightblue;
   
- 
-};
+}
 
-a {
-  color: #00B7FF;
-};
-
-.barraSec{
-  display: inline-block;
+.barraPrim {
   list-style-type: none;
-};
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
 
+.barras {
+  overflow: hidden;
+
+}
+
+.nav-left {
+  float: left;
+}
+
+.nav-right {
+  float: right;
+}
+
+li .no-hover {
+  width: 5%;
+}
+.barraSec{  
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+}
+
+.barraSec li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 2%;
+}
