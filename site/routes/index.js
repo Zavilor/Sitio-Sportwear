@@ -4,5 +4,6 @@ var router = express.Router();
 const controller = require('../../controllers/indexController');
 
 router.get('/', controller.index);
+router.get('/register', controller.index);
 
 module.exports = router;
