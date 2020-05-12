@@ -1,4 +1,4 @@
-<%- include('../partial/header'); %>
+<%- include('../partials/header'); %>
 
 <section>
     <h1>Registrate</h1>
@@ -8,7 +8,7 @@
             <div class="formRegistro">
                <label>Nombre</label>
             </div>
-            <input type="text" class="nombreUsuario" id="nombre" name="name">
+            <input type="text" class="nombreUsuario" id="nombre" name="name" required>
         </div>
         <div>
             <div class="formRegistro">
@@ -36,6 +36,12 @@
         </div> 
         <div class="botonRegistro">
             <button type="submit" class="botonRegistro">Crear Cuenta</button>
+        </div>
+        <div>
+            <button type="submit" class="regFacebook">Registrar con Facebook</button>
+        </div>
+        <div>
+            <button type="submit" class="regGoogle">Registrar con Google</button>
         </div>
     </form>
 </section>
