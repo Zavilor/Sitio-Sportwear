@@ -10,15 +10,10 @@ module.exports = {
     login: function (req, res) {
         res.render ('../../site/views/auth/login')
     },
-
-
-
-
-
-
-
-
-
+    
+    product: function (req, res) {
+        res.render ('../../site/productAdd')
+    }
 
 
 
