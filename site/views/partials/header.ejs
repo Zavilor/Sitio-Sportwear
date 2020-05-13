@@ -11,16 +11,15 @@
 <body>
 
     <header class="header">
-        <div class="contenedor">
-
-            <div>
-                <nav>
-                    <i class="fab fa-stripe-s"></i>
-                    <a href="#">SportWear</a>
-                    <a href="/login"><button>Login</button></a>
-                    <a href="/register"><button>Registrar</button></a>
-                    <a href="#"><i class="fas fa-shopping-cart"></i></a>
-                    <li class="no-hover">
+        
+        <!--
+            <div class="barras">
+                <nav class="barraPrim">
+                    <div class="nav-left">
+                        <i class="fab fa-stripe-s"></i>
+                        <a href="#">SportWear</a>
+                    </div>
+                   < <div class="no-hover">
                         <form action="/" method="GET" class="forms">
                           <div class="input-group">
                             <div class="input-group-prepend">
@@ -29,10 +28,41 @@
                             <input type="text" class="form-control" placeholder="Buscar" name="busqueda">
                           </div>
                         </form>
-                      </li>
+                    </div>
+                    <div class="nav-right">
+                        <div class="botLogIn">
+                            <a href="/login" class="navbar"><button><a href="#">Login</a></button>
+                        </div>
+                        <div class="botReg">
+                            <a href="/register" class="navbar"><button><a href="#">Registrar</a></button>
+                        </div>
+                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
                 </nav>
             </div>
-            
+        -->
+            <section class="barraSuperior">
+                <div class="NombreSW">
+                    <i class="fab fa-stripe-s"></i>
+                        <a href="#">SportWear</a>
+                </div>
+                <div class="buscador">
+                    <form action="/" method="GET" class="forms">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fas fa-search"></i></div>
+                          </div>
+                          <input type="text" class="form-control" placeholder="Buscar" name="busqueda">
+                        </div>
+                    </form>
+                </div>
+                <div class="logIn">
+                    <button><a href="###">LogIn</a></button>
+                </div>
+                <div class="register">
+                    <button><a href="###">Registro</a></button>
+                </div>
+            </section>
             <div>
                 <nav class="barra">
                     <ul class="barraSec">
@@ -45,13 +75,6 @@
                     </ul>
                 </nav>
             </div>
-
-
-
-
-        </div>
-    
-
 
     </header>
 </body>
