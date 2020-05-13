@@ -1,46 +1,91 @@
-
 body {
-  padding: 50px;
-  font: 25px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: lightblue;
-  
+  padding: 3%;
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif; 
 }
 
-.contenedor{
-  width: 100%;
-  box-sizing: border-box;
+li{
+  list-style: none
 }
-
 
 .barraSuperior {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: space-between;
+  margin: 2%;
+}
+
+.navLeft{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: row
+}
+
+.navCenter{
+  display: flex;
+  flex-wrap: wrap
+}
+
+.navRight{
+  display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
-  align-items: center;
+  flex-direction: row;
   
+}
 
+.botLogIn{
+  margin: 2px;
+}
+
+.botRegister{
+  margin: 2px;
+}
+
+.barraSec{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  position: absolute;
+  bottom: 2%;
+  right: 3%;
+  font-size: 13px;
+}
+
+.footerMenu{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;  
+}
+.footerMenu li{
+  padding: 5px
+}
+
+.footerRedes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-end
+}
+
+.footerRedes li{
+  padding: 5px;
+  
 }
 
 
-
-.barraPrim {
-  list-style-type: none;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-}
-.barraSec{  
-  list-style-type: none;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-.barraSec li {
-  display: inline-block;
-  font-size: 20px;
-  padding: 2%;
-}
