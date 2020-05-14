@@ -1,5 +1,4 @@
 body {
-  padding: 3%;
   font: 20px "Lucida Grande", Helvetica, Arial, sans-serif; 
 }
 
@@ -57,12 +56,21 @@ li{
 .footer{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-direction: row;
   position: absolute;
+  background-color: blue;
+  color: white;
+  width: 100%;
   bottom: 2%;
-  right: 3%;
   font-size: 13px;
+  border:  1px;
+  margin-left: 2px;
+  margin-right: 2px;
+  
+  
+  
+  
 }
 
 .footerMenu{
