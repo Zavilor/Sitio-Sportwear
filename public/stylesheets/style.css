@@ -1,29 +1,57 @@
 body {
-  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif; 
+  font-family: "arial", serif;
+  color: black;
+  height: 100% 
+}
+
+html{
+  height: 100%;
 }
 
 li{
   list-style: none
 }
+a{
+  text-decoration: none;
+  color: black;
+}
+ a:hover{
+  text-decoration: underline;
+  color: black;  
+}
 
+/* HEADER ----------------------------*/
+
+header{
+  /*background-color: rgba(135, 206, 250, 0.753);*/
+  padding-bottom: 3px ;
+}
 .barraSuperior {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  margin: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  
+  
 }
 
 .navLeft{
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  flex-direction: row
+  flex-direction: row;
+  margin-left: 2%;
+  flex-direction: column;
+  justify-content: center;
 }
+
 
 .navCenter{
   display: flex;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  
 }
 
 .navRight{
@@ -31,6 +59,7 @@ li{
   flex-wrap: wrap;
   justify-content: flex-end;
   flex-direction: row;
+  margin-right: 2%;
   
 }
 
@@ -42,35 +71,44 @@ li{
   margin: 2px;
 }
 
+.barraSecundaria{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(135, 206, 250, 0.760);
+  padding-left: 10%;
+  padding-right: 10%;
+  justify-content: space-between;
+  height: 60px;
+  
+}
 .barraSec{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   flex-direction: row;
-  margin-left: 10%;
-  margin-right: 10%;
+  width: 100%;
   margin-top: 2%;
   margin-bottom: 2%;
 }
+
+
+
+
+/*FOOTER ------------------ */
 
 .footer{
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   flex-direction: row;
-  position: absolute;
-  background-color: blue;
-  color: white;
+  position:absolute ;
+  background-color: lightskyblue;
+  color: black;
   width: 100%;
-  bottom: 2%;
+  bottom: 0px;
   font-size: 13px;
-  border:  1px;
   margin-left: 2px;
-  margin-right: 2px;
-  
-  
-  
-  
+  margin-right: 2px;  
 }
 
 .footerMenu{
@@ -78,6 +116,7 @@ li{
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: row;  
+  
 }
 .footerMenu li{
   padding: 5px
@@ -88,10 +127,120 @@ li{
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: row;
-  align-items: flex-end
+  align-items: flex-end;
+
 }
 
 .footerRedes li{
   padding: 5px;
+}
+
+/*LOGIN ------------------------ */
+
+.tituloFormulario{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom:18px;
+}
+.cajaLogIn{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: center; 
+  border: solid black 1px;
+  border-radius: 10px;
+  align-self: center;
+  padding: 10px;
+}
+
+.todoLogIn{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: 50px
+}
+
+.nombreLogIn{
+  text-align: center;
+  position: relative;
+  top: 7px;
+}
+
+.ConfLogIn{
+  margin-top: 7px ;
+  text-align: center;
   
+}
+ 
+/* REGISTER ------------------------ */
+
+.todoRegister{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: 50px;
+  
+}
+
+.tituloRegister{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom:18px;
+  
+}
+
+.cajaRegister{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: center; 
+  border: solid black 1px;
+  border-radius: 10px;
+  align-self: center;
+  padding: 10px;
+  background-color: whitesmoke;
+}
+
+.nombreReg{
+  text-align: center;
+  position: relative;
+  bottom: -10px;
+}
+
+.botonRegistro{
+  margin-top: 7px;
+  text-align: center;
+}
+
+.inputCompletar{
+  border-radius: 10px
+}
+
+.botonesFacbookGoogle{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.regFacebook {
+  margin: 5px;
+  margin-top: 10px;
+  width: 180px;
+}
+
+.regGoogle{
+  margin: 5px;
+  margin-top: 10px;
+  width: 180px;
 }

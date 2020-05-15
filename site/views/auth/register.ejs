@@ -1,50 +1,58 @@
 <%- include('../partials/header'); %>
 
-<section>
-    <h1>Registrate</h1>
-
-    <form class="formulario" action="registro" method="POST">
+<section class="todoRegister">
+    <div class="tituloRegister">
+      <p><h1>Registrate</h1></p>
+    </div>
+    <div class="cajaRegister">
+    <form class="formRegister" action="registro" method="POST">
         <div>
             <div class="formRegistro">
-               <label>Nombre</label>
+               <p class="nombreReg"><label>Nombre</label></p>
             </div>
-            <input type="text" class="nombreUsuario" id="nombre" name="name" required>
+            <input class="inputCompletar" type="text" class="nombreUsuario" id="nombre" name="name" required>
         </div>
         <div>
             <div class="formRegistro">
-               <label>Apellido</label>
+            <p class="nombreReg"><label>Apellido</label></p>
             </div>
-           <input type="text" class="apellido" id="apellido" name="apelido">
+           <input class="inputCompletar" type="text" class="apellido" id="apellido" name="apelido">
         </div>
         <div>
             <div class="formRegistro">
-               <label>Correo electronico</label>
+            <p class="nombreReg"><label>Correo electronico</label></p>
             </div>
-            <input type="email" class="email" id="email" name="email">
+            <input class="inputCompletar" type="email" class="email" id="email" name="email">
         </div>
         <div>
             <div class="formRegistro">
-               <label>Contraseña</label>
+            <p class="nombreReg"><label>Contraseña</label></p>
             </div>
-            <input type="password" class="form-control" id="password" name="password">
+            <input class="inputCompletar" type="password" id="password" name="password">
         </div>
         <div>
             <div class="formRegistro">
-               <label>Confir Contraseña</label>
+            <p class="nombreReg"><label>Confir Contraseña</label></p>
             </div>
-            <input type="password" class="form-control" id="password" name="confirmarPAssword">     
+            <input class="inputCompletar" type="password" id="password" name="confirmarPAssword">     
         </div> 
         <div class="botonRegistro">
             <button type="submit" class="botonRegistro">Crear Cuenta</button>
         </div>
+    </div>
+    <div class="botonesFacbookGoogle">
         <div>
             <button type="submit" class="regFacebook">Registrar con Facebook</button>
         </div>
         <div>
             <button type="submit" class="regGoogle">Registrar con Google</button>
         </div>
+    </div>
     </form>
+
 </section>
 </div>
 
 <%- include('../partials/footer'); %>
+
+

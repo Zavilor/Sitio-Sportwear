@@ -1,16 +1,26 @@
-<section>
-    <h1>Log In</h1>
-     <form class="formulario" action="logIn" method="POST">
+<%- include('../partials/header'); %>
+
+<section class="todoLogIn">
+    <div class="tituloFormulario">
+     <p><h1>Log In</h1></p>
+    </div>
+     <div class="cajaLogIn">
+      <form class="formulario" action="logIn" method="POST">
          <div class="logeo">
-             <label>Mail</label>
-             <input type="email" class="email" id="email" name="email">
+             <p class="nombreLogIn"><label>Mail</label></p>
+             <input class="inputCompletar" type="email" class="email" id="email" name="email">
          </div>
          <div>
-             <label for="">Contraseña</label>
-             <input type="password" name="password" id="password">
+             <p class="nombreLogIn"><label for="">Contraseña</label></p>
+             <input class="inputCompletar" type="password" name="password" id="password" class="password">
          </div>
          <div>
              <button type="submit" class="ConfLogIn">Confirmar</button>
          </div>
-     </form>
+      </form>
+    </div>
+    </div>
 </section>
+
+
+<%- include('../partials/footer'); %>
