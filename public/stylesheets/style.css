@@ -101,7 +101,6 @@ header{
   flex-wrap: wrap;
   justify-content: flex-end;
   flex-direction: row;
-  position:absolute ;
   background-color: lightskyblue;
   color: black;
   width: 100%;
@@ -109,6 +108,8 @@ header{
   font-size: 13px;
   margin-left: 2px;
   margin-right: 2px;  
+  margin-top: auto;
+
 }
 
 .footerMenu{
@@ -244,3 +245,6 @@ header{
   margin-top: 10px;
   width: 180px;
 }
+
+/*-------PRODUCT ADD-----------------*/
+
