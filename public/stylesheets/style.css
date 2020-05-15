@@ -4,6 +4,10 @@ body {
   height: 100% 
 }
 
+.coment {
+  width: 90%;
+}
+
 html{
   height: 100%;
 }
@@ -242,5 +246,38 @@ header{
 .regGoogle{
   margin: 5px;
   margin-top: 10px;
-  width: 180px;
+  width: 150px;
+}
+
+.dropdown {
+  display:none;
+}
+
+@media (max-width: 506px) {
+  .navRight {
+    display: none;
+  }
+
+  .barraSecundaria {
+    display: none;
+  }
+
+  .dropdown {
+    display: block;
+    justify-content: center;
+  }
+
+  .global h2{
+    font-size: smaller;  
+  }
+
+  .global h3{
+    font-size: 20px;
+    font-weight: bold;  
+  }
+
+  .global h1{
+    font-size: 25px;
+    font-weight: bold;  
+  }
 }
