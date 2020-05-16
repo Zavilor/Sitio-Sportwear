@@ -95,34 +95,49 @@ header{
   margin-bottom: 2%;
 }
 
+.dropdown{
+  display: none;
+}
 
+/* HOME ----------------------------*/
+
+#carrouselInicio{
+  width: 50vh;
+  height: 40vh;
+  margin: 20px 20px;
+}
+
+.home{
+  text-align: center;
+}
 
 
 /*FOOTER ------------------ */
 
 .footer{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  flex-direction: column;
+
+  box-sizing: border-box;
   background-color: lightskyblue;
+  padding: 0px 15px;
+  position: absolute;
+  
   color: black;
-  width: 100%;
+  width: 100%; 
   bottom: 0px;
   font-size: 13px;
   margin-left: 2px;
   margin-right: 2px;  
   margin-top: auto;
-
 }
 
 .footerMenu{
-  display: flex;
+  display: flex; 
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: row;  
-  
 }
+
+
 .footerMenu li{
   padding: 5px
 }
@@ -142,7 +157,7 @@ header{
 
 /*LOGIN ------------------------ */
 
-.tituloFormulario{
+ .tituloFormulario{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -181,7 +196,7 @@ header{
   text-align: center;
   
 }
- 
+
 /* REGISTER ------------------------ */
 
 .todoRegister{
@@ -281,17 +296,10 @@ header{
   }
 }
 
-.carousel-inner img {
-  width: 50vh;
-  height: 40vh;
-}
+/* PRODUCT DETAIL ------------------------ */
 
-.carousel-inner{
-  width: 50vh;
-  height: 40vh;
+#carrouselProduct{
+  width: 25%;
+  
   margin: 20px 20px;
-  }
-
-
-
-
+}
