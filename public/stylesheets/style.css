@@ -132,7 +132,7 @@ header{
 .footerMenu{
   display: flex; 
   flex-wrap: wrap;
-  justify-content: right;
+  justify-content: flex-end;
   flex-direction: row;  
 }
 
@@ -145,7 +145,7 @@ header{
 .footerRedes{
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: flex-end;
   flex-direction: row;
   align-items: flex-end;
 
@@ -172,7 +172,7 @@ header{
   flex-direction: row;
   justify-content: center; 
   border: solid black 1px;
-  border-radius: 10px;
+  border-radius: 5px;
   align-self: center;
   padding: 10px;
 }
@@ -226,7 +226,7 @@ header{
   flex-direction: row;
   justify-content: center; 
   border: solid black 1px;
-  border-radius: 10px;
+  border-radius: 5px;
   align-self: center;
   padding: 10px;
   background-color: whitesmoke;
@@ -244,7 +244,7 @@ header{
 }
 
 .inputCompletar{
-  border-radius: 10px
+  border-radius: 5px
 }
 
 .botonesFacbookGoogle{
@@ -322,8 +322,11 @@ header{
 
 /* PRODUCT DETAIL ------------------------ */
 
+.sectionProductDetail{
+  padding: 2%;
+}
+
 #carrouselProduct{
   width: 25%;
-  
   margin: 20px 20px;
 }
