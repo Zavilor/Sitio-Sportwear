@@ -280,3 +280,18 @@ header{
     font-weight: bold;  
   }
 }
+
+.carousel-inner img {
+  width: 50vh;
+  height: 40vh;
+}
+
+.carousel-inner{
+  width: 50vh;
+  height: 40vh;
+  margin: 20px 20px;
+  }
+
+
+
+
