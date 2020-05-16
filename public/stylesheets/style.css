@@ -4,10 +4,6 @@ body {
   height: 100% 
 }
 
-.coment {
-  width: 90%;
-}
-
 html{
   height: 100%;
 }
@@ -37,7 +33,6 @@ header{
   justify-content: space-between;
   padding-top: 1%;
   padding-bottom: 1%;
-  
   
 }
 
@@ -101,6 +96,13 @@ header{
 
 /* HOME ----------------------------*/
 
+.container-index{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
 #carrouselInicio{
   width: 50vh;
   height: 40vh;
@@ -118,15 +120,10 @@ header{
   box-sizing: border-box;
   background-color: lightskyblue;
   padding: 0px 15px;
-  position: absolute;
-  
   color: black;
   width: 100%; 
   font-size: 13px;
-  /*bottom: 0px;
-  margin-left: 2px;
-  margin-right: 2px;  
-  margin-top: 0;*/
+  bottom: 0px;
 }
 
 .footerMenu{
@@ -158,44 +155,47 @@ header{
 
 /*LOGIN ------------------------ */
 
- .tituloFormulario{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom:18px;
-}
-.cajaLogIn{
+.todoLogIn{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
+  box-sizing: border-box;
+  align-self: center;
+  height: 90%;
+  width: 100%;
+  
+}
+
+.cajaLogIn{
+
   flex-direction: row;
-  justify-content: center; 
   border: solid black 1px;
   border-radius: 5px;
   align-self: center;
   padding: 10px;
 }
 
-.todoLogIn{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  top: 50px
+.tituloFormulario{
+  margin-bottom:18px;
+  align-self: center;
 }
 
 .nombreLogIn{
   text-align: center;
-  position: relative;
   top: 7px;
+  margin: 10px;
+  font-size: 20px;
 }
 
 .ConfLogIn{
   margin-top: 7px ;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.boton-login{
   text-align: center;
-  
 }
 
 /* REGISTER ------------------------ */
@@ -205,8 +205,9 @@ header{
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  position: relative;
   top: 50px;
+  height: 78%;
+  width: 100%;
   
 }
 
@@ -239,7 +240,13 @@ header{
 }
 
 .botonRegistro{
-  margin-top: 7px;
+  margin-top: 7px ;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.div-boton-reg{
   text-align: center;
 }
 
@@ -257,13 +264,13 @@ header{
 .regFacebook {
   margin: 5px;
   margin-top: 10px;
-  width: 180px;
+  width: 150px;
 }
 
 .regGoogle{
   margin: 5px;
   margin-top: 10px;
-  width: 180px;
+  width: 150px;
 }
 
 
@@ -278,6 +285,10 @@ header{
 @media (max-width: 506px) {
   .navRight {
     display: none;
+  }
+
+  .buscador {
+    align-items: center;
   }
 
   .barraSecundaria {
@@ -314,9 +325,6 @@ header{
     align-items: center;
   }
 
-
-
-
 }
 
 
@@ -327,6 +335,78 @@ header{
 }
 
 #carrouselProduct{
-  width: 25%;
+  width: 80%;
   margin: 20px 20px;
+}
+
+.product-detail-container{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.product-detail-container-right{
+  width: 40vw;
+}
+
+.product-detail-container-bottom{
+  flex-direction: column;
+  width: 100vw;
+}
+
+/* CARRITO */
+
+#elemento{
+  padding: 0px 15px;
+}
+
+#product-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 10px;
+  border-bottom: 1px solid rgb(194, 187, 187);
+  margin-left: 30px;
+}
+
+.chart-container{
+  height: 80vh;
+  
+}
+
+#chart-title{
+  padding: 20px;
+}
+
+.precio{
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.total-container{
+
+  width: 150px;
+  margin-left: 30px;
+  margin-top: 30px;
+  
+}
+
+.buttons{
+  margin: 10px;
+}
+
+/* PRODUCT ADD */
+
+.coment {
+  width: 90%;
+}
+.global{
+  margin: 25px;
+}
+
+.botones-product-add{
+  margin-top: 10px;
 }
