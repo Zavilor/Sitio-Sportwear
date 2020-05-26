@@ -1,0 +1,28 @@
+
+
+/* PRODUCT DETAIL ------------------------ */
+
+.sectionProductDetail{
+    padding: 2%;
+  }
+  
+  #carrouselProduct{
+    width: 80%;
+    margin: 20px 20px;
+  }
+  
+  .product-detail-container{
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  
+  .product-detail-container-right{
+    width: 40vw;
+  }
+  
+  .product-detail-container-bottom{
+    flex-direction: column;
+    width: 100vw;
+  }
+  

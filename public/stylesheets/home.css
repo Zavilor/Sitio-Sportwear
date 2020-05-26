@@ -1,0 +1,18 @@
+/* HOME ----------------------------*/
+
+.container-index{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #carrouselInicio{
+    width: 50vh;
+    height: 40vh;
+    margin: 20px 20px;
+  }
+  
+  .home{
+    text-align: center;
+  }
