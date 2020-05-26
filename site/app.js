@@ -6,7 +6,8 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-// var productsRouter = require('./routes/')USAMOS TODO INDEX ROUTES NO CREE NINGUN ARCHIVO NUEVO(SANTI)
+var productRouter = require('./routes/products')
+
 
 var app = express();
 
@@ -22,9 +23,10 @@ app.use(express.static(path.join(__dirname,'..','public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/product/add', indexRouter);
-app.use('/carrito', indexRouter);
-app.use('/product/detail', indexRouter)
+app.use('/product/add', productRouter);
+app.use('/carrito', productRouter);
+app.use('/product/detail', productRouter)
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
