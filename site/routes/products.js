@@ -1,3 +1,4 @@
+/*
 var express = require('express');
 var router = express.Router();
 
@@ -8,3 +9,4 @@ router.get('/product/cart' , controllerProd.carrito);
 router.get('/product/detail', controllerProd.detail)
 
 module.exports = router;
+*/

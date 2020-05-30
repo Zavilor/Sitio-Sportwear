@@ -1,3 +1,4 @@
+/*
 module.exports = {
 
     product: function (req, res) {
@@ -12,3 +13,4 @@ module.exports = {
         res.render ('../../site/views/auth/productDetail')
     }
 }
+*/
