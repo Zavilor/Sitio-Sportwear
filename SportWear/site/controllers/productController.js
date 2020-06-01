@@ -1,3 +1,6 @@
+const fs = require('fs');
+const path = require('path');
+
 module.exports = {
 
     create: function (req, res) {
@@ -13,6 +16,24 @@ module.exports = {
     },
 
     productList: function (req, res) {
-        res.render ('../../site/views/product/productList')
+
+        let productList = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products.json'), { encoding: 'utf-8' }));
+       
+        res.render ('../../site/views/product/productList', { productList: productList})
+    },
+
+    detail2 : (req, res) => {
+        
+        let pelis = moviesData.findAll();
+
+        let pelicula = pelis.find(function (peli) {
+            return req.params.id == peli.id;
+        });
+        
+        res.render('movies/detail', {
+            pelicula : pelicula
+            });
     }
+
+
 }
