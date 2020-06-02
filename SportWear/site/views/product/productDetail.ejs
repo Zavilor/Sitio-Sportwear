@@ -1,22 +1,22 @@
 <%- include('../partials/header'); %>
 
-<link rel="stylesheet" href="/stylesheets/prodDetail.css">
+<link rel="stylesheet" href="/stylesheets/productDetail.css">
 
 <section class="sectionProductDetail">
     <div class="product-detail-container">
         <div class="product-detail-container-left">
             
-            <img src="/imagenes/camiseta-boca.jpg" class="d-block w-100" alt="..." style="padding-right: 20px;";>
+            <img src= <%= product.image %> class="productImages" alt="..." style="padding-right: 20px;";>
             
         </div>
         <div class="product-detail-container-right">
             <div>
-                <h2>Nombre Producto</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dicta eaque cupiditate totam beatae vero vel iure. Cum, alias non.</p>
+                <h2><%= product.name %></h2>
+
             </div>
             <div class="precioProducto">
                 <h2>Precio</h2>
-                <h3>$2000</h3>
+                <h3><%= product.price %></h3>
             </div>
             <div class="detallesProdDetail">
                 <p><label for=""><h2>Talle</h2></label>
@@ -45,7 +45,7 @@
                 <div class="product-detail-container-bottom">
                     <div>       
                         <p><label for=""><h3>Descripcion</h3></label></p>
-                        <textarea name="coment" id="" cols="70" rows="10" class="coment"></textarea>
+                        <textarea name="coment" id="" cols="70" rows="10" class="coment"><%= product.description %></textarea>
                     </div>
                     
                     <div>       

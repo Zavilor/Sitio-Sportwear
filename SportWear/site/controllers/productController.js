@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const productData = require('../models/products');
 
 module.exports = {
 
@@ -11,9 +12,9 @@ module.exports = {
         res.render ('../../site/views/product/productCart')
     },
 
-    detail: function (req, res) {
+    /*detail: function (req, res) {
         res.render ('../../site/views/product/productDetail')
-    },
+    },*/
 
     productList: function (req, res) {
 
@@ -22,18 +23,26 @@ module.exports = {
         res.render ('../../site/views/product/productList', { productList: productList})
     },
 
-    detail2 : (req, res) => {
+    index : (req, res) => {
         
-        let pelis = moviesData.findAll();
+        let products = []
+        products = productData.findAll();
+        res.render('product/index', {products});
+    },
 
-        let pelicula = pelis.find(function (peli) {
-            return req.params.id == peli.id;
+    detail : (req, res) => {
+        
+        let products = productData.findAll();
+
+        let product = products.find(function (products) {
+    
+            return req.params.id == products.id;
         });
         
-        res.render('movies/detail', {
-            pelicula : pelicula
+        res.render('product/productDetail', {
+            product : product
             });
-    }
+    } 
 
 
 }

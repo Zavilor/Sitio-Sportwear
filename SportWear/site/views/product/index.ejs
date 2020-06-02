@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/productList.css">
+    <title>Products | SportWear</title>
+
+    <%- include('../partials/header') %>
+    
+    <section class="sectionProductList"> 
+
+        <h1>Productos</h1>
+
+        <div class="product-detail-main-container">
+
+        <% products.forEach(products =>{ %>
+
+            <div class="product-detail-container">
+
+                <div class="product-detail-container-left">
+                    <img src= <%= products.image %> class="productImages" alt="..." style="padding-right: 20px;";>
+                    
+                </div>
+                <div class="product-detail-container-right">
+                    <div>
+                        <h3><%= products.name %></h3>
+                        
+                    </div>
+                    <div class="precioProducto">
+                        <h3>Precio</h3>
+                        <h4><%= products.price %></h4>
+                    </div> 
+                    <div>
+                        <button type="submit">Añadir al Carito</button>
+                        <button type="submit">Comprar Ahora</button>
+                    </div>
+                </div> 
+                
+            </div> 
+
+            <% }) %>   
+
+        </div>
+
+        </section>
+        
+        
+        
+        <%- include('../partials/footer') %>
