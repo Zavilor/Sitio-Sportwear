@@ -8,6 +8,10 @@ module.exports = {
         res.render ('../../site/views/product/create')
     },
 
+    newProduct: function (req, res){
+        res.send('Producto agregado exitosamente, en unos instantes podrá ver su publicación');
+    },
+
     cart: function (req, res) {
         res.render ('../../site/views/product/productCart')
     },
