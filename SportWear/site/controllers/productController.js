@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const productData = require('../models/products');
+const fileData = path.join(__dirname, '../data/products.json');
 
 module.exports = {
 
@@ -46,7 +47,20 @@ module.exports = {
         res.render('product/productDetail', {
             product : product
             });
-    } 
+    },
+
+    edit : (req, res) => {
+
+        let products = fs.readFileSync(fileData, {encoding: 'utf-8'});
+        let productsId = JSON.parse(products)    
+        let prodId = req.params.id;
+        let prodEdit = products[prodId] 
+        //res.send('intentando editar el ' + prodId +productsId[prodId] )
+        console.log(productsId[prodId])
+        res.render('../views/product/productEdit')
+    }
+
+
 
 
 }

@@ -1,0 +1,74 @@
+<h1>ACA QUEREMOS EDITAR EL PRODUCTO</h1>
+
+<h1>Editar usuario (aca va nombre de usuario)</h1>
+    
+    <h3>Titulo</h3>
+    <textarea name="" id="" cols="40" rows="1" ></textarea>
+    
+    <p><h3>Caracteristicas</h3></p>
+    <div>
+        <form action="/product/edit?_method=PUT" method="POST">
+            <p><label for="">Condicion</label>
+                <select name="cond" id="cond">
+                    <option value="nuevo">Nuevo</option>
+                    <option value="usado">Usado</option>
+                </select>
+            </p>    
+            
+            <p><label for="">Categoria</label>
+                <select name="cat" id="cat">
+                    <option value="cat1">Cat 1</option>
+                    <option value="cat2">Cat 2</option>
+                    <option value="cat3">Cat 3</option>
+                </select>
+            </p>
+            
+            <p><label for="">SubCategoria</label>
+                <select name="subcat" id="subcat">
+                    <option value="subcat1">Uno</option>
+                    <option value="subcat2">Dos</option>
+                    <option value="subcat3">Tres</option>
+                </select>
+            </p>
+            
+            <p><label for="">Genero</label>
+                <select name="gen" id="gen">
+                    <option value="H">Hombre</option>
+                    <option value="M">Mujer</option>
+                    <option value="N">Niño</option>
+                    <option value="uni">Unisex</option>
+                </select>
+            </p>
+            
+            <p><label for=""><h3>Descripcion</h3></label></p>
+            <textarea name="coment" id="" cols="70" rows="10" class="coment"></textarea>
+            
+            <!--AGREGAR DESPUES DE LA CLASE DEL 14/5 LO DE SUBIR IMAGENES-->
+            
+            <p><label for=""><h3>Precio</h3></label></p>
+            <input type="number" name="precio" id="precio">
+            
+            <p><label for=""><h3>Envio</h3></label></p>
+            <select name="envio" id="envio">
+                <option value="env1">Envio 3</option>
+                <option value="env2">Envio 2</option>
+                <option value="env3">Envio 1</option>
+            </select>
+            
+            <p><label for=""><h3>Exposición</h3></label></p>
+            <select name="exp" id="exp">
+                <option value="baja">Baja</option>
+                <option value="media">Media</option>
+                <option value="alta">Alta</option>
+            </select>
+            
+            
+            <div class="botones-product-add">
+                
+                <p><button type="submit" class="btn btn-success">Editar Publicación</button>
+                    
+                    <button type="reset" class="btn btn-danger">Borrar todo</button>
+                </p>
+            </div>
+        </form>
+    </div>

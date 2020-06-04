@@ -13,9 +13,10 @@ module.exports = {
         res.render ('../../site/views/auth/login')
     },
 
-    loginExistingUser: function(req, res){
+    loginExistingUser: function(req, res, next){
         let email = req.body.email;
         res.send('Usuario ' + email + ' se ha logueado con éxito');
+        /*res.redirect ('../../site/views/auth/register')*/
     }
 }
     
