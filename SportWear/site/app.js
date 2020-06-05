@@ -32,6 +32,9 @@ app.use('/users', usersRouter);
 app.use('/product', productRouter);
 app.use('/auth', authRouter);
 app.use('/cart', cartRouter);
+app.use(function(req, res, next){
+  res.status(404).render('not-found')
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
