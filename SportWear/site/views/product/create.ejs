@@ -2,26 +2,22 @@
 <link rel="stylesheet" href='/stylesheets/productAdd.css'>
 <div class="global">
     
-    <form method="POST" action="/movies" enctype="multipart/form-data">
+    <form method="POST" action="/product/create" enctype="multipart/form-data">
        
         <div class="form-group ">
             <label class="" for="title">Nombre de producto</label>
             <input type="text" class="form-control" id="title" placeholder="Title" name="title">
-
-
         </div>
     
         <div class="form-group ">
             <label class="" for="title">Descripcion de producto</label>
             
             <textarea name="description" id="description" class="form-control" rows="5" cols="10"></textarea>
-
         </div>
 
         <div class="form-group ">
             <label class="" for="title">Imagen</label>
             <input type="text" class="form-control" id="image" placeholder="Image" name="image">
-
         </div>
 
         <div class="form-group ">
@@ -33,7 +29,6 @@
                 <option value="">CATEGORIA C</option>
                 <option value="">CATEGORIA D</option>
             </select>
-
         </div>
 
         <div class="form-group ">
@@ -45,8 +40,6 @@
                 <option value="color-blanco">BLANCO</option>
                 <option value="color-negro">NEGRO</option>
             </select>
-
-
         </div>
 
         <div class="form-group ">
@@ -59,14 +52,11 @@
                 <option value="talle-M">M</option>
                 <option value="talle-L">L</option>
             </select>
-
-
         </div>
 
         <div class="form-group ">
             <label class="" for="title">Precio</label>
             <textarea name="description" id="description" class="form-control" cols="5" rows="2"></textarea>
-
         </div>
 
         <div class="botones-product-add">
@@ -74,12 +64,7 @@
             <button type="submit" class="btn btn-success">Enviar Publicación</button>
                 
             <button type="reset" class="btn btn-danger">Borrar todo</button>
-            
         </div>
-
-    
-
-    
     
     </form>
     <%- include('../partials/footer'); %>
