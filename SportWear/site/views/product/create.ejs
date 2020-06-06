@@ -2,17 +2,17 @@
 <link rel="stylesheet" href='/stylesheets/productAdd.css'>
 <div class="global">
     
-    <form method="POST" action="/product/create" enctype="multipart/form-data">
+    <form method="POST" action="/product">
        
         <div class="form-group ">
             <label class="" for="title">Nombre de producto</label>
-            <input type="text" class="form-control" id="title" placeholder="Title" name="title">
+            <input type="text" class="form-control" id="title" placeholder="Title" name="name">
         </div>
     
         <div class="form-group ">
             <label class="" for="title">Descripcion de producto</label>
             
-            <textarea name="description" id="description" class="form-control" rows="5" cols="10"></textarea>
+            <textarea name="description" id="description" class="form-control" rows="5" cols="10">Describa en breves palabras a su producto</textarea>
         </div>
 
         <div class="form-group ">
@@ -22,41 +22,24 @@
 
         <div class="form-group ">
             <label class="" for="title">Categoria</label>
-            <select name="category-id" id="category" class="form-control">
-                <option value="">--SELECCIONE UNA CATEGORIA--</option>
-                <option value="">CATEGORIA A</option>
-                <option value="">CATEGORIA B</option>
-                <option value="">CATEGORIA C</option>
-                <option value="">CATEGORIA D</option>
+            <select name="category" id="category" class="form-control">
+                <option value="">--Seleccione una categoría--</option>
+                <option value="Football">Futbol</option>
+                <option value="Hocky">Hockey</option>
+                <option value="Golf">Golf</option>
+                <option value="Tennis">Tenis</option>
             </select>
         </div>
 
         <div class="form-group ">
-            <label class="" for="title">Colores</label>
-            <select name="colors-id" id="colors" class="form-control">
-                <option value="">--SELECCIONE UN COLOR--</option>
-                <option value="color-orjo">ROJO</option>
-                <option value="color-azul">AZUL</option>
-                <option value="color-blanco">BLANCO</option>
-                <option value="color-negro">NEGRO</option>
-            </select>
-        </div>
-
-        <div class="form-group ">
-            <label class="" for="title">Tamaño</label>
+            <label class="" for="title">Cantidad</label>
+            <input type="text" class="form-control" id="title" placeholder="Indica la cantidad disponible" name="quantity">
             
-            <select name="size-id" id="size" class="form-control">
-                <option value="">--SELECCIONE UN TALLE--</option>
-                <option value="talle-XS">XS</option>
-                <option value="talle-S">S</option>
-                <option value="talle-M">M</option>
-                <option value="talle-L">L</option>
-            </select>
         </div>
 
         <div class="form-group ">
             <label class="" for="title">Precio</label>
-            <textarea name="description" id="description" class="form-control" cols="5" rows="2"></textarea>
+            <input type="text" class="form-control" id="title" placeholder="Establece un precio acorde" name="price">
         </div>
 
         <div class="botones-product-add">

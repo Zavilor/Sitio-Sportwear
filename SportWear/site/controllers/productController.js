@@ -4,63 +4,115 @@ const productData = require('../models/products');
 const fileData = path.join(__dirname, '../data/products.json');
 
 module.exports = {
-
+    
     create: function (req, res) {
-        res.render ('../../site/views/product/create')
+        res.render ('product/create')
     },
-
+    
     newProduct: function (req, res){
         res.send('Producto agregado exitosamente, en unos instantes podrá ver su publicación');
     },
-
+    
     cart: function (req, res) {
-        res.render ('../../site/views/product/productCart')
+        res.render ('product/productCart')
     },
-
-    /*detail: function (req, res) {
-        res.render ('../../site/views/product/productDetail')
-    },*/
-
+    
+    save: function (req, res){
+        
+        // Armamos el objeto literal
+        console.log(req.params);
+        
+        let product = {
+            id: req.params.id,
+            name : req.body.name,
+            description : req.body.description,
+            image : req.body.image,
+            category : req.body.category,
+            stock : req.body.quantity,
+            price : req.body.price
+        } 
+        
+        productData.create(product);
+        return res.redirect('/');
+    },
+    
     productList: function (req, res) {
-
+        
         let productList = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products.json'), { encoding: 'utf-8' }));
-       
+        
         res.render ('../../site/views/product/productList', { productList: productList})
     },
-
+    
     index : (req, res) => {
         
         let products = []
         products = productData.findAll();
         res.render('product/index', {products});
     },
-
+    
     detail : (req, res) => {
         
         let products = productData.findAll();
-
+        
         let product = products.find(function (products) {
-    
+            
             return req.params.id == products.id;
         });
         
-        res.render('product/productDetail', {
+        res.render('product/detail', {
             product : product
-            });
+        });
     },
-
+    
     edit : (req, res) => {
-
-        let products = fs.readFileSync(fileData, {encoding: 'utf-8'});
-        let productsId = JSON.parse(products)    
-        let prodId = req.params.id;
-        let prodEdit = products[prodId] 
-        //res.send('intentando editar el ' + prodId +productsId[prodId] )
-        console.log(productsId[prodId])
-        res.render('../views/product/productEdit')
+        
+        // validamos que existe el id que pasó la url
+        let productId = req.params.id;
+        
+        // pedirle al modelo que busque el producto
+        let findedProduct = productData.findId(productId);
+        
+        res.render('product/edit', {
+            product : findedProduct
+        });
+    },
+    
+    update : (req, res) => {
+        
+        // busco el producto a editar
+        let productId = req.params.id;
+        let product = productData.findId(productId);
+        
+        // Seteamos los nuevos atributos
+        product.name = req.body.name;
+        product.description = req.body.description;
+        product.image = req.body.image;
+        product.category = req.body.category;
+        product.stock = req.body.stock;
+        product.price = req.body.price;
+        
+        // Le pedimos al modelo que impacte la actualización en el JSON
+        productData.update(product);
+        
+        // Redireccionamos la vista
+        res.redirect('/');
+    },
+    
+    delete: (req, res) => {
+        
+        // validamos que existe el id que pasó la url
+        let productId = req.params.id;
+        
+        // pedirle al modelo que busque el producto
+        let findedProduct = productData.findId(productId);
+        
+        // Le pedimos al modelo que finalmente lo borre y modifique el JSON
+        productData.delete(findedProduct);
+        
+        // Redireccionamos la vista
+        res.redirect('/');
     }
-
-
-
-
+    
+    
+    
 }
