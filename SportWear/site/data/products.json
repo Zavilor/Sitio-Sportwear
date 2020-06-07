@@ -178,5 +178,14 @@
   "category": "http://dummyimage.com/206x220.jpg/ff4444/ffffff",
   "stock": "10",
   "price": "$2092.13"
+ },
+ {
+  "id": 21,
+  "name": "Benfica",
+  "description": "Ultimo modelo de la camiseta del Benfica Football Club (Portugal)",
+  "image": "http://dummyimage.com/206x220.jpg/ff4444/ffffff",
+  "category": "http://dummyimage.com/206x220.jpg/ff4444/ffffff",
+  "stock": "10",
+  "price": "$2092.13"
  }
 ]
