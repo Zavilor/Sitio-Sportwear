@@ -110,7 +110,7 @@ module.exports = {
         productData.delete(findedProduct);
         
         // Redireccionamos la vista
-        res.redirect('/');
+        res.redirect('/product');
     }
     
     
