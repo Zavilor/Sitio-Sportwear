@@ -4,13 +4,25 @@
     <div class="tituloRegister">
         <p><h1>Registrate</h1></p>
     </div>
+    <div>
+        <% if (typeof errors != 'undefined') { %>
+            <ul>
+            <% for (let i = 0; i < errors.length; i++) { %>
+                <li>
+                    <%= errors[i].msg %>
+                </li>
+                <% } %>
+            </ul>
+        <% } %>
+    </div>
     <div class="cajaRegister">
+        
         <form class="formRegister" action="register" method="POST">
             <div>
                 <div class="formRegistro">
-                    <p class="nombreReg"><label>Nombre</label></p>
+                    <p class="nombreReg"><label>Nombre </label></p>
                 </div>
-                <input class="inputCompletar" type="text" class="nombreUsuario" id="nombre" name="name" required>
+                <input class="inputCompletar" type="text" class="nombreUsuario" id="nombre" name="name" >
             </div>
             <div>
                 <div class="formRegistro">
@@ -51,7 +63,6 @@
     </form> <!--EL DIV QUE ESTABA SUELTO LO SAQUE DE ACA Y AHI QUEDA TODO COMO ANTES-->
 </section>
 
-
+<!-- 
 <%- include('../partials/footer'); %>
-
-
+-->

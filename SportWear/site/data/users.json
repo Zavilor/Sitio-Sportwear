@@ -1,101 +1,61 @@
-[{
-    "first_name": "Earl",
-    "last_name": "Tourle",
-    "email": "etourle0@bluehost.com",
-    "password": "PbUujh"
-  }, {
-    "first_name": "Alex",
-    "last_name": "Gilpin",
-    "email": "agilpin1@tumblr.com",
-    "password": "Sfott3"
-  }, {
-    "first_name": "Tiebout",
-    "last_name": "Normanville",
-    "email": "tnormanville2@arstechnica.com",
-    "password": "64EPYAx4"
-  }, {
-    "first_name": "Rosalind",
-    "last_name": "Oddie",
-    "email": "roddie3@globo.com",
-    "password": "J4W154"
-  }, {
-    "first_name": "Virgina",
-    "last_name": "Beggin",
-    "email": "vbeggin4@tuttocitta.it",
-    "password": "zCG1iNkTw3h"
-  }, {
-    "first_name": "Harlin",
-    "last_name": "Chivrall",
-    "email": "hchivrall5@blogtalkradio.com",
-    "password": "jZTvMdVT31X"
-  }, {
-    "first_name": "Donall",
-    "last_name": "Pockey",
-    "email": "dpockey6@reuters.com",
-    "password": "nc2WXSfhVAy"
-  }, {
-    "first_name": "Becky",
-    "last_name": "Vinck",
-    "email": "bvinck7@shutterfly.com",
-    "password": "3bYPE3hYVA"
-  }, {
-    "first_name": "Omero",
-    "last_name": "Matissoff",
-    "email": "omatissoff8@npr.org",
-    "password": "Krow4b"
-  }, {
-    "first_name": "Athena",
-    "last_name": "Longshaw",
-    "email": "alongshaw9@delicious.com",
-    "password": "KPjLqSAj"
-  }, {
-    "first_name": "Pietra",
-    "last_name": "Pley",
-    "email": "ppleya@npr.org",
-    "password": "fYBrNyqvahG"
-  }, {
-    "first_name": "Lynda",
-    "last_name": "Drewry",
-    "email": "ldrewryb@census.gov",
-    "password": "UeruWC"
-  }, {
-    "first_name": "Dionis",
-    "last_name": "Hawkins",
-    "email": "dhawkinsc@hc360.com",
-    "password": "PwfrlH"
-  }, {
-    "first_name": "Gilberta",
-    "last_name": "Barensen",
-    "email": "gbarensend@google.es",
-    "password": "Lxux8hmHl"
-  }, {
-    "first_name": "Bobine",
-    "last_name": "Lamblin",
-    "email": "blambline@cloudflare.com",
-    "password": "QmdOHr"
-  }, {
-    "first_name": "Cassi",
-    "last_name": "Vescovini",
-    "email": "cvescovinif@narod.ru",
-    "password": "iHYEUbi4SyU"
-  }, {
-    "first_name": "Godfree",
-    "last_name": "Joyner",
-    "email": "gjoynerg@sitemeter.com",
-    "password": "OMS11Xi"
-  }, {
-    "first_name": "Gilligan",
-    "last_name": "Olivas",
-    "email": "golivash@jiathis.com",
-    "password": "BfMWSgl3Q6"
-  }, {
-    "first_name": "Herve",
-    "last_name": "Tschiersch",
-    "email": "htschierschi@cargocollective.com",
-    "password": "d8YoWg"
-  }, {
-    "first_name": "Gay",
-    "last_name": "Doerling",
-    "email": "gdoerlingj@bbb.org",
-    "password": "BTJGPV"
-  }]
+[
+ {
+  "name": "Santif",
+  "email": "ff@gial.cm",
+  "password": "$2b$05$o2Ksa1N6lHvgRGbw3fVCXeOkpTXg3bhm8CaTTg9Z329QgKgARpxj.",
+  "id": 1
+ },
+ {
+  "name": "chivana",
+  "email": "chivi@rur.com",
+  "password": "$2b$05$gK0x8Xc9saGFR.886LNJ.ODQlRXATf9QbstyQ4yL.hc3Mds9.WXLe",
+  "id": 2
+ },
+ {
+  "name": "Santi",
+  "apellido": "Lago",
+  "email": "s.lagocurretti@gmail.com",
+  "password": "$2b$05$c3vETDYv.g8ELKBjNoM1lOG7B7wejyLZDL7OriplA5CT5fL0U7JAO",
+  "id": 3
+ },
+ {
+  "name": "Santi",
+  "apellido": "Lago",
+  "email": "s.lagocurretti@gmail.com",
+  "password": "$2b$05$lfAVegQLeQpZp5Ma9.FBuOMf4EiGPonaxS4HyWzp4G1HF.5ymyXMq",
+  "id": 4
+ },
+ {
+  "name": "Santi",
+  "apellido": "Lago",
+  "email": "s.lagocurretti@gmail.com",
+  "password": "$2b$05$x.aP2NkGk9nmwYpuXQRsj.6aCQ/V0qaH0/FS8EK7TPkZiciS4v4nq",
+  "id": 5
+ },
+ {
+  "name": "Santi",
+  "email": "s.lagocurretti@gmail.com",
+  "password": "$2b$05$6rfEq8Iou3//pkRVBBrNfuCoUVAO8NUihaG4vhIFdDXkaw.AtFkay",
+  "id": 6
+ },
+ {
+  "name": "Juan",
+  "email": "sjsjs@fss.com",
+  "password": "$2b$05$W7SjwRiv/N/6V1URy/QB6eWr.aNM46.3o4HPeTzaJfEDPxXzuev9.",
+  "id": 7
+ },
+ {
+  "name": "Santi",
+  "apellido": "Caro",
+  "email": "scurrett@grimoldi.com",
+  "password": "$2b$05$VUW7Me4r4CnYXaLzkEeH6eP4WPtXkscj3HGWnk4B0D1i22tvT9QzW",
+  "id": 8
+ },
+ {
+  "name": "Santiagosddhd",
+  "apellido": "Caro",
+  "email": "scurrett@grimoldi.com",
+  "password": "$2b$05$ntGGBQiLqVcbsFJzHSUqGuz1/SbuKIdHbNxseVNX3abjlDfTXKljC",
+  "id": 9
+ }
+]

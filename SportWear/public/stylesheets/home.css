@@ -1,5 +1,10 @@
 /* HOME ----------------------------*/
 
+/*body{
+  background-image: url(/imagenes/fondo-sport.jpeg);
+
+} */
+
 .container-index{
     display: flex;
     flex-wrap: wrap;

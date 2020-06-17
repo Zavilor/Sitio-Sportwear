@@ -20,13 +20,17 @@
             <div class="product-detail-container">
 
                 <div class="product-detail-container-left">
-                    <img src= "/imagenes/botines-nemeziz.jpg" class="productImages" alt="...">
+                    <a href="/product/<%= products.id %>">  
+                        <img src= "/imagenes/botines-nemeziz.jpg" class="productImages" alt="...">
+                    
                     
                 </div>
                 <div class="product-detail-container-right">
                     <div>
-                        <h3><%= products.name %></h3>
                         
+                        <h3><%= products.name %></h3>
+                    </a>
+                      
                     </div>
                     <div class="precioProducto">
                         <h4>Precio</h4>
@@ -34,7 +38,8 @@
                     </div> 
                     <div class= "product-detail-container-bottom">
                         <button type="submit" class="button-sumit">Añadir al Carrito</button>  <br>
-                        <button type="submit">Comprar Ahora</button>
+                        <button type="submit">Comprar Ahora</button> <br>
+                        <a class="btn btn-link" href="/product/<%= products.id %>/edit">Editar</a>
                     </div>
                 </div> 
                 
@@ -45,7 +50,3 @@
         </div>
 
         </section>
-        
-        
-        
-        <%- include('../partials/footer') %>
