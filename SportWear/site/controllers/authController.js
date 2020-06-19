@@ -1,6 +1,7 @@
 const { check, validationResult, body } = require('express-validator');
 const bcrypt = require('bcrypt');
 const userData = require('../models/user');
+//const multer = require('multer');
 
 
 module.exports = {
@@ -8,7 +9,7 @@ module.exports = {
         res.render ('../../site/views/auth/register')
     },
 
-    newUser: function (req, res) {
+    newUser: function (req, res, next) {
         let errors= validationResult(req);
 
         if (errors.isEmpty()) {
@@ -16,12 +17,13 @@ module.exports = {
                 name: req.body.name,
                 apellido: req.body.apellido,
                 email: req.body.email,
-                password: bcrypt.hashSync(req.body.password, 5)
+                password: bcrypt.hashSync(req.body.password, 5),
+                avatar: req.files[0].filename
             }
 
             userData.create(user);
-            res.send('Usuario ' + req.body.name + ' registrado con exito');
-            //res.redirect('/')
+            //res.send('Usuario ' + req.body.name + ' registrado con exito');
+            res.redirect('/')
 
         } else {
             res.render('auth/register', {errors: errors.errors})

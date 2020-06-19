@@ -2,22 +2,36 @@
 <link rel="stylesheet" href="/stylesheets/login.css">
 
 <section class="todoLogIn">
-    <div class="tituloFormulario">
-        <p><h1>Log In</h1></p>
-    </div>
+   
     <div class="cajaLogIn">
+        <div class="tituloFormulario">
+            <h1>Log In</h1>
+        </div>
+
         <form class="formulario" action="login" method="POST">
-            <div class="logeo">
-                <p class="nombreLogIn"><label>Mail</label></p>
-                <input class="inputCompletar" type="email" class="email" id="email" name="email">
+         <div class="logueo">
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-default" class="nombreLogIn">Email</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" class="inputCompletar"  type="email" class="email" id="email" name="email">
             </div>
-            <div>
-                <p class="nombreLogIn"><label for="">Contraseña</label></p>
-                <input class="inputCompletar" type="password" name="password" id="password" class="password">
+            
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-default" class="nombreLogIn">Contraseña</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" class="inputCompletar" type="password" name="password" id="password" class="password">
+              </div>
+           
+        </div >
+            
+            <div class="div-boton-reg" class="boton-login" >
+                <button class="btn btn-info" type="submit" class="ConfLogIn">Confirmar</button>
             </div>
-            <div class="boton-login">
-                <button type="submit" class="ConfLogIn">Confirmar</button>
-            </div>
+        
+        
         </form>
     </div>
 </section>

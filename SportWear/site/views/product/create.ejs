@@ -1,7 +1,9 @@
 <%- include('../partials/header'); %> 
 <link rel="stylesheet" href='/stylesheets/productAdd.css'>
-<div class="global">
-    
+<section class="todoCreate">
+   
+   
+    <div class="create">
     
     <form method="POST" action="/product">
        
@@ -10,16 +12,19 @@
             <input type="text" class="form-control" id="title" placeholder="Title" name="name">
         </div>
     
+       
         <div class="form-group ">
             <label class="" for="title">Descripcion de producto</label>
             
             <textarea name="description" id="description" class="form-control" rows="5" cols="10" placeholder= "Describa en breves palabras a su producto"></textarea>
         </div>
 
+       
         <div class="form-group ">
             <label class="" for="title">Imagen</label>
             <input type="text" class="form-control" id="image" placeholder="Image" name="image">
         </div>
+
 
         <div class="form-group ">
             <label class="" for="title">Categoria</label>
@@ -32,16 +37,19 @@
             </select>
         </div>
 
+
         <div class="form-group ">
             <label class="" for="title">Cantidad</label>
             <input type="text" class="form-control" id="title" placeholder="Indica la cantidad disponible" name="quantity">
             
         </div>
 
+
         <div class="form-group ">
             <label class="" for="title">Precio</label>
             <input type="text" class="form-control" id="title" placeholder="Establece un precio acorde" name="price">
         </div>
+
 
         <div class="botones-product-add">
                 
@@ -51,4 +59,7 @@
         </div>
     
     </form>
+
+</div>
+</section>
     <%- include('../partials/footer'); %>

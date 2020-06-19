@@ -57,5 +57,19 @@
   "email": "scurrett@grimoldi.com",
   "password": "$2b$05$ntGGBQiLqVcbsFJzHSUqGuz1/SbuKIdHbNxseVNX3abjlDfTXKljC",
   "id": 9
+ },
+ {
+  "name": "juan",
+  "apellido": "Perez",
+  "email": "juancruzzcaro1345@gmail.com",
+  "password": "$2b$05$yphxUpajcjgomT76qQP56ukTVD1lL6H1/7WASszyt9Sld16.4FbhK",
+  "id": 10
+ },
+ {
+  "name": "Juan Cruz ",
+  "apellido": "Caro",
+  "email": "juancruzzcaro@hotmail.com",
+  "password": "$2b$05$SihLUBuPaxWhWZI6Y8bklOpspwaBRG5Wm7N6dJswchssgjjRdvzpm",
+  "id": 11
  }
 ]
