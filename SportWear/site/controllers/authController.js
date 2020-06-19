@@ -1,8 +1,7 @@
 const { check, validationResult, body } = require('express-validator');
 const bcrypt = require('bcrypt');
 const userData = require('../models/user');
-//const multer = require('multer');
-
+//const multer = require ('multer')
 
 module.exports = {
     register: function (req, res) {
@@ -40,4 +39,3 @@ module.exports = {
         /*res.redirect ('../../site/views/auth/register')*/
     }
 }
-    

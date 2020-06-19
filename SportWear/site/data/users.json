@@ -71,5 +71,20 @@
   "email": "juancruzzcaro@hotmail.com",
   "password": "$2b$05$SihLUBuPaxWhWZI6Y8bklOpspwaBRG5Wm7N6dJswchssgjjRdvzpm",
   "id": 11
+ },
+ {
+  "name": "juan",
+  "apellido": "Lago",
+  "email": "juanlago12@hotmail.com",
+  "password": "$2b$05$ZmYnlPIasfl4LpNXHcF9NOHEhPuU3g8LY7bxNTfFc3xyjazrnZpMu",
+  "id": 12
+ },
+ {
+  "name": "camila",
+  "apellido": "lago",
+  "email": "scurrett@grimoldi.com",
+  "password": "$2b$05$jrLr7rwUWUOrFxnPJNqrcO5rvyHqTS7vHHt0RxypuPwckT/YpK60G",
+  "avatar": "avatar-1592603897390.jpg",
+  "id": 13
  }
 ]
