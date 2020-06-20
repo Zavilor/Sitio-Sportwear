@@ -86,5 +86,13 @@
   "password": "$2b$05$jrLr7rwUWUOrFxnPJNqrcO5rvyHqTS7vHHt0RxypuPwckT/YpK60G",
   "avatar": "avatar-1592603897390.jpg",
   "id": 13
+ },
+ {
+  "name": "Lucas",
+  "apellido": "Chavez",
+  "email": "Lucaschavez@hotmail.com",
+  "password": "$2b$05$zeezSSNbJpZi3riPD7w6.u9yubp7F7h1LGuphEQmS2WSWniH1L5/C",
+  "avatar": "avatar-1592665384954.jpg",
+  "id": 14
  }
 ]
