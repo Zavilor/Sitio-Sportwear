@@ -3,15 +3,15 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const methodOverride = require('method-override')
+const methodOverride = require('method-override');
+const session = require('express-session');
 
 const indexRouter = require('./routes/index');
 const productRouter = require('./routes/products')
 const authRouter = require('./routes/auth')
 const cartRouter = require('./routes/shoppingCart')
 const usersRouter = require('./routes/users');
-
-
+const authMdw = require('./middlewares/auth')
 
 
 const app = express();
@@ -19,6 +19,14 @@ const app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+app.use(session({
+  secret: 'Sportwear',
+  resave: false,
+  saveUninitialized: true
+}));
+
+app.use(authMdw);
 
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: false }));

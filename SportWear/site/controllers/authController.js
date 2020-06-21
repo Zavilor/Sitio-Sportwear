@@ -33,9 +33,19 @@ module.exports = {
         res.render ('../../site/views/auth/login')
     },
 
-    loginExistingUser: function(req, res, next){
-        let email = req.body.email;
+    loginExistingUser: function(req, res) {
+
+        if (req.body.rememberMe) {
+            res.cookie('Mantener usu', req.body.email, {expires: new Date(Date.now() + 1000*60*60*24*90)});
+        }   
+        
+        req.session.logeado = true
+        req.session.locals = true
+
+        return res.redirect('/')
+
+        /*let email = req.body.email;
         res.send('Usuario ' + email + ' se ha logueado con éxito');
-        /*res.redirect ('../../site/views/auth/register')*/
+        res.redirect ('../../site/views/auth/register')*/
     }
 }
