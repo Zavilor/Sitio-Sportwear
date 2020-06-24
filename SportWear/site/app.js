@@ -11,7 +11,8 @@ const productRouter = require('./routes/products')
 const authRouter = require('./routes/auth')
 const cartRouter = require('./routes/shoppingCart')
 const usersRouter = require('./routes/users');
-const authMdw = require('./middlewares/auth')
+const sessionMdw = require('./middlewares/session');
+const rememberMdw = require('./middlewares/remember');
 
 
 const app = express();
@@ -26,12 +27,15 @@ app.use(session({
   saveUninitialized: true
 }));
 
-app.use(authMdw);
+app.use(sessionMdw);
 
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());
+
+app.use(rememberMdw);
+
 app.use(express.static(path.join(__dirname,'..','public')));
 app.use(methodOverride('_method'));
 
