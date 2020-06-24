@@ -16,3 +16,6 @@ Nuestras páginas de referencia son:
 Estas paginas, las hemos considerado como modelo a seguir, ya que apuntan a un público similar y es por ello, que las hemos usado como ejemplo en muchos aspectos.
 
 Link del Trello: https://trello.com/b/IZKaGMer/sportwear
+
+
+
