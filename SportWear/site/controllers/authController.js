@@ -20,14 +20,16 @@ module.exports = {
                 avatar: req.files[0].filename
             }            
                 userData.create(user)
-                //TODO: que logee al usuario y muestre la pagina del perfil
-                res.locals.logeado = true;
-                req.session.logeado = true;
-                req.session.userEmail = req.body.email;
+                if (user) {
+                    //TODO: que logee al usuario y muestre la pagina del perfil
+                    res.locals.logeado = true;
+                    req.session.logeado = true;
+                    req.session.userEmail = user.email;
+                    //enviar a otro html que se registro exitosamente
+                    res.redirect('/profile')
+                } else {
 
-                //enviar a otro html que se registro exitosamente
-
-                 res.redirect('/profile');
+                }
         
             /* ACA BORRE ALGO QUE COPIE DEL ARCHIVO DE DIGITAL MOVIES XQ HAY UN "THEN" QUE NO ANDA
             .catch(function(error){
@@ -37,9 +39,9 @@ module.exports = {
             })*/
             //.then(function(){
                 //TODO: que logee al usuario y muestre la pagina del perfil
-                res.locals.logeado = true;
-                req.session.logeado = true;
-                req.session.userEmail = user.email;
+                //res.locals.logeado = true;
+                //req.session.logeado = true;
+                //req.session.userEmail = user.email;
 
             //res.send('Usuario ' + req.body.name + ' registrado con exito');
             //res.redirect('/profile')
