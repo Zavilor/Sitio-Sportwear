@@ -174,5 +174,37 @@
   "password": "$2b$05$z1EO5de8uHD.ru7L8p5c2.TK92ro1NAHZJBWi8OKI9PV66wFqtt/C",
   "avatar": "avatar-1593028127110.png",
   "id": 24
+ },
+ {
+  "name": "Cesar",
+  "apellido": "Lopez",
+  "email": "cesar@gmail.com",
+  "password": "$2b$05$WRy/ZVKdM.5SEvQwjKBEIORBsC7lf8vefNRkxPfc5I33YcQqa20eK",
+  "avatar": "avatar-1593113077707.png",
+  "id": 25
+ },
+ {
+  "name": "Santi",
+  "apellido": "Lago",
+  "email": "santilago97@yahoo.com.ar",
+  "password": "$2b$05$NGudVFFCQhIxD1bQjNrQQuxmZDQkumyOPQo/T.MG4BUoNro2v7gdO",
+  "avatar": "avatar-1593113405087.png",
+  "id": 26
+ },
+ {
+  "name": "Santi",
+  "apellido": "Lago",
+  "email": "mati@gmail.com",
+  "password": "$2b$05$4RuqvA5h6HGAkmjaOyxuYO/PLquC7JyMF/jiVNvg.dnrtmUkjkQAO",
+  "avatar": "avatar-1593115511328.png",
+  "id": 27
+ },
+ {
+  "name": "Santi",
+  "apellido": "Lago",
+  "email": "jeremias@gmail.com",
+  "password": "$2b$05$aJf5Pbb6w9/VTdgG1NTCGuAeGolxTl1SOV0Tb4HKUqWCqT/amaY/q",
+  "avatar": "avatar-1593116184236.png",
+  "id": 28
  }
 ]
