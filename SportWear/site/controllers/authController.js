@@ -82,7 +82,20 @@ module.exports = {
         res.redirect ('../../site/views/auth/register')*/
     },
 
-    profile : (req, res) => {
-        res.render('../../site/views/auth/profile');
+    profile : function (req, res) {
+        
+        let user = req.session.userEmail;
+        
+        let users = userData.findAll();
+       
+       let userLogeado = users.find(function(usuario){
+           return user == usuario.email;
+       });
+       
+        res.render('profile', { userLogeado : userLogeado });
     }
+
+    /*profile : (req, res) => {
+        res.render('../../site/views/auth/profile');
+    }*/
 }
