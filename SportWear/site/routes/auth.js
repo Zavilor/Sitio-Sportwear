@@ -27,11 +27,26 @@ router.post('/register', guestMdw, upload.any(), [
     check('name').isLength({min: 1}).withMessage('El usuario a registrar debe tener un nombre'),
     check('apellido').isLength({min: 1}).withMessage('El usuario a registrar debe tener un apellido'),
     check('email').isEmail().withMessage('El email debe ser valido'),
-    check('password').isLength({min:5}).withMessage('La contraseña debe contener 5 caracteres como minimo')   
+    body('email').custom(function (value) {
+    
+        let users = userData.findAll();
+        for (let i = 0; i < users.length; i++) {
+          if (users[i].email == value) {
+            return false;
+          }
+        }
+        return true;
+      }).withMessage('El email ya está registrado'),
+    check('password').isLength({min:5}).withMessage('La contraseña debe contener 5 caracteres como minimo'),
+    check('password', 'Las contraseñas no coinciden')
+    .custom((value, { req }) => {
+      return value === req.body.confirmarPassword
+    })   
 ] , controller.newUser);
 router.get('/login', guestMdw, controller.login);
-router.post('/login', guestMdw, 
-/*[
+router.post('/login', guestMdw, controller.loginExistingUser);
+/*router.post('/login', guestMdw, 
+[
     check('password').isLength({min:5})
         .withMessage('Contraseña incorrecta').bail(),
     check('email').isEmail()
@@ -46,7 +61,7 @@ router.post('/login', guestMdw,
             })
         }),
         
-],*/ controller.loginExistingUser);
+], controller.loginExistingUser); */
 router.get('/profile', authMdw)
 
 module.exports = router;
