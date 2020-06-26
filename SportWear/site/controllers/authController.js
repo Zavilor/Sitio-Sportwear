@@ -10,14 +10,20 @@ module.exports = {
 
     newUser: function (req, res, next) {
         let errors= validationResult(req);
-        console.log(req.file[0])
-        let avatar = '';
-            if (req.file[0]) {
-                avatar = req.file[0].path.replace('public/', '/');
-            }
 
         if (errors.isEmpty()) {
             
+            let avatar = '';
+            if (req.files[0]) {
+                console.log("Muestro el path antes de reemplazar");
+                console.log(req.files[0].path);
+                avatar = req.files[0].path.replace('..\\public\\imgUsers\\', '/imgUsers/');
+                console.log("Muestro el path desp de reemplazar");
+                console.log(req.files[0].path);
+            }
+
+
+            //Genero el objeto user
             let user = {
                 name: req.body.name,
                 apellido: req.body.apellido,
