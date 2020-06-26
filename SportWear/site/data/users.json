@@ -176,6 +176,14 @@
   "id": 24
  },
  {
+<<<<<<< HEAD
+  "name": "Juan",
+  "apellido": "Zavi",
+  "email": "d@d.com",
+  "password": "$2b$05$tyizO.u3hbLPIFh7flv5oexuI2i4a0qDxNpYf1ErE45JQPjdnIEKe",
+  "avatar": "avatar-1593048720702.png",
+  "id": 25
+=======
   "name": "Cesar",
   "apellido": "Lopez",
   "email": "cesar@gmail.com",
@@ -206,5 +214,6 @@
   "password": "$2b$05$aJf5Pbb6w9/VTdgG1NTCGuAeGolxTl1SOV0Tb4HKUqWCqT/amaY/q",
   "avatar": "avatar-1593116184236.png",
   "id": 28
+>>>>>>> 6f450cad294083e1e84f9d5e7458b912b3c0c39f
  }
 ]
