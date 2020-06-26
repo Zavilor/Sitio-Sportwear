@@ -62,7 +62,7 @@ router.post('/login', guestMdw, controller.loginExistingUser);
         }),
         
 ], controller.loginExistingUser); */
-router.get('/profile', authMdw)
+router.get('/profile', controller.profile);
 
 module.exports = router;
     

@@ -80,5 +80,9 @@ module.exports = {
         /*let email = req.body.email;
         res.send('Usuario ' + email + ' se ha logueado con éxito');
         res.redirect ('../../site/views/auth/register')*/
+    },
+
+    profile : (req, res) => {
+        res.render('../../site/views/auth/profile');
     }
 }
