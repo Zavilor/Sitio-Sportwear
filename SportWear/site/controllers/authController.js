@@ -81,6 +81,7 @@ module.exports = {
         res.send('Usuario ' + email + ' se ha logueado con éxito');
         res.redirect ('../../site/views/auth/register')*/
     },
+ 
 
     profile : function (req, res) {
         
