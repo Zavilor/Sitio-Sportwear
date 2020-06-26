@@ -10,14 +10,20 @@ module.exports = {
 
     newUser: function (req, res, next) {
         let errors= validationResult(req);
+        console.log(req.file[0])
+        let avatar = '';
+            if (req.file[0]) {
+                avatar = req.file[0].path.replace('public/', '/');
+            }
 
         if (errors.isEmpty()) {
+            
             let user = {
                 name: req.body.name,
                 apellido: req.body.apellido,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 5),
-                avatar: req.files[0].filename
+                avatar: avatar
             }            
                 userData.create(user)
                 if (user) {
@@ -26,7 +32,7 @@ module.exports = {
                     req.session.logeado = true;
                     req.session.userEmail = user.email;
                     //enviar a otro html que se registro exitosamente
-                    res.redirect('/profile')
+                    res.redirect('/auth/profile')
                 } else {
 
                 }
@@ -93,7 +99,7 @@ module.exports = {
            return user == usuario.email;
        });
        
-        res.render('profile', { userLogeado : userLogeado });
+        res.render('auth/profile', { userLogeado : userLogeado });
     }
 
     /*profile : (req, res) => {

@@ -5,8 +5,10 @@
 
     <div class="profile">
 
-        <h1><%= userLogeado.name %></h1>
-        <h1><%= userLogeado.apellido %></h1>
+        <h2><%= userLogeado.name %></h2>
+        <h2><%= userLogeado.apellido %></h2>
+        <h2><%= userLogeado.email %></h2>
+        <img src= "<%= userLogeado.avatar %>" alt="imagen avatar">
 
 
     </div>
@@ -16,5 +18,5 @@
 </html>
 
 
-
-<%- include('../partials/footer'); %>
+<!--
+<%- include('../partials/footer'); %> -->

@@ -172,7 +172,7 @@
   "apellido": "perez",
   "email": "jose@gmail.com",
   "password": "$2b$05$z1EO5de8uHD.ru7L8p5c2.TK92ro1NAHZJBWi8OKI9PV66wFqtt/C",
-  "avatar": "avatar-1593028127110.png",
+  "avatar": "/imgUsers/avatar-1593028127110.png",
   "id": 24
  },
  {
@@ -182,5 +182,37 @@
   "password": "$2b$05$.sfYlnOMS40DE1tWyncV0uT629wqzCCjwOXgpycD5lmu800P3Xdky",
   "avatar": "avatar-1593171392468.jpg",
   "id": 25
+ },
+ {
+  "name": "Juancho",
+  "apellido": "Lopez",
+  "email": "juancho@gmail.com",
+  "password": "$2b$05$H8mnzXoAhHbH.7hrDvF4j..cveOjIALph8D6onsoZ0k39/1.mUwzO",
+  "avatar": "avatar-1593188545212.png",
+  "id": 26
+ },
+ {
+  "name": "Julian",
+  "apellido": "aaaaa",
+  "email": "juli@gmail.com",
+  "password": "$2b$05$hzrLcfb8uTF/9iRVYPqGs.NoTrOjawa8E3GPS4wbggBmyte/xGQ6u",
+  "avatar": "",
+  "id": 27
+ },
+ {
+  "name": "jose",
+  "apellido": "jose",
+  "email": "juanjo@gmail.com",
+  "password": "$2b$05$SjrjQP0h8K3DcjSaPUp6AO2agUtq3zV4iZTrcJOkhI/tpmpauNZtW",
+  "avatar": "",
+  "id": 28
+ },
+ {
+  "name": "juan",
+  "apellido": "juan",
+  "email": "verga@gmail.com",
+  "password": "$2b$05$giaIh1Nuk158XmYF0JW25.yLObQfcc42kIapZo3LPjUg3mGvP8CNy",
+  "avatar": "",
+  "id": 29
  }
 ]
