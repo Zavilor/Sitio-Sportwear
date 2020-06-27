@@ -7,6 +7,7 @@ const authMdw = require('../middlewares/auth');
 const guestMdw = require('../middlewares/guest');
 const path = require('path');
 const multer = require('multer');
+const bcrypt = require('bcrypt');
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -19,8 +20,8 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage })
 
-
 const controller = require('../controllers/authController');
+const { nextTick } = require('process');
 
 router.get('/register', guestMdw, controller.register);
 router.post('/register', guestMdw, upload.any(), [
@@ -43,25 +44,34 @@ router.post('/register', guestMdw, upload.any(), [
     return value === req.body.confirmarPassword
   })   
 ] , controller.newUser);
+
 router.get('/login', guestMdw, controller.login);
-router.post('/login', guestMdw, controller.loginExistingUser);
-/*router.post('/login', guestMdw, 
-[
-  check('password').isLength({min:5})
-  .withMessage('Contraseña incorrecta').bail(),
-  check('email').isEmail()
-  .withMessage('Email invalido')
-  .custom((value, { req }) => {
-    return userData.findOne({where :{email : value}}).then(user => {
-      if (user == null) {
-        return Promise.reject('Email invalido');
-      } else if (user && !bcrypt.compareSync(req.body.password , user.password)) {
-        return Promise.reject('Contraseña erronea');
-      }
-    })
-  }),
+router.post('/login', guestMdw, [
   
-], controller.loginExistingUser); */
+  check('password').isLength({min:5}).withMessage('Ingrese un formato de contraseña válida').bail(),
+  check('email').isEmail().withMessage('Ingrese un formato de email válido').custom((value, { req }) => {
+
+    if (user = userData.findByEmail(req.body.email)){
+
+      // Si el mail existe en nuestra base de datos, comprobamos la contraseña
+      let check = bcrypt.compareSync(req.body.password, user.password);
+      console.log(check);
+
+      console.log(user.password);
+      console.log(req.body.password);
+
+      if(check){
+        return true;
+      }
+    }
+    else{
+      return false;
+    }
+    console.log(req.body.email);
+  
+  }).withMessage('Datos erroneos, vuelva a intentar'),], controller.loginExistingUser);
+
 router.get('/profile', controller.profile);
+router.post('/logOut', controller.logOut);
 
 module.exports = router;

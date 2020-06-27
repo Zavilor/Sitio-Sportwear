@@ -7,79 +7,83 @@
     <link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/stylesheets/header.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://kit.fontawesome.com/1cc22e00f7.js" crossorigin="anonymous"></script>
+    
     <title>SportWear</title>
 </head>
 <body>
-
+    
     <header class="header">
-            <section class="barraSuperior">
-                <div class="navLeft">
-                    <div class="NombreSW">
-                        <a href="/" ><i class="fab fa-stripe-s"></i></a>
-                        <a href="/" class="tituloHead">SportWear</a>
-                    </div> 
-               </div>
-                <div class="navCenter">
-                    <div class="buscador">
-                        <form action="/" method="GET" class="forms">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text"><i class="fas fa-search"></i></div>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Buscar" name="busqueda">
+        <section class="barraSuperior">
+            <div class="navLeft">
+                <div class="NombreSW">
+                    <a href="/" ><i class="fab fa-stripe-s"></i></a>
+                    <a href="/" class="tituloHead">SportWear</a>
+                </div> 
+            </div>
+            <div class="navCenter">
+                <div class="buscador">
+                    <form action="/" method="GET" class="forms">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-search"></i></div>
                             </div>
-                        </form>
-                    </div>
+                            <input type="text" class="form-control" placeholder="Buscar" name="busqueda">
+                        </div>
+                    </form>
                 </div>
-                <div class="navRight">
-                    <% if (locals.logeado) {%>
+            </div>
+            <div class="navRight">
+                <% if (locals.logeado) {%>
+                    <form class="formulario" action="/auth/LogOut" method="POST">
                         <div class="botonLogReg">
                             <button><a href="/auth/profile">Perfil</a></button>
                         </div>
                         <div class="botonLogReg">
-                            <button><a href="">LogOut</a></button>
-                        </div>
-                    <% } else { %>
-                        <div class="botonLogReg">
-                            <button><a href="/auth/login">LogIn</a></button>
-                        </div>
-                        <div class="botonLogReg">
-                            <button><a href="/auth/register">Registro</a></button>
-                        </div>
-                        <% } %>
-                        <div class="botonLogReg">
-                            <button><a href="/cart/index"><i class="fas fa-shopping-cart"></i></a></button>
+                            <button type="submit" class="ConfLogIn">LogOut</button>
+                        </form>
+                        <% } else { %>
+                            <div class="botonLogReg">
+                                <button><a href="/auth/login">LogIn</a></button>
+                            </div>
+                            <div class="botonLogReg">
+                                <button><a href="/auth/register">Registro</a></button>
+                            </div>
+                            <% } %>
+                            <div class="botonLogReg">
+                                <button><a href="/cart/index"><i class="fas fa-shopping-cart"></i></a></button>
+                            </div>
+                            
                         </div>
                     
-                </div>
-            </section>
-            
-            <div>
-                <nav class="barraSecundaria">
-                    <ul class="barraSec">
-                        <li class="botonesBarraSec"><a href="/">Inicio</a></li>
-                        <li class="botonesBarraSec"><a href="#">Categorias</a></li>
-                        <li class="botonesBarraSec"><a href="/product">Productos</a></li>
-                        <li class="botonesBarraSec"><a href="/product/create">Publicar</a></li>
-                        <li class="botonesBarraSec"><a href="#">Ofertas</a></li>
-                        <li class="botonesBarraSec"><a href="#">Ayuda</a></li>
-                    </ul>
-                </nav>
-
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="/">Inicio</a>
-                      <a class="dropdown-item" href="#">Categorias</a>
-                      <a class="dropdown-item" href="/product/create">Publicar</a>
-                      <a class="dropdown-item" href="/product">Productos</a>
-                      <a class="dropdown-item" href="#">Ayuda</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="/login">Login</a>
-                      <a class="dropdown-item" href="/register">Register</a>
+                    </section>
+                    
+                    <div>
+                        <nav class="barraSecundaria">
+                            <ul class="barraSec">
+                                <li class="botonesBarraSec"><a href="/">Inicio</a></li>
+                                <li class="botonesBarraSec"><a href="#">Categorias</a></li>
+                                <li class="botonesBarraSec"><a href="/product">Productos</a></li>
+                                <li class="botonesBarraSec"><a href="/product/create">Publicar</a></li>
+                                <li class="botonesBarraSec"><a href="#">Ofertas</a></li>
+                                <li class="botonesBarraSec"><a href="#">Ayuda</a></li>
+                            </ul>
+                        </nav>
+                        
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="/">Inicio</a>
+                                <a class="dropdown-item" href="#">Categorias</a>
+                                <a class="dropdown-item" href="/product/create">Publicar</a>
+                                <a class="dropdown-item" href="/product">Productos</a>
+                                <a class="dropdown-item" href="#">Ayuda</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/login">Login</a>
+                                <a class="dropdown-item" href="/register">Register</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-    </header>
+                </header>

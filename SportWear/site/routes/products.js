@@ -29,7 +29,7 @@ router.post('/', controller.save);
 router.get('/:id?', controller.detail);
 
 // Nos lleva al formulario de edición del producto que mandemos por parametro
-router.get('/:id/edit', controller.edit);
+router.get('/:id/edit', publishMdw, controller.edit);
 // Actualizar el producto editado
 router.put('/:id', controller.update);
 

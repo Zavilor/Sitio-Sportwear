@@ -60,6 +60,12 @@ let userData = {
         });
     },
 
+    findByEmail : function (email) {
+        return this.findAll().find(function(user){
+            return user.email == email;
+        });
+    },
+
     findByPK : function (id) {
         return this.findAll().find(function(user){
             return user.id == id;
