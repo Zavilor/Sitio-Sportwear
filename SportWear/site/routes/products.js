@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const controller = require('../controllers/productController');
-
+const publishMdw = require('../middlewares/publish')
 router.use( function( req, res, next ) {
     // this middleware will call for each requested
     // and we checked for the requested query properties
@@ -21,7 +21,7 @@ router.use( function( req, res, next ) {
 router.get('/', controller.index);
 
 // Formulario de creacion de producto
-router.get('/create', controller.create);
+router.get('/create', publishMdw, controller.create);
 // Guardamos la publicación
 router.post('/', controller.save);
 
