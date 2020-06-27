@@ -1,186 +1,26 @@
 [
  {
-  "name": "Santif",
-  "email": "ff@gial.cm",
-  "password": "$2b$05$o2Ksa1N6lHvgRGbw3fVCXeOkpTXg3bhm8CaTTg9Z329QgKgARpxj.",
+  "name": "juan",
+  "apellido": "Caro",
+  "email": "juancruzzcaro@hotmail.com",
+  "password": "$2b$05$7QFysDxs4ciIXU9O0aGtvuFzceQMm.v10IPbkR/PLnuhbiM6YaKWu",
+  "avatar": "/imgUsers/avatar-1593295120856.jpg",
   "id": 1
  },
  {
-  "name": "chivana",
-  "email": "chivi@rur.com",
-  "password": "$2b$05$gK0x8Xc9saGFR.886LNJ.ODQlRXATf9QbstyQ4yL.hc3Mds9.WXLe",
+  "name": "Santiago",
+  "apellido": "Lago",
+  "email": "santilago@hotmail.com",
+  "password": "$2b$05$7UeSIZp3tpBckphXJcuVpuoxmeyH6EfQINBK7CtWKddSUuXlOdaLS",
+  "avatar": "/imgUsers/avatar-1593295186114.jpg",
   "id": 2
  },
  {
-  "name": "Santi",
-  "apellido": "Lago",
-  "email": "s.lagocurretti@gmail.com",
-  "password": "$2b$05$c3vETDYv.g8ELKBjNoM1lOG7B7wejyLZDL7OriplA5CT5fL0U7JAO",
-  "id": 3
- },
- {
-  "name": "Santi",
-  "apellido": "Lago",
-  "email": "s.lagocurretti@gmail.com",
-  "password": "$2b$05$lfAVegQLeQpZp5Ma9.FBuOMf4EiGPonaxS4HyWzp4G1HF.5ymyXMq",
-  "id": 4
- },
- {
-  "name": "Santi",
-  "apellido": "Lago",
-  "email": "s.lagocurretti@gmail.com",
-  "password": "$2b$05$x.aP2NkGk9nmwYpuXQRsj.6aCQ/V0qaH0/FS8EK7TPkZiciS4v4nq",
-  "id": 5
- },
- {
-  "name": "Santi",
-  "email": "s.lagocurretti@gmail.com",
-  "password": "$2b$05$6rfEq8Iou3//pkRVBBrNfuCoUVAO8NUihaG4vhIFdDXkaw.AtFkay",
-  "id": 6
- },
- {
   "name": "Juan",
-  "email": "sjsjs@fss.com",
-  "password": "$2b$05$W7SjwRiv/N/6V1URy/QB6eWr.aNM46.3o4HPeTzaJfEDPxXzuev9.",
-  "id": 7
- },
- {
-  "name": "Santi",
-  "apellido": "Caro",
-  "email": "scurrett@grimoldi.com",
-  "password": "$2b$05$VUW7Me4r4CnYXaLzkEeH6eP4WPtXkscj3HGWnk4B0D1i22tvT9QzW",
-  "id": 8
- },
- {
-  "name": "Santiagosddhd",
-  "apellido": "Caro",
-  "email": "scurrett@grimoldi.com",
-  "password": "$2b$05$ntGGBQiLqVcbsFJzHSUqGuz1/SbuKIdHbNxseVNX3abjlDfTXKljC",
-  "id": 9
- },
- {
-  "name": "juan",
-  "apellido": "Perez",
-  "email": "juancruzzcaro1345@gmail.com",
-  "password": "$2b$05$yphxUpajcjgomT76qQP56ukTVD1lL6H1/7WASszyt9Sld16.4FbhK",
-  "id": 10
- },
- {
-  "name": "Juan Cruz ",
-  "apellido": "Caro",
-  "email": "juancruzzcaro@hotmail.com",
-  "password": "$2b$05$SihLUBuPaxWhWZI6Y8bklOpspwaBRG5Wm7N6dJswchssgjjRdvzpm",
-  "id": 11
- },
- {
-  "name": "juan",
-  "apellido": "Lago",
-  "email": "juanlago12@hotmail.com",
-  "password": "$2b$05$ZmYnlPIasfl4LpNXHcF9NOHEhPuU3g8LY7bxNTfFc3xyjazrnZpMu",
-  "id": 12
- },
- {
-  "name": "camila",
-  "apellido": "lago",
-  "email": "scurrett@grimoldi.com",
-  "password": "$2b$05$jrLr7rwUWUOrFxnPJNqrcO5rvyHqTS7vHHt0RxypuPwckT/YpK60G",
-  "avatar": "avatar-1592603897390.jpg",
-  "id": 13
- },
- {
-  "name": "Lucas",
-  "apellido": "Chavez",
-  "email": "Lucaschavez@hotmail.com",
-  "password": "$2b$05$zeezSSNbJpZi3riPD7w6.u9yubp7F7h1LGuphEQmS2WSWniH1L5/C",
-  "avatar": "avatar-1592665384954.jpg",
-  "id": 14
- },
- {
-  "name": "Santi",
-  "apellido": "Lago",
-  "email": "s.lagocurretti@gmail.com",
-  "password": "$2b$05$iPtK4CfkCoJOXLhjZvUhP.plfsD2Uiooh7GRydsviV/Apmds5MnT.",
-  "avatar": "avatar-1592939523181.png",
-  "id": 15
- },
- {
-  "name": "daniel",
-  "apellido": "lagodddd",
-  "email": "s.lagocurretti@gmail.com",
-  "password": "$2b$05$4HKN8WRJOYk/AULKyes3c.s8DmeJHNWrTm9vMm4jqlkJzqf5NZcam",
-  "avatar": "avatar-1592939586317.png",
-  "id": 16
- },
- {
-  "name": "Santi",
-  "apellido": "Lago",
-  "email": "s.lagocurretti@gmail.com",
-  "password": "$2b$05$CzcRmRGMF6FOUVPKDknU1e/cP87r6Q6nik5.qbL/.QnisHNS4vE9G",
-  "avatar": "avatar-1592940282264.png",
-  "id": 17
- },
- {
-  "name": "Juan Cruz",
-  "apellido": "Lago",
-  "email": "juancruz@gmail.com",
-  "password": "$2b$05$GFxdu/dioEKmY9GCTdBOvOAKzPvathXv9iItjvO8f46SqK.4Z2icm",
-  "avatar": "avatar-1593024259245.png",
-  "id": 18
- },
- {
-  "name": "Juan Cruz",
-  "apellido": "Lago",
-  "email": "juancruz@gmail.com",
-  "password": "$2b$05$9aRwkpzDts5oaMVGO3diMuHWHsZOsPJbhoMmMCcwOt7vowk7ZnR6m",
-  "avatar": "avatar-1593024680671.png",
-  "id": 19
- },
- {
-  "name": "Juan Cruz",
-  "apellido": "Lago",
-  "email": "juancruz@gmail.com",
-  "password": "$2b$05$6sucgyl0yBS4rQxpsmuZze5hTVqA6NgcT.Z4WohCcNP5pe4q1ZvJ.",
-  "avatar": "avatar-1593024739046.png",
-  "id": 20
- },
- {
-  "name": "Santi",
-  "apellido": "lago",
-  "email": "juancruz@gmail.com",
-  "password": "$2b$05$WSXzjwx2FUp7I6WTLyX2C.eqmD1CpNH6PO0jElhgZxlFX5AsJ9P3W",
-  "avatar": "avatar-1593024782181.jpg",
-  "id": 21
- },
- {
-  "name": "Santi",
-  "apellido": "lago",
-  "email": "juancruz@gmail.com",
-  "password": "$2b$05$gQtrqHH02AQieM7YoZZhfON/VF6vHvJq9pnpGcg1yxCxCScaYdv/6",
-  "avatar": "avatar-1593024802251.jpg",
-  "id": 22
- },
- {
-  "name": "Santi",
-  "apellido": "lago",
-  "email": "juancruz@gmail.com",
-  "password": "$2b$05$nEdDUAGXK/TdoeCdFyFqqONxkdud3NhiuFvSRbsYs19sun2C04Guu",
-  "avatar": "avatar-1593025428414.jpg",
-  "id": 23
- },
- {
-  "name": "jose",
-  "apellido": "perez",
-  "email": "jose@gmail.com",
-  "password": "$2b$05$z1EO5de8uHD.ru7L8p5c2.TK92ro1NAHZJBWi8OKI9PV66wFqtt/C",
-  "avatar": "/imgUsers/avatar-1593028127110.png",
-  "id": 24
- },
- {
-  "name": "Eugenia",
-  "apellido": "Robles",
-  "email": "eush@hotmail.com",
-  "password": "$2b$05$.sfYlnOMS40DE1tWyncV0uT629wqzCCjwOXgpycD5lmu800P3Xdky",
-  "avatar": "avatar-1593171392468.jpg",
-  "id": 25
+  "apellido": "Retori",
+  "email": "juancho@hotmail.com",
+  "password": "$2b$05$jFq/mcLoOvlbohiWsA675u25P09MhnBsI67Gf71a6zNMHI0LOjEZm",
+  "avatar": "/imgUsers/avatar-1593295223053.jpg",
+  "id": 3
  }
 ]

@@ -11,7 +11,7 @@
     
     <section class="sectionProductList"> 
 
-        <h1>Listado de productos</h1>
+       
 
         <div class="product-detail-main-container">
 
@@ -26,23 +26,22 @@
                     
                 </div>
                 <div class="product-detail-container-right">
-                    <div>
-                        
-                        <h3><%= products.name %></h3>
-                    </a>
-                      
+                    <div>                       
+                        <p class="prodName"><%= products.name %></p>                      
                     </div>
                     <div class="precioProducto">
-                        <h4>Precio</h4>
-                        <h5><%= products.price %></h5>
+                        <p class="prodPrice">Precio</p>
+                        <p class="prodPrice"><%= products.price %></p>
                     </div> 
                     <div class= "product-detail-container-bottom">
-                        <button type="submit" class="button-sumit">Añadir al Carrito</button>  <br>
-                        <button type="submit">Comprar Ahora</button> <br>
+                        <button type="submit" class="btn btn-secondary">Añadir al Carrito</button>
+                        <button type="submit" class="btn btn-success" >Comprar Ahora</button>
+                        
                         <a class="btn btn-link" href="/product/<%= products.id %>/edit">Editar</a>
+                                              
                     </div>
-                </div> 
-                
+                </div>
+                <p>---------------------</p>
             </div> 
 
             <% }) %>   

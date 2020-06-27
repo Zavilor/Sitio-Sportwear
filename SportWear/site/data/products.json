@@ -3,7 +3,7 @@
   "id": 1,
   "name": "Real Madrid",
   "description": "Ultimo modelo de la camiseta del Real Madrid Club de Futbol (España)",
-  "image": "http://dummyimage.com/109x236.jpg/cc0000/ffffff",
+  "image": "/imgProds/RealMadrid.jpg",
   "category": "Futbol",
   "stock": 10,
   "price": "$260.77"
@@ -12,7 +12,7 @@
   "id": 2,
   "name": "Atlético Madrid",
   "description": "Ultimo modelo de la camiseta del Atlético de Madrid Club de Futbol (España)",
-  "image": "http://dummyimage.com/240x250.jpg/ff4444/ffffff",
+  "image": "/imgProds/AtlMadrid.jpg",
   "category": "Futbol",
   "stock": 10,
   "price": "$954.62"
@@ -21,7 +21,7 @@
   "id": 3,
   "name": "Barcelona",
   "description": "Ultimo modelo de la camiseta del Barcelona Club de Futbol (España)",
-  "image": "http://dummyimage.com/158x135.jpg/5fa2dd/ffffff",
+  "image": "/imgProds/fcbarc.jpg",
   "category": "Futbol",
   "stock": 10,
   "price": "$3067.19"
@@ -30,7 +30,7 @@
   "id": 4,
   "name": "Liverpool",
   "description": "Ultimo modelo de la camiseta del Liverpool Football Club (Inglaterra)",
-  "image": "http://dummyimage.com/146x185.jpg/5fa2dd/ffffff",
+  "image": "/imgProds/liverpool.jpg",
   "category": "Futbol",
   "stock": 10,
   "price": "$2949.51"
@@ -39,7 +39,7 @@
   "id": 5,
   "name": "Bayern de Múnich",
   "description": "Ultimo modelo de la camiseta del Bayern de Múnich Football Club (Alemania)",
-  "image": "http://dummyimage.com/191x146.jpg/5fa2dd/ffffff",
+  "image": "/imgProds/fcBayMunch.jpg",
   "category": "Futbol",
   "stock": 10,
   "price": "$4404.67"
@@ -48,7 +48,7 @@
   "id": 6,
   "name": "Chelsea",
   "description": "Ultimo modelo de la camiseta del Chelsea Football Club (Inglaterra)",
-  "image": "http://dummyimage.com/236x210.jpg/ff4444/ffffff",
+  "image": "/imgProds/chelsea.jpg",
   "category": "Futbol",
   "stock": 10,
   "price": "$4301.79"
@@ -57,7 +57,7 @@
   "id": 7,
   "name": "Manchester City",
   "description": "",
-  "image": "Ultimo modelo de la camiseta del Manchester City Football Club (Inglaterra)",
+  "image": "/imgProds/manCity.jpg",
   "category": "Futbol",
   "stock": 10,
   "price": "$4868.34"
@@ -66,7 +66,7 @@
   "id": 8,
   "name": "Ginger",
   "description": "Ultimo modelo de la camiseta del Paris Saint-German Football Club (Francia)",
-  "image": "http://dummyimage.com/131x247.jpg/cc0000/ffffff",
+  "image": "/imgProds/PSG.jpg",
   "category": "Futbol",
   "stock": 10,
   "price": "$608.51"
@@ -75,7 +75,7 @@
   "id": 9,
   "name": "Juventus",
   "description": "Ultimo modelo de la camiseta de la Juventus de Turín Football Club (Italia)",
-  "image": "http://dummyimage.com/162x200.jpg/cc0000/ffffff",
+  "image": "/imgProds/Juventus.jpg",
   "category": "Futbol",
   "stock": 10,
   "price": "$2299.39"
@@ -84,7 +84,7 @@
   "id": 10,
   "name": "Borusia Dortmund",
   "description": "Ultimo modelo de la camiseta del Borusia Dortmund Football Club (Alemania)",
-  "image": "http://dummyimage.com/149x212.jpg/5fa2dd/ffffff",
+  "image": "/imgProds/BVB.jpg",
   "category": "Futbol",
   "stock": 10,
   "price": "$7.86"
@@ -93,7 +93,7 @@
   "id": 11,
   "name": "Olympique de Lyon",
   "description": "Ultimo modelo de la camiseta del Olympique de Lyon Football Club (Francia)",
-  "image": "http://dummyimage.com/169x152.jpg/ff4444/ffffff",
+  "image": "/imgProds/OlLyion.jpg",
   "category": "Futbol",
   "stock": 10,
   "price": "$882.26"
@@ -102,7 +102,7 @@
   "id": 12,
   "name": "Valencia",
   "description": "Ultimo modelo de la camiseta del Valencia Football Club (España)",
-  "image": "http://dummyimage.com/158x114.jpg/5fa2dd/ffffff",
+  "image": "/imgProds/valencia.jpg",
   "category": "Futbol",
   "stock": 10,
   "price": "$3024.23"
@@ -111,7 +111,7 @@
   "id": 13,
   "name": "Ajax",
   "description": "Ultimo modelo de la camiseta del Ajax Football Club (Holanda)",
-  "image": "http://dummyimage.com/148x217.jpg/5fa2dd/ffffff",
+  "image": "/imgProds/Ajax.jpg",
   "category": "Futbol",
   "stock": 10,
   "price": "$840.04"
@@ -120,7 +120,7 @@
   "id": 14,
   "name": "Inter de Milán",
   "description": "Ultimo modelo de la camiseta del Inter de Milán Football Club (Italia)",
-  "image": "http://dummyimage.com/169x179.jpg/ff4444/ffffff",
+  "image": "/imgProds/interMilan.jpg",
   "category": "Futbol",
   "stock": 10,
   "price": "$3108.94"
@@ -129,25 +129,25 @@
   "id": 15,
   "name": "AC Milán",
   "description": "Ultimo modelo de la camiseta del AC de Milán Football Club (Italia)",
-  "image": "http://dummyimage.com/103x241.jpg/cc0000/ffffff",
+  "image": "/imgProds/acMilan.jpg",
   "category": "Futbol",
   "stock": 10,
   "price": "$3100.17"
  },
  {
   "id": 16,
-  "name": "Fiorentina",
+  "name": "Fiorentina Fc",
   "description": "Ultimo modelo de la camiseta de la Fiorentina Football Club (Italia)",
-  "image": "http://dummyimage.com/250x250.jpg/ff4444/ffffff",
+  "image": "/imgProds/Fiorentina.jpg",
   "category": "Futbol",
   "stock": 10,
   "price": "$3325.32"
  },
  {
   "id": 17,
-  "name": "La Roma",
+  "name": "As Roma",
   "description": "Ultimo modelo de la camiseta de la Roma Football Club (Italia)",
-  "image": "http://dummyimage.com/213x118.jpg/cc0000/ffffff",
+  "image": "/imgProds/asRoma.jpg",
   "category": "Futbol",
   "stock": 10,
   "price": "$220.45"
@@ -156,7 +156,7 @@
   "id": 18,
   "name": "Manchester United",
   "description": "Ultimo modelo de la camiseta del Manchester United Football Club (Inglaterra)",
-  "image": "http://dummyimage.com/148x166.jpg/ff4444/ffffff",
+  "image": "/imgProds/manUnited.jpg",
   "category": "Futbol",
   "stock": 10,
   "price": "$3722.30"
@@ -165,7 +165,7 @@
   "id": 19,
   "name": "Arsenal",
   "description": "Ultimo modelo de la camiseta del Arsenal Football Club (Inglaterra)",
-  "image": "http://dummyimage.com/223x151.jpg/ff4444/ffffff",
+  "image": "/imgProds/ArsenalFc.jpg",
   "category": "Futbol",
   "stock": 10,
   "price": "$2549.22"
@@ -174,16 +174,7 @@
   "id": 20,
   "name": "Benfica",
   "description": "Ultimo modelo de la camiseta del Benfica Football Club (Portugal)",
-  "image": "http://dummyimage.com/206x220.jpg/ff4444/ffffff",
-  "category": "http://dummyimage.com/206x220.jpg/ff4444/ffffff",
-  "stock": "10",
-  "price": "$2092.13"
- },
- {
-  "id": 21,
-  "name": "Benfica",
-  "description": "Ultimo modelo de la camiseta del Benfica Football Club (Portugal)",
-  "image": "http://dummyimage.com/206x220.jpg/ff4444/ffffff",
+  "image": "/imgProds/benfica.jpg",
   "category": "http://dummyimage.com/206x220.jpg/ff4444/ffffff",
   "stock": "10",
   "price": "$2092.13"

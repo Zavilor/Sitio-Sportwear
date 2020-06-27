@@ -1,15 +1,16 @@
 <%- include('../partials/header'); %>
 <html>
 <section class="todoProfile">
+    
     <link rel="stylesheet" href="/stylesheets/profile.css">
 
     <div class="profile">
-
-        <h2><%= userLogeado.name %></h2>
-        <h2><%= userLogeado.apellido %></h2>
-        <h2><%= userLogeado.email %></h2>
         <img src= "<%= userLogeado.avatar %>" alt="imagen avatar">
-
+        <h2><%= userLogeado.name %> <%= userLogeado.apellido %></h2>
+        <h2><%= userLogeado.email %></h2>
+    </div>
+    <div class="compras">
+        <h2><a href="">Tus ultimas compras</a></h2>
 
     </div>
 
@@ -18,5 +19,5 @@
 </html>
 
 
-<!--
-<%- include('../partials/footer'); %> -->
+
+<%- include('../partials/footer'); %> 
