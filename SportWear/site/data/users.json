@@ -22,5 +22,37 @@
   "password": "$2b$05$jFq/mcLoOvlbohiWsA675u25P09MhnBsI67Gf71a6zNMHI0LOjEZm",
   "avatar": "/imgUsers/avatar-1593295223053.jpg",
   "id": 3
+ },
+ {
+  "name": "santi",
+  "apellido": "lgo",
+  "email": "ff@gial.cm",
+  "password": "$2b$05$kJjotiFkZ3vhzc87cF79jezV0nstMEBNeZOgweRTq0s8A79oBMjf.",
+  "avatar": "public\\imgUsers\\avatar-1593439401815.png",
+  "id": 4
+ },
+ {
+  "name": "s",
+  "apellido": "ss",
+  "email": "ss@pq.com",
+  "password": "$2b$05$NHfW0AsuvJ.230YA/tRlM.qFVFsILGZHljKIc0.gcpDrG7kzLpxcG",
+  "avatar": "public\\imgUsers\\avatar-1593440276537.png",
+  "id": 5
+ },
+ {
+  "name": "qq",
+  "apellido": "qq",
+  "email": "qq@qq.com",
+  "password": "$2b$05$AePRbw1dqattxVDcBa3WVuFVdjUTP6CJjXie1wlFdxy9rBFK.KfiS",
+  "avatar": "/imgUsers/avatar-1593440454782.png",
+  "id": 6
+ },
+ {
+  "name": "aa",
+  "apellido": "aa",
+  "email": "aa@aa.com",
+  "password": "$2b$05$5FxdHaCY6NWmp1ix0Omc2Og5TCfFIGi/FFNS4Y0wpMpwaPNBa8KWC",
+  "avatar": "/imgUsers/avatar-1593440554024.png",
+  "id": 7
  }
 ]

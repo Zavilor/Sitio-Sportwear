@@ -4,7 +4,7 @@ const userData = require('../models/user');
 
 module.exports = {
     register: function (req, res) {
-        res.render ('../../site/views/auth/register')
+        res.render ('auth/register')
     },
     
     newUser: function (req, res, next) {
@@ -16,7 +16,7 @@ module.exports = {
             if (req.files[0]) {
                 console.log("Muestro el path antes de reemplazar");
                 console.log(req.files[0].path);
-                avatar = req.files[0].path.replace('..\\public\\imgUsers\\', '/imgUsers/');
+                avatar = req.files[0].path.replace('public\\imgUsers\\', '/imgUsers/');
                 console.log("Muestro el path desp de reemplazar");
                 console.log(req.files[0].path);
             }
@@ -107,15 +107,17 @@ module.exports = {
     
     
     profile : function (req, res) {
-        
+        console.log(req.session);
         let user = req.session.userEmail;
+        console.log(user)
         
         let users = userData.findAll();
         
         let userLogeado = users.find(function(usuario){
             return user == usuario.email;
         });
-        
+        console.log(userLogeado);
+    
         res.render('auth/profile', { userLogeado : userLogeado });
     }
     
