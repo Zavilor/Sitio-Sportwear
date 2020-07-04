@@ -1,12 +1,12 @@
-/* HEADER ----------------------------*/
+/* ----Parte Uno ----*/
 
 header{
   background-color: rgba(135, 206, 250, 0.753);
   padding-bottom: 3px ;
 }
-.barraSuperior {
+.mainContainer {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
   padding-top: 1%;
@@ -14,54 +14,63 @@ header{
   
 }
 
-.navLeft{
+.logo{
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  flex-direction: row;
-  margin-left: 2%;
-  flex-direction: column;
   justify-content: center;
-}
-
-
-.navCenter{
-  display: flex;
-  flex-wrap: wrap;
+  
+  flex-direction: column;  
+  margin-left: 2%;
   
 }
 
-.navRight{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+
+.buscador{
+ width: auto;
+ justify-content: flex-start;
+  justify-content: center;
   flex-direction: row;
+  flex-direction: column;  
+}
+
+.loginReg{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  flex-direction:row;
   margin-right: 2%;
   
 }
 
 
+/*----Parte Dos ----*/
 
-.barraSecundaria{
-  display: flex;
-  flex-wrap: wrap;
-  background-color: rgba(135, 206, 250, 0.760);
-  padding-left: 10%;
-  padding-right: 10%;
-  justify-content: space-between;
-  height: 60px;
+
+
+.barraSecuncadiaList{
   
-}
-.barraSec{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  flex-direction: row;
-  width: 100%;
   margin-top: 2%;
   margin-bottom: 2%;
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: space-around;
+  flex-direction: row;
+  padding: auto 0;
+  
 }
+
 
 .dropdown{
   display: none;
+}
+
+@media (min-width:426px){
+
+  .mainContainer{
+    flex-wrap: wrap
+  }
+
+  .barraInferior{
+    width: 100vw;
+  }
 }
