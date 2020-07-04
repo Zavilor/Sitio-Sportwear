@@ -11,7 +11,7 @@ const bcrypt = require('bcrypt');
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, '../public/imgUsers')
+    cb(null, './public/imgUsers')
   },  
   filename: function (req, file, cb) {
     return cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
@@ -71,7 +71,7 @@ router.post('/login', guestMdw, [
   
   }).withMessage('Datos erroneos, vuelva a intentar'),], controller.loginExistingUser);
 
-router.get('/profile', controller.profile);
+router.get('/profile', authMdw, controller.profile);
 router.post('/logOut', controller.logOut);
 
 module.exports = router;
