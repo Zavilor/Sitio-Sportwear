@@ -6,7 +6,7 @@ header{
 }
 .mainContainer {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   padding-top: 1%;
@@ -15,31 +15,26 @@ header{
 }
 
 .logo{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  
-  flex-direction: column;  
-  margin-left: 2%;
-  
-}
-
-
-.buscador{
- width: auto;
- justify-content: flex-start;
-  justify-content: center;
-  flex-direction: row;
-  flex-direction: column;  
-}
-
-.loginReg{
+  width: fit-content;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  flex-direction:row;
-  margin-right: 2%;
-  
+  flex-direction: row;  
+  margin-left: 2%;
+}
+
+.tituloHead{
+  display: none;
+}
+
+.buscador{
+  width: max-content;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.loginReg{
+  display: none
 }
 
 
@@ -48,29 +43,55 @@ header{
 
 
 .barraSecuncadiaList{
-  
   margin-top: 2%;
   margin-bottom: 2%;
   display: flex;
   flex-wrap: wrap;  
   justify-content: space-around;
   flex-direction: row;
-  padding: auto 0;
-  
+  padding: auto 0; 
 }
 
-
-.dropdown{
+.dropdown {
+  display: flex;
+  justify-content: center;
+}
+.barraSecundaria{
   display: none;
 }
 
-@media (min-width:426px){
+@media(min-width : 426px){
+  .loginReg{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction:row;
+    margin-right: 2%;
+  }
 
-  .mainContainer{
-    flex-wrap: wrap
+  .buscador{
+    width: 100%;
+  }
+
+  .dropdown {
+    display: none
   }
 
   .barraInferior{
-    width: 100vw;
+    width: 100%;
+  }
+
+  .barraSecundaria{
+    width: 100%;
+    display: flex;
+  }
+
+  .barraSecuncadiaList{
+    width: 100%;
+    justify-content: space-around
+  }
+
+  .tituloHead{
+    display: block;
   }
 }
