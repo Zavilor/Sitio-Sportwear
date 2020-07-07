@@ -17,14 +17,8 @@
   justify-content: center;
   flex-direction: row;
   border-radius: 5px; 
-  margin-left: 3%;
-  margin-right: 3%;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  padding-left: 3%;
-  padding-right: 2%;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
+  margin: 5vh 3%;
+  padding : 2vh 3%;
   background-color: white; 
   border: gray 1px solid;
 }
@@ -57,13 +51,9 @@ p.prodName{
  }
 
  .btn{
-  justify-content: space-between;
-  margin-top: 1vh;
-  width: 100%;
-  margin-bottom: 1vh;
+  justify-content: space-between; 
   width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin : 1vh 10%
 }
 
 
@@ -81,8 +71,6 @@ p.prodName{
     padding: auto;
   }
  }
-
-
  
  @media(min-width: 769px){
 
