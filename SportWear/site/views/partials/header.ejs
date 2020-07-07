@@ -24,6 +24,7 @@
             
                 
             <div class="buscador">
+                <div class="buscadorChico">
                 <form action="/" method="GET" class="forms">
                     <div class="input-group">
                         <div class="input-group-prepend">
@@ -32,6 +33,7 @@
                     <input type="text" class="form-control" placeholder="Buscar" name="busqueda">
                     </div>
                 </form>
+                </div>
             </div>
 
          
@@ -42,7 +44,7 @@
                     <form class="formulario" action="/auth/LogOut" method="POST">
                         
                         <div class="botonLogReg">
-                            <button><a href="/auth/profile">Perfil</a></button>
+                            <button><a class="btn btn-link" href="/auth/profile">Perfil</a></button>
                         </div>
                         
                         <div class="botonLogReg">
@@ -51,8 +53,8 @@
             
                     
                         <% } else { %>
-                        <div class="botonLogReg">
-                            <button><a href="/auth/login">LogIn</a></button>
+                        <div class="botonesLogReg">
+                            <button class="botonLogRed"><a href="/auth/login">LogIn</a></button>
                         </div>
                         <div class="botonLogReg">
                             <button><a href="/auth/register">Registro</a></button>
