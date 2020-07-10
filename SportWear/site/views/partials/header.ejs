@@ -50,7 +50,10 @@
                         <div class="botonLogReg">
                             <button type="submit" class="ConfLogIn">LogOut</button>                        
                         </div>
-            
+                        
+                        <div class="botonLogReg">
+                            <button><a href="/cart/index"><i class="fas fa-shopping-cart"></i></a></button>
+                        </div>
                     
                         <% } else { %>
                         <div class="botonesLogReg">
@@ -60,9 +63,7 @@
                             <button><a href="/auth/register">Registro</a></button>
                         </div>
                         <% } %>
-                        <div class="botonLogReg">
-                            <button><a href="/cart/index"><i class="fas fa-shopping-cart"></i></a></button>
-                        </div>
+                        
                     </form>
                             
             </div>
@@ -105,15 +106,17 @@
 
                             <a class="dropdown-item" href="/auth/profile">Perfil</a>
                             <a class="dropdown-item" type="submit" class="ConfLogIn">LogOut</a>
+                            <a class="dropdown-item" href="/cart/index">Carrito</a>
 
                         <% } else { %>
 
                             <a class="dropdown-item" href="/login">Login</a>
                             <a class="dropdown-item" href="/register">Register</a>  
+                            
 
                         <% } %>
                         
-                            <a class="dropdown-item" href="/cart/index">Carrito</a>
+                            
 
                         </form>
                     </div>
