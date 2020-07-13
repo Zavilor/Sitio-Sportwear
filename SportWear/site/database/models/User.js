@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
     
     const User = sequelize.define('User', {
         
-        id: {
+        idUser: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
@@ -31,6 +31,10 @@ module.exports = (sequelize, DataTypes) => {
     
     User.associate = function(models) {
         // associations can be defined here
+        User.belongsTo(models.Rol, {
+            as : "rol",
+            foreingKey : "idRol"
+        });
     };
     
     return User;

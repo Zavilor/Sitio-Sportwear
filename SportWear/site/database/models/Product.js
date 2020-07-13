@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
     
     const Product = sequelize.define('Product', {
         
-        id: {
+        idProduct: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
@@ -19,8 +19,10 @@ module.exports = (sequelize, DataTypes) => {
         },
         price: {
             type: DataTypes.INTEGER
+        },
+        idCategory: {
+            type: DataTypes.INTEGER
         }
-        
     },
 
     {
@@ -30,6 +32,17 @@ module.exports = (sequelize, DataTypes) => {
     
     Product.associate = function(models) {
         // associations can be defined here
+        Product.belongsTo(models.Category, {
+            as : "category",
+            foreingKey : "idCategory"
+        });
+        Product.belongsToMany(models.ShoppingCart, {
+            as : "cartProduct",
+            through: "SHOPPING_CART_has_PRODUCTS",
+            foreingKey : "idProducts",
+            otherKey : "idSHOPPING_CART",
+            timestamps : false
+        });
     };
     
     return Product;

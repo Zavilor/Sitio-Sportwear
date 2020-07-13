@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
     
     const Size = sequelize.define('Size', {
         
-        id: {
+        idSize: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
@@ -20,6 +20,10 @@ module.exports = (sequelize, DataTypes) => {
     
     Size.associate = function(models) {
         // associations can be defined here
+        Size.hasMany(models.CartProduct, {
+            as : "CartProduct",
+            foreingKey : "idSize"
+        });
     };
     
     return Size;
