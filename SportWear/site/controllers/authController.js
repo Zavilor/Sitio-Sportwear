@@ -16,7 +16,7 @@ module.exports = {
             if (req.files[0]) {
                 console.log("Muestro el path antes de reemplazar");
                 console.log(req.files[0].path);
-                avatar = req.files[0].path.replace('public\\imgUsers\\', '/imgUsers/');
+                avatar = req.files[0].path.replace('public\\imgUsers\\','/imgUsers/')
                 console.log("Muestro el path desp de reemplazar");
                 console.log(req.files[0].path);
             }
@@ -28,7 +28,7 @@ module.exports = {
                 apellido: req.body.apellido,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 5),
-                avatar: avatar
+                //avatar: avatar
             }            
             userData.create(user)
             if (user) {
