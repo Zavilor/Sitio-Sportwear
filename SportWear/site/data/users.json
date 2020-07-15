@@ -54,5 +54,19 @@
   "password": "$2b$05$5FxdHaCY6NWmp1ix0Omc2Og5TCfFIGi/FFNS4Y0wpMpwaPNBa8KWC",
   "avatar": "/imgUsers/avatar-1593440554024.png",
   "id": 7
+ },
+ {
+  "name": "San ",
+  "apellido": "san ",
+  "email": "san@san.com",
+  "password": "$2b$05$1gb4HICLqWiNfpP2n6rz7emoK/lNqAZTEj/LYGLEUKE1W7S68PKEe",
+  "id": 8
+ },
+ {
+  "name": "dd",
+  "apellido": "ss",
+  "email": "ee@ee.com",
+  "password": "$2b$05$h/hCN6K0V/AV1O2grhKOmuZ74DwFAAqSOzAe4kRRkEEgVPUA8Fu7m",
+  "id": 9
  }
 ]
