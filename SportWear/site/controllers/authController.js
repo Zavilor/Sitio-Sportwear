@@ -125,3 +125,4 @@ module.exports = {
         res.render('../../site/views/auth/profile');
     }*/
 }
+

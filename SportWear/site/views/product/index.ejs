@@ -35,7 +35,9 @@
                     <div class= "buttonsProductList">
                         <button type="submit" class="btn btn-secondary">Añadir al Carrito</button>
                         <button type="submit" class="btn btn-success" >Comprar Ahora</button>
-                        <a class="btn btn-link" href="/product/<%= products.id %>/edit">Editar</a>                                             
+                        <% if (locals.logeado) {%>
+                        <a class="btn btn-link" href="/product/<%= products.id %>/edit">Editar</a>
+                        <% } %>                                              
                     </div>
 
                 </div>
