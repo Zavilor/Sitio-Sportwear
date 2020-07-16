@@ -41,31 +41,29 @@
             <div class="loginReg">
 
                 <% if (locals.logeado) {%>
-                    <form class="formulario" action="/auth/LogOut" method="POST">
-                        
-                        <div class="botonLogReg">
-                            <button><a  href="/auth/profile">Perfil</a></button>
-                        </div>
+                    <div class="botonLogReg">
+                        <button><a  href="/auth/profile">Perfil</a></button>
+                    </div>
 
-                        <div class="botonLogReg">
-                            <button type="submit" class="ConfLogIn" >LogOut</button>                        
-                        </div>
-                        <div class="botonLogReg">
-                            <a href="/cart/index"><i class="fas fa-shopping-cart"></i></a>
-                        </div>
-                        
-                        
+                    <div class="botonLogReg">
+                        <form class="formulario" action="/auth/LogOut" method="POST">
+                            <button type="submit" class="ConfLogIn" >LogOut</button>
+                        </form>                        
+                    </div>
+                    <div class="botonLogReg">
+                        <button><a href="/cart/index"><i class="fas fa-shopping-cart"></i></a></button>
+                    </div>
                     
-                        <% } else { %>
-                        <div class="botonesLogReg">
-                            <button class="botonLogRed"><a href="/auth/login">LogIn</a></button>
-                        </div>
-                        <div class="botonesLogReg">
-                            <button><a href="/auth/register">Registro</a></button>
-                        </div>
-                        <% } %>
+                <% } else { %>
+                    <div class="botonesLogReg">
+                        <button class="botonLogRed"><a href="/auth/login">LogIn</a></button>
+                    </div>
+                    <div class="botonesLogReg">
+                        <button><a href="/auth/register">Registro</a></button>
+                    </div>
+                <% } %>
                         
-                    </form>
+            
                             
             </div>
                     
@@ -103,23 +101,20 @@
                         
                         <% if (locals.logeado) {%>
 
-                            <form class="formulario" action="/auth/LogOut" method="POST">
-
                             <a class="dropdown-item" href="/auth/profile">Perfil</a>
-                            <a class="dropdown-item" type="submit" class="ConfLogIn">LogOut</a>
                             <a class="dropdown-item" href="/cart/index">Carrito</a>
+                            <form class="formulario" action="/auth/LogOut" method="POST">
+                                <button class="dropdown-item" type="submit" class="ConfLogIn">LogOut</button>
+                            </form>
+                            
 
                         <% } else { %>
 
-                            <a class="dropdown-item" href="/login">Login</a>
-                            <a class="dropdown-item" href="/register">Register</a>  
+                            <a class="dropdown-item" href="/auth/login">Login</a>
+                            <a class="dropdown-item" href="/auth/register">Register</a>  
                             
 
                         <% } %>
-                        
-                            
-
-                        </form>
                     </div>
                 
                 </div>
