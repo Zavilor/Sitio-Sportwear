@@ -6,7 +6,7 @@
   "image": "/imgProds/RealMadrid.jpg",
   "category": "Futbol",
   "stock": 10,
-  "price": "$260.77"
+  "price": "260.77"
  },
  {
   "id": 2,
@@ -15,7 +15,7 @@
   "image": "/imgProds/AtlMadrid.jpg",
   "category": "Futbol",
   "stock": 10,
-  "price": "$954.62"
+  "price": "954.62"
  },
  {
   "id": 3,
@@ -24,7 +24,7 @@
   "image": "/imgProds/fcbarc.jpg",
   "category": "Futbol",
   "stock": 10,
-  "price": "$3067.19"
+  "price": "3067.19"
  },
  {
   "id": 4,
@@ -33,7 +33,7 @@
   "image": "/imgProds/liverpool.jpg",
   "category": "Futbol",
   "stock": 10,
-  "price": "$2949.51"
+  "price": "2949.51"
  },
  {
   "id": 5,
@@ -42,7 +42,7 @@
   "image": "/imgProds/fcBayMunch.jpg",
   "category": "Futbol",
   "stock": 10,
-  "price": "$4404.67"
+  "price": "4404.67"
  },
  {
   "id": 6,
@@ -51,7 +51,7 @@
   "image": "/imgProds/chelsea.jpg",
   "category": "Futbol",
   "stock": 10,
-  "price": "$4301.79"
+  "price": "4301.79"
  },
  {
   "id": 7,
@@ -60,16 +60,16 @@
   "image": "/imgProds/manCity.jpg",
   "category": "Futbol",
   "stock": 10,
-  "price": "$4868.34"
+  "price": "4868.34"
  },
  {
   "id": 8,
-  "name": "Ginger",
+  "name": "PSG",
   "description": "Ultimo modelo de la camiseta del Paris Saint-German Football Club (Francia)",
   "image": "/imgProds/PSG.jpg",
   "category": "Futbol",
   "stock": 10,
-  "price": "$608.51"
+  "price": "608.51"
  },
  {
   "id": 9,
@@ -78,7 +78,7 @@
   "image": "/imgProds/Juventus.jpg",
   "category": "Futbol",
   "stock": 10,
-  "price": "$2299.39"
+  "price": "2299.39"
  },
  {
   "id": 10,
@@ -87,7 +87,7 @@
   "image": "/imgProds/BVB.jpg",
   "category": "Futbol",
   "stock": 10,
-  "price": "$7.86"
+  "price": "7.86"
  },
  {
   "id": 11,
@@ -96,7 +96,7 @@
   "image": "/imgProds/OlLyion.jpg",
   "category": "Futbol",
   "stock": 10,
-  "price": "$882.26"
+  "price": "882.26"
  },
  {
   "id": 12,
@@ -105,7 +105,7 @@
   "image": "/imgProds/valencia.jpg",
   "category": "Futbol",
   "stock": 10,
-  "price": "$3024.23"
+  "price": "3024.23"
  },
  {
   "id": 13,
@@ -114,7 +114,7 @@
   "image": "/imgProds/Ajax.jpg",
   "category": "Futbol",
   "stock": 10,
-  "price": "$840.04"
+  "price": "840.04"
  },
  {
   "id": 14,
@@ -123,7 +123,7 @@
   "image": "/imgProds/interMilan.jpg",
   "category": "Futbol",
   "stock": 10,
-  "price": "$3108.94"
+  "price": "3108.94"
  },
  {
   "id": 15,
@@ -132,7 +132,7 @@
   "image": "/imgProds/acMilan.jpg",
   "category": "Futbol",
   "stock": 10,
-  "price": "$3100.17"
+  "price": "3100.17"
  },
  {
   "id": 16,
@@ -141,7 +141,7 @@
   "image": "/imgProds/Fiorentina.jpg",
   "category": "Futbol",
   "stock": 10,
-  "price": "$3325.32"
+  "price": "3325.32"
  },
  {
   "id": 17,
@@ -150,7 +150,7 @@
   "image": "/imgProds/asRoma.jpg",
   "category": "Futbol",
   "stock": 10,
-  "price": "$220.45"
+  "price": "220.45"
  },
  {
   "id": 18,
@@ -159,7 +159,7 @@
   "image": "/imgProds/manUnited.jpg",
   "category": "Futbol",
   "stock": 10,
-  "price": "$3722.30"
+  "price": "3722.30"
  },
  {
   "id": 19,
@@ -168,15 +168,23 @@
   "image": "/imgProds/ArsenalFc.jpg",
   "category": "Futbol",
   "stock": 10,
-  "price": "$2549.22"
+  "price": "2549.22"
  },
  {
   "id": 20,
   "name": "Benfica",
   "description": "Ultimo modelo de la camiseta del Benfica Football Club (Portugal)",
   "image": "/imgProds/benfica.jpg",
-  "category": "http://dummyimage.com/206x220.jpg/ff4444/ffffff",
+  "category": "Futbol",
   "stock": "10",
-  "price": "$2092.13"
+  "price": "2092.13"
+ },
+ {
+  "id": 21,
+  "name": "Hola ",
+  "description": "Probando si se ve las imagenes",
+  "category": "Golf",
+  "stock": "3",
+  "price": "53"
  }
 ]
