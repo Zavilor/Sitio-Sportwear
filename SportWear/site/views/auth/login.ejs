@@ -1,6 +1,7 @@
 <%- include('../partials/header'); %>
 <link rel="stylesheet" href="/stylesheets/login.css">
 
+<script src="/js/login.js"></script>
 <section class="todoLogIn">
    
     <div class="cajaLogIn">
@@ -21,23 +22,24 @@
         </div>
     
 
-        <form class="formulario" action="login" method="POST">
+        <form class="formulario formularioLogin" action="login" method="POST">
          <div class="logueo">
 
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-default" class="nombreLogIn">Email</span>
+                  <span class="input-group-text nombreLogIn" id="inputGroup-sizing-default">Email</span>
                 </div>
                 <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" class="inputCompletar"  type="email" class="email" id="email" name="email">
+                
             </div>
             
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-default" class="nombreLogIn">Contraseña</span>
+                  <span class="input-group-text nombreLogIn" id="inputGroup-sizing-default">Contraseña</i></span>
                 </div>
-                <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" class="inputCompletar" type="password" name="password" id="password" class="password">
+                <input type="password" class="form-control inputCompletar password verPassword" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="password" id="password" >
             </div>
-
+           
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="inputGroup-sizing-default" class="nombreLogIn">Recordarme</span>
@@ -56,7 +58,5 @@
 </section>
 
 <%- include('../partials/footer'); %>
-
-
 
 </div>
