@@ -1,0 +1,107 @@
+<%- include('../partials/header'); %>
+<link rel="stylesheet" href="/stylesheets/register.css">
+<section class="todoRegister">
+   
+    <section class="register">
+    <div class="tituloRegister">
+        <p><h1>Crear Perfil</h1></p>
+    </div>
+
+    <div>
+        <% if (typeof errors != 'undefined') { %>
+            <ul>
+            <% for (let i = 0; i < errors.length; i++) { %>
+                <li>
+                    <%= errors[i].msg %>
+                </li>
+                <% } %>
+            </ul>
+        <% } %>
+    </div>
+
+
+    <div class="cajaRegister">
+        <form class="formRegister" action="register" method="POST" enctype="multipart/form-data">          
+            <div>
+                <div class="input-group input-group-sm mb-3" class="formRegistro">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-sm">Nombre</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="text" class="nombreUsuario" id="nombre" name="name">
+                </div>
+                <!--<input class="inputCompletar" type="text" class="nombreUsuario" id="nombre" name="name" required>-->
+            </div>
+            
+            
+
+
+            <div>
+                <div class="input-group input-group-sm mb-3" class="formRegistro">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-sm">Apellido</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="text" class="apellido" id="apellido" name="apellido">
+                </div>
+                <!--<input class="inputCompletar" type="text" class="apellido" id="apellido" name="apellido"> -->
+            </div>
+            
+           
+            <div>
+                <div class="input-group input-group-sm mb-3" class="formRegistro">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-sm">Correo Electronico</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="email" class="email" id="email" name="email">
+                </div>
+                <!--<input class="inputCompletar" type="email" class="email" id="email" name="email"> -->
+            </div>
+           
+            
+
+            <div>
+                <div class="input-group input-group-sm mb-3" class="formRegistro">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-sm">Contraseña</span>
+                    </div>
+                    <input class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="password" id="password" name="password">
+                </div>
+                <!--<input class="inputCompletar" type="password" id="password" name="password"> -->
+            </div>
+            
+            
+
+            <div>
+                <div class="input-group input-group-sm mb-3" class="formRegistro">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-sm">Confirmar Contraseña</span>
+                    </div>
+                    <input class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="password" id="password" name="confirmarPassword">
+                </div>
+                <!--<input class="inputCompletar" type="password" id="password" name="confirmarPAssword">  -->
+            </div> 
+ 
+            <div class="form-group" class="formRegistro">
+                <label for="exampleFormControlFile1" class="avatar">Seleccionar Avatar</label>
+                <input  type="file" class="form-control-file" id="exampleFormControlFile1" type="file" name="avatar">
+            </div>
+            
+            <!--<div>
+                <p class="avatar"><label>Avatar</label></p>
+                <input type="file" name="avatar">
+            </div> -->
+
+            <div class="div-boton-reg">
+                <button type="submit" class="btn btn-info">Crear Cuenta</button>
+            </div>
+        </div>
+        <div class="botonesFacbookGoogle">
+            <div>
+                <button type="submit" class="btn btn-primary">Registrar con Facebook</button>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-success">Registrar con Google</button>
+            </div>
+        </div>
+    </form> 
+</section>
+</section>

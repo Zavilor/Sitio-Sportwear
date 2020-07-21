@@ -1,0 +1,109 @@
+/* ----Parte Uno ----*/
+
+header{
+  background-color: rgba(78, 162, 214, 0.753);
+  
+}
+.mainContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 5px; 
+  padding-bottom: 5px; 
+}
+
+.logo{
+  width: 15%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  flex-direction: row;  
+  margin-left: 2%;
+  font-size: larger;
+}
+
+.tituloHead{
+  display: none;
+}
+
+.buscador{
+  width: fit-content;
+  align-items: center;
+  flex-direction: column;
+}
+
+.buscadorChico{
+  flex-direction: column;
+ align-items: center;
+}
+
+.loginReg{
+  display: none
+}
+
+.dropdown {
+  display: flex;
+  justify-content: center;
+}
+  
+.barraSecuncadiaList{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: space-around;
+  flex-direction: row;
+  padding: auto 0; 
+}
+
+.barraSecundaria{
+  display: none;
+}
+
+@media(min-width : 426px){
+
+  .mainContainer{
+    flex-wrap: wrap;
+    padding-bottom: 0px; 
+  }
+
+  .barraInferior{
+    background-color: rgba(128, 208, 255, 0.753);
+    margin-top: 8px;
+  }
+
+  .loginReg{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    flex-direction:row;
+    margin-right: 2%;
+  }
+
+  .buscador{
+    width: 100%;
+  }
+
+  .dropdown {
+    display: none
+  }
+
+  .barraInferior{
+    width: 100%;
+  }
+
+  .barraSecundaria{
+    width: 100%;
+    display: flex;
+  }
+
+  .barraSecuncadiaList{
+    width: 100%;
+    justify-content: space-around
+  }
+
+  .tituloHead{
+    display: block;
+  }
+}
