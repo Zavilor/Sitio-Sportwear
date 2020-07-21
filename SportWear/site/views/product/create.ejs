@@ -4,15 +4,24 @@
    
    
     <div class="create">
-    
-    <form method="POST" action="/product">
+        <div>
+            <% if (typeof errors != 'undefined') { %>
+                <ul>
+                <% for (let i = 0; i < errors.length; i++) { %>
+                    <li>
+                        <%= errors[i].msg %>
+                    </li>
+                    <% } %>
+                </ul>
+            <% } %>
+        </div> 
+    <form method="POST" action="/product/create" enctype="multipart/form-data">
        
         <div class="form-group ">
-            <label class="" for="title">Nombre de producto</label>
+            <label class="" for="title">Nombre del producto</label>
             <input type="text" class="form-control" id="title" placeholder="Title" name="name">
         </div>
-    
-       
+
         <div class="form-group ">
             <label class="" for="title">Descripcion de producto</label>           
             <textarea name="description" id="description" class="form-control" rows="5" cols="10" placeholder= "Describa en breves palabras a su producto"></textarea>
@@ -21,13 +30,13 @@
        
         <div class="form-group ">
             <label class="" for="title">Imagen</label>
-            <input type="text" class="form-control" id="image" placeholder="Image" name="image">
+            <input type="file" class="form-control" id="image" placeholder="Image" name="image">
         </div>
 
 
         <div class="form-group ">
             <label class="" for="title">Categoria</label>
-            <select name="category" id="category" class="form-control">
+            <select name="category" id="category" class="form-control" >
                 <option value="">--Seleccione una categoría--</option>
                 <option value="Football">Futbol</option>
                 <option value="Hocky">Hockey</option>
@@ -39,14 +48,14 @@
 
         <div class="form-group ">
             <label class="" for="title">Cantidad</label>
-            <input type="text" class="form-control" id="title" placeholder="Indica la cantidad disponible" name="quantity">
+            <input type="number" class="form-control" id="title" placeholder="Indica la cantidad disponible" name="quantity">
             
         </div>
 
 
         <div class="form-group ">
             <label class="" for="title">Precio</label>
-            <input type="text" class="form-control" id="title" placeholder="Establece un precio acorde" name="price">
+            <input type="number" class="form-control" id="title" placeholder="Establece un precio acorde" name="price">
         </div>
 
 

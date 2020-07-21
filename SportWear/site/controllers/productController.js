@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { check, validationResult, body } = require('express-validator');
 const productData = require('../models/products');
 const fileData = path.join(__dirname, '../data/products.json');
 
@@ -17,23 +18,35 @@ module.exports = {
         res.render ('product/productCart')
     },
     
-    save: function (req, res){
+    save: function (req, res, next){
+
+        let errors= validationResult(req);
+
+        if (errors.isEmpty()) {
+
+            let image = '';
+            if (req.files[0]) {
+                image = '/imgProds/' + req.files.filename
+                console.log(image)
+            }
         
-        // Armamos el objeto literal
-        console.log(req.params);
+         // Armamos el objeto literal
+                    
+            let product = {
+                id: req.params.id,
+                name : req.body.name,
+                description : req.body.description,
+                image : image,
+                category : req.body.category,
+                stock : req.body.quantity,
+                price : req.body.price
+            } 
         
-        let product = {
-            id: req.params.id,
-            name : req.body.name,
-            description : req.body.description,
-            image : req.body.image,
-            category : req.body.category,
-            stock : req.body.quantity,
-            price : req.body.price
-        } 
-        
-        productData.create(product);
-        return res.redirect('/');
+            productData.create(product);
+            return res.redirect('/');
+        } else {
+            res.render('product/create', {errors: errors.errors})
+        }
     },
     
     productList: function (req, res) {

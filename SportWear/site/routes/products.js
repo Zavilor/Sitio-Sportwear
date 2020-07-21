@@ -1,5 +1,33 @@
 const express = require('express');
 const router = express.Router();
+const { check, validationResult, body } = require('express-validator')
+const prodCreate = require ('../middlewares/prodCreate')
+const path = require('path');
+const multer = require('multer');
+
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, './public/imgProds');
+        console.log(destination + 'este es el destino de la ruta');
+    },   
+    filename: function (req, file, cb) {
+        return cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+    }
+
+});
+  
+var upload = multer({ storage: storage,
+    fileFilter: (req, file, cb) => {
+        const fileTypes = ['jepg', 'jpg', 'png'];
+        const extname = path.extname(file.originalname);
+        if(fileTypes.includes(extname)) {
+            cb(null, true);
+        } else {
+            req.file = file;
+            cb(null, false);
+        }
+    } 
+});
 
 const controller = require('../controllers/productController');
 const publishMdw = require('../middlewares/publish')
@@ -23,7 +51,7 @@ router.get('/', controller.index);
 // Formulario de creacion de producto
 router.get('/create', publishMdw, controller.create);
 // Guardamos la publicación
-router.post('/', controller.save);
+router.post('/create', upload.any(), prodCreate, controller.save);
 
 // Nos muestra el detalle del producto que llega por parametro
 router.get('/:id?', controller.detail);

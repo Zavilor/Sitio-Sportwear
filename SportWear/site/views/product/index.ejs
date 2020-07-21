@@ -21,7 +21,7 @@
 
                 <div class="productImagen">
                     <a href="/product/<%= products.id %>">  
-                        <img src= "/imagenes/botines-nemeziz.jpg" class="productImages" alt="...">
+                        <img src= "<%= products.image %>" class="productImages" alt="...">
                 </div>
                 
                 <div class="productList">
@@ -30,7 +30,7 @@
                         <p class="prodName"><%= products.name %></p>                      
                     </div>
                     <div class="precioProducto">
-                        <p class="prodPrice">Precio : <%= products.price %></p>
+                        <p class="prodPrice">Precio : $<%= products.price %></p>
                     </div> 
                     <div class= "buttonsProductList">
                         <button type="submit" class="btn btn-secondary">Añadir al Carrito</button>
