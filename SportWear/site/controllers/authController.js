@@ -38,26 +38,8 @@ module.exports = {
                 req.session.userEmail = user.email;
                 //enviar a otro html que se registro exitosamente
                 res.redirect('/auth/profile')
-            } else {
-                
-            }
-            
-            /* ACA BORRE ALGO QUE COPIE DEL ARCHIVO DE DIGITAL MOVIES XQ HAY UN "THEN" QUE NO ANDA
-            .catch(function(error){
-                console.error(error);
-                //TO-DO make error general in an div, res.locals....
-                return res.redirect('/auth/register', {errors: errors.errors})
-            })*/
-            //.then(function(){
-            //TODO: que logee al usuario y muestre la pagina del perfil
-            //res.locals.logeado = true;
-            //req.session.logeado = true;
-            //req.session.userEmail = user.email;
-            
-            //res.send('Usuario ' + req.body.name + ' registrado con exito');
-            //res.redirect('/profile')
-            //})
-            
+            }             
+                   
         } else {
             res.render('auth/register', {errors: errors.errors})
         }
@@ -121,8 +103,5 @@ module.exports = {
         res.render('auth/profile', { userLogeado : userLogeado });
     }
     
-    /*profile : (req, res) => {
-        res.render('../../site/views/auth/profile');
-    }*/
 }
 
