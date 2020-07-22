@@ -9,15 +9,6 @@
   "price": "260.77"
  },
  {
-  "id": 2,
-  "name": "Atlético Madrid",
-  "description": "Ultimo modelo de la camiseta del Atlético de Madrid Club de Futbol (España)",
-  "image": "/imgProds/AtlMadrid.jpg",
-  "category": "Futbol",
-  "stock": 10,
-  "price": "954.62"
- },
- {
   "id": 3,
   "name": "Barcelona",
   "description": "Ultimo modelo de la camiseta del Barcelona Club de Futbol (España)",
@@ -186,5 +177,14 @@
   "category": "Golf",
   "stock": "3",
   "price": "53"
+ },
+ {
+  "id": 2,
+  "name": "Atlético Madrid",
+  "description": "Ultimo modelo de la camiseta del Atlético de Madrid Club de Futbol (España) ",
+  "image": "/imgProds/AtlMadrid.jpg",
+  "category": "/imgProds/AtlMadrid.jpg",
+  "stock": "10",
+  "price": "954.62"
  }
 ]

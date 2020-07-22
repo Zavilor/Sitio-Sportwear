@@ -6,5 +6,4 @@ check('name').notEmpty().withMessage('El producto debe tener un nombre'),
 check('description').notEmpty().withMessage('El producto debe contar con una descripcion'),
 check('quantity').notEmpty().withMessage('Debe especificar el stock disponible'),
 check('price').notEmpty().withMessage('El producto a vender debe tener un precio')
-
 ]

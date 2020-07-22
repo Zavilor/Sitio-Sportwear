@@ -1,20 +1,21 @@
 <%- include('../partials/header'); %> 
 
 <link rel="stylesheet" href='/stylesheets/productAdd.css'>
+<script src="/js/create.js"></script>
 
 <div class="global">
     
     <h1></h1>
-    <form action="/product/<%= product.id %>?_method=PUT" method="POST">
+    <form action="/product/<%= product.id %>?_method=PUT" method="POST" class="formCreate">
         <h3>Editar Producto <%= product.id %></h3>   
         <div class="form-group ">
             <label class="" for="title">Nombre de producto</label>
-            <input type="text" class="form-control" id="title" placeholder="Title" name="name" value="<%= product.name %>">
+            <input type="text" class="form-control nombreProdCreate" id="title" placeholder="Title" name="name" value="<%= product.name %>">
         </div>
         
         <div class="form-group ">
             <label class="" for="title">Descripcion de producto</label>           
-            <textarea name="description" id="" cols="10" rows="5" class="form-control"><%= product.description %></textarea>
+            <textarea name="description" id="" cols="10" rows="5" class="form-control descrProdCreate"><%= product.description %></textarea>
         </div>
         
         <div class="form-group ">
@@ -24,7 +25,7 @@
         
         <div class="form-group ">
             <label class="" for="title">Categoria</label>
-            <select name="category" id="category" class="form-control">
+            <select name="category" id="category" class="form-control categoriaProd">
                 <option value="<%= product.image %>"><%= product.category %></option>
                 <option value="Hocky">Hockey</option>
                 <option value="Tennis">Tenis</option>
@@ -34,12 +35,12 @@
         
         <div class="form-group ">
             <label class="" for="title">Cantidad disponible</label>
-            <input type="text" class="form-control" id="image" name="stock" value="<%= product.stock %>">
+            <input type="text" class="form-control cantProdCreate" id="image" name="stock" value="<%= product.stock %>">
         </div>
         
         <div class="form-group ">
             <label class="" for="title">Precio</label>
-            <input type="text" class="form-control" id="image" name="price" value="<%= product.price %>">
+            <input type="text" class="form-control  precioProdCreate" id="image" name="price" value="<%= product.price %>">
             
         </div>
         

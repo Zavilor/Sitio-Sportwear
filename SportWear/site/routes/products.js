@@ -49,7 +49,7 @@ router.use( function( req, res, next ) {
 router.get('/', controller.index);
 
 // Formulario de creacion de producto
-router.get('/create', publishMdw, controller.create);
+router.get('/create', publishMdw,  controller.create);
 // Guardamos la publicación
 router.post('/create', upload.any(), prodCreate, controller.save);
 
@@ -57,7 +57,7 @@ router.post('/create', upload.any(), prodCreate, controller.save);
 router.get('/:id?', controller.detail);
 
 // Nos lleva al formulario de edición del producto que mandemos por parametro
-router.get('/:id/edit', publishMdw, controller.edit);
+router.get('/:id/edit', /*publishMdw,*/ controller.edit);
 // Actualizar el producto editado
 router.put('/:id', controller.update);
 

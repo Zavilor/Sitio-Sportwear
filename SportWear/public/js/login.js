@@ -3,7 +3,7 @@ window.addEventListener('load', function(){
     //agrego esa clase al form login del ejs(formularioLogin)
     
     let campoEmail = formularioLogin.querySelector('input.email');
-    let campoPass = formularioLogin.querrySelector('input.verPassword');
+    let campoPass = formularioLogin.querySelector('input.password');
     //toma el input con id =email/password
 
     formularioLogin.onsubmit = function (event) {
@@ -20,11 +20,8 @@ window.addEventListener('load', function(){
         alert('email invalido')
         //mensaje de error
         }
-    
-    
-    let verPassword = formularioLogin.querySelector('.verPassword')
 
-     if (verPassword.value.length < 5){
+     if (campoPass.value.length < 5){
          event.preventDefault();
          campoPass.classList.add('is-invalid');
          alert('la contraseña debe tener al menos 5 caracteres')
