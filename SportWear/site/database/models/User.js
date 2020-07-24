@@ -31,10 +31,10 @@ module.exports = (sequelize, DataTypes) => {
     
     User.associate = function(models) {
         // associations can be defined here
-        User.belongsTo(models.Rol, {
+        /*User.belongsTo(models.Rol, {
             as : "rol",
             foreingKey : "idRol"
-        });
+        });*/
     };
     
     return User;

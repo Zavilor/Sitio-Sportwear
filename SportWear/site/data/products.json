@@ -9,15 +9,6 @@
   "price": "260.77"
  },
  {
-  "id": 3,
-  "name": "Barcelona",
-  "description": "Ultimo modelo de la camiseta del Barcelona Club de Futbol (España)",
-  "image": "/imgProds/fcbarc.jpg",
-  "category": "Futbol",
-  "stock": 10,
-  "price": "3067.19"
- },
- {
   "id": 4,
   "name": "Liverpool",
   "description": "Ultimo modelo de la camiseta del Liverpool Football Club (Inglaterra)",
@@ -99,15 +90,6 @@
   "price": "3024.23"
  },
  {
-  "id": 13,
-  "name": "Ajax",
-  "description": "Ultimo modelo de la camiseta del Ajax Football Club (Holanda)",
-  "image": "/imgProds/Ajax.jpg",
-  "category": "Futbol",
-  "stock": 10,
-  "price": "840.04"
- },
- {
   "id": 14,
   "name": "Inter de Milán",
   "description": "Ultimo modelo de la camiseta del Inter de Milán Football Club (Italia)",
@@ -115,15 +97,6 @@
   "category": "Futbol",
   "stock": 10,
   "price": "3108.94"
- },
- {
-  "id": 15,
-  "name": "AC Milán",
-  "description": "Ultimo modelo de la camiseta del AC de Milán Football Club (Italia)",
-  "image": "/imgProds/acMilan.jpg",
-  "category": "Futbol",
-  "stock": 10,
-  "price": "3100.17"
  },
  {
   "id": 16,
@@ -186,5 +159,29 @@
   "category": "/imgProds/AtlMadrid.jpg",
   "stock": "10",
   "price": "954.62"
+ },
+ {
+  "id": 15,
+  "name": "AC Milán",
+  "description": "Ultimo modelo de la camiseta del AC de Milán Football Club (Italia)",
+  "image": "/imgProds/acMilan.jpg",
+  "stock": "",
+  "price": "4160"
+ },
+ {
+  "id": 3,
+  "name": "Barcelona",
+  "description": "Ultimo modelo de la camiseta del Barcelona Club de Futbol (España)",
+  "image": "/imgProds/fcbarc.jpg",
+  "stock": "",
+  "price": "3782.13"
+ },
+ {
+  "id": 13,
+  "name": "Ajax Fc",
+  "description": "Ultimo modelo de la camiseta del Ajax Football Club (Holanda)",
+  "image": "/imgProds/Ajax.jpg",
+  "stock": "",
+  "price": "6120.72"
  }
 ]

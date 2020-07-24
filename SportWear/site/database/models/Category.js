@@ -3,14 +3,14 @@ module.exports = (sequelize, DataTypes) => {
     
     const Category = sequelize.define('Category', {
         
-        idCategory: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            autoIncrement: true
-        },
         description: {
             type: DataTypes.STRING(20)
-        }
+        },
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+        },
+        
     },
     
     {
@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
         // associations can be defined here
         Category.hasMany(models.Product, {
             as : "Products",
-            foreingKey : "idCategory"
+            foreignKey : "idCategory"
         });
     };
     

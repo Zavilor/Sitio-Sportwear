@@ -20,10 +20,10 @@ module.exports = (sequelize, DataTypes) => {
     
     Rol.associate = function(models) {
         // associations can be defined here
-        Rol.hasMany(models.User, {
+        /*Rol.hasMany(models.User, {
             as : "Users",
             foreingKey : "idRol"
-        });
+        });*/
     };
     
     return Rol;

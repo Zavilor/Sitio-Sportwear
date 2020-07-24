@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
     
     ShoppingCart.associate = function(models) {
         // associations can be defined here
-        ShoppingCart.belongsTo(models.User, {
+        /*ShoppingCart.belongsTo(models.User, {
             as : "idUser",
             foreingKey : "idUser"
         });
@@ -39,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
             foreingKey : "idProducts",
             otherKey : "idShoppingCart",
             timestamps : false
-        });
+        });*/
     };
     
     return ShoppingCart;

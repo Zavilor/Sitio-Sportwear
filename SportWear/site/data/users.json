@@ -68,5 +68,37 @@
   "email": "ee@ee.com",
   "password": "$2b$05$h/hCN6K0V/AV1O2grhKOmuZ74DwFAAqSOzAe4kRRkEEgVPUA8Fu7m",
   "id": 9
+ },
+ {
+  "name": "juan",
+  "apellido": "asd",
+  "email": "j@j.com",
+  "password": "$2b$05$FiphYThK.RHkSzE60Hfr5OxnE0ktE3/WQxVTJCUES1rCLqOYF1upG",
+  "avatar": "/imgUsers/avatar-1595540173166.jpg",
+  "id": 10
+ },
+ {
+  "name": "Testing",
+  "apellido": "asd",
+  "email": "d@d.com",
+  "password": "$2b$05$b9IBrs5F/AKFPKfM0HelXecYzcj76PCC5277LZPGJGFExiTRsbL/G",
+  "avatar": "",
+  "id": 11
+ },
+ {
+  "name": "testing2",
+  "apellido": "asd",
+  "email": "asdd@asdd.com",
+  "password": "$2b$05$ZAc4BdPWXXrRRB2koZPA3ubUn64674.qljTZVY5HyL03m4Lnh4v.K",
+  "avatar": "",
+  "id": 12
+ },
+ {
+  "name": "ultimoTest",
+  "apellido": "asdads",
+  "email": "k@d.com",
+  "password": "$2b$05$7k/qEBBZT4x8cPkaB8KKB.Jc2Z3DpVVr0dUa8RQDS3.n6BPkA8tE.",
+  "avatar": "/imgUsers/avatar-1595540600275.pdf",
+  "id": 13
  }
 ]

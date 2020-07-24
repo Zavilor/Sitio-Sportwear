@@ -24,34 +24,35 @@
         </div>
         
         <div class="form-group ">
-            <label class="" for="title">Categoria</label>
-            <select name="category" id="category" class="form-control categoriaProd">
-                <option value="<%= product.image %>"><%= product.category %></option>
-                <option value="Hocky">Hockey</option>
-                <option value="Tennis">Tenis</option>
-                <option value="Golf">Golf</option>
-            </select>
-        </div>
-        
-        <div class="form-group ">
-            <label class="" for="title">Cantidad disponible</label>
-            <input type="text" class="form-control cantProdCreate" id="image" name="stock" value="<%= product.stock %>">
-        </div>
-        
-        <div class="form-group ">
-            <label class="" for="title">Precio</label>
-            <input type="text" class="form-control  precioProdCreate" id="image" name="price" value="<%= product.price %>">
+            <label class="" for="category">Categoria</label>
+            <select name="idCategory" id="categoria" class="form-control categoriaProd">
+                <option value="">--Seleccione--</option>></option>
+                <% for(let categoria of category) { %>
+                    <option value="<%= categoria.id %>"
+                        <% if (product.idCategory == categoria.id) {%> selected <% } %>><%= categoria.description %></option>
+                    <% } %> 
+                </select>
+            </div>
             
-        </div>
-        
-        <div class="botones-product-add">
+            <div class="form-group ">
+                <label class="" for="title">Cantidad disponible</label>
+                <input type="text" class="form-control cantProdCreate" id="image" name="stock" value="<%= product.stock %>">
+            </div>
             
-            <button type="submit" class="btn btn-success" value="Update">Editar Publicación</button>
+            <div class="form-group ">
+                <label class="" for="title">Precio</label>
+                <input type="text" class="form-control  precioProdCreate" id="image" name="price" value="<%= product.price %>">
+                
+            </div>
             
-            <button type="reset" class="btn btn-secondary">Resetear campos</button>
-        </div>
+            <div class="botones-product-add">
+                
+                <button type="submit" class="btn btn-success" value="Update">Editar Publicación</button>
+                
+                <button type="reset" class="btn btn-secondary">Resetear campos</button>
+            </div>
+            
+            
+        </form>
         
-        
-    </form>
-
-     <a class="btn btn-danger" href="/product/<%= product.id %>?_method=DELETE">Eliminar</a>
+        <a class="btn btn-danger" href="/product/<%= product.id %>?_method=DELETE">Eliminar</a>

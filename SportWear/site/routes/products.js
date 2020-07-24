@@ -57,7 +57,7 @@ router.post('/create', upload.any(), prodCreate, controller.save);
 router.get('/:id?', controller.detail);
 
 // Nos lleva al formulario de edición del producto que mandemos por parametro
-router.get('/:id/edit', /*publishMdw,*/ controller.edit);
+router.get('/:id/edit', publishMdw, controller.formEdit);
 // Actualizar el producto editado
 router.put('/:id', controller.update);
 

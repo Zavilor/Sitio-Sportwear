@@ -28,7 +28,7 @@ module.exports = {
                 apellido: req.body.apellido,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 5),
-                //avatar: avatar
+                avatar: avatar
             }            
             userData.create(user)
             if (user) {

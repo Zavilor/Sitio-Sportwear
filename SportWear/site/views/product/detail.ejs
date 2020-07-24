@@ -7,7 +7,7 @@
     <div class="product-detail-container">
         <div class="product-detail-container-left">
             
-            <img class= "prodImg" src= <%= product.image %> class="productImages" alt="..." style="padding-right: 20px;";>
+            <img class= "prodImg" src= "<%= product.image %>" class="productImages" alt="..." style="padding-right: 20px;";>
             
         </div>
         
@@ -19,7 +19,7 @@
            
             <div class="precioProducto">
                 <h2>Precio</h2>
-                <h3><%= product.price %></h3>
+                <h3>$<%= product.price %></h3>
             </div>
             
             <div class="detallesProdDetail">

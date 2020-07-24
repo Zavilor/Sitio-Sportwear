@@ -20,10 +20,10 @@ module.exports = (sequelize, DataTypes) => {
     
     Size.associate = function(models) {
         // associations can be defined here
-        Size.hasMany(models.CartProduct, {
+        /*Size.hasMany(models.CartProduct, {
             as : "CartProduct",
             foreingKey : "idSize"
-        });
+        });*/
     };
     
     return Size;
