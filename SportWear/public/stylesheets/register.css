@@ -25,7 +25,7 @@
   
 }
 
-.btn  {
+.btnReg  {
   margin: 3px;
   width: 80%;
   margin-left: 10%;
@@ -43,7 +43,7 @@
     font-size: 30px;
   }
 
-  .btn {
+  .btnReg {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
@@ -70,7 +70,7 @@
     font-size: 30px;
   }
 
-  .btn {
+  .btnReg {
     width: 60%;
     margin-left: 20%;
     margin-right: 20%;
@@ -97,96 +97,10 @@
     font-size: 30px;
   }
 
-  .btn {
+  .btnReg {
     width: 60%;
     margin-left: 20%;
     margin-right: 20%;
 
   } 
 }
-
-
-
-
-
-/* REGISTER ------------------------ 
-
-.todoRegister{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    top: 50px;
-    height: 78%;
-    width: 100%;
-    
-  }
-  
-  .tituloRegister{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom:18px;
-    
-  }
-  
-  .cajaRegister{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: flex-end;
-    flex-direction: row;
-    justify-content: center; 
-    border: solid black 1px;
-    border-radius: 5px;
-    align-self: center;
-    padding: 10px;
-    background-color: whitesmoke;
-  }
-  
-  .nombreReg{
-    text-align: center;
-    position: relative;
-    bottom: -10px;
-  }
-  
-  .botonRegistro{
-    margin-top: 7px ;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .div-boton-reg{
-    text-align: center;
-  }
-  
-  .inputCompletar{
-    border-radius: 5px
-  }
-  
-  .botonesFacbookGoogle{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-  }
-  
-  .regFacebook {
-    margin: 5px;
-    margin-top: 10px;
-    width: 150px;
-  }
-  
-  .regGoogle{
-    margin: 5px;
-    margin-top: 10px;
-    width: 150px;
-  }
-  
-  
-  
-  .dropdown {
-    display:none;
-  }
-  */

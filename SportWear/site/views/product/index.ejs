@@ -33,10 +33,10 @@
                         <p class="prodPrice">Precio : $<%= products.price %></p>
                     </div> 
                     <div class= "buttonsProductList">
-                        <button type="submit" class="btn btn-secondary">Añadir al Carrito</button>
-                        <button type="submit" class="btn btn-success" >Comprar Ahora</button>
+                        <button type="submit" class="btnProdList btn btn-secondary">Añadir al Carrito</button>
+                        <button type="submit" class="btnProdList btn btn-success" >Comprar Ahora</button>
                         <% if (locals.logeado) {%>
-                        <a class="btn btn-link" href="/product/<%= products.id %>/edit">Editar</a>
+                        <a class="btnProdList btn btn-link" href="/product/<%= products.id %>/edit">Editar</a>
                         <% } %>                                              
                     </div>
 

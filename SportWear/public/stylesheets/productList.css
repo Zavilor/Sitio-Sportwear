@@ -51,11 +51,12 @@ p.prodName{
    font-size: 20px;
  }
 
- .btn{
+ .btnProdList{
   justify-content: space-between; 
   width: 80%;
   margin : 1vh 10%
 }
+ 
 
 
  @media (min-width : 426px){

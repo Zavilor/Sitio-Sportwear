@@ -16,6 +16,7 @@
     <header class="header">
         
         <section class="mainContainer">
+        
             
             <div class="logo">               
                     <a href="/" ><i class="fab fa-stripe-s"></i></a>
@@ -42,7 +43,7 @@
 
                 <% if (locals.logeado) {%>
                     <div class="botonLogReg">
-                        <button><a  href="/auth/profile">Perfil</a></button>
+                        <button ><a  href="/auth/profile">Perfil</a></button>
                     </div>
 
                     <div class="botonLogReg">
@@ -56,19 +57,14 @@
                     
                 <% } else { %>
                     <div class="botonesLogReg">
-                        <button class="botonLogRed"><a href="/auth/login">LogIn</a></button>
+                        <button class="botonLogRed btn btn-secondary"><a href="/auth/login">LogIn</a></button>
                     </div>
                     <div class="botonesLogReg">
-                        <button><a href="/auth/register">Registro</a></button>
+                        <button class=" botonLogRed btn btn-secondary" ><a href="/auth/register">Registro</a></button>
                     </div>
                 <% } %>
-                        
-            
-                            
+                                                   
             </div>
-                    
-      
-                    
 
             <section class="barraInferior">
 
