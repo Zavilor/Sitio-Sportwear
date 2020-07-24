@@ -211,10 +211,11 @@ module.exports = {
             
             let image = '';
             if (req.files[0]) {
-                image = '/imgProds/' + req.files.filename
+                //image = '/imgProds/' + req.files.filename
+                image = req.files[0].path.replace('public\\imgUsers\\','/imgUsers/')
                 console.log(image)
             }
-            
+                        
             // Armamos el objeto literal
             
             let product = {

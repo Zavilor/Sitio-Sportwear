@@ -6,7 +6,7 @@
 <div class="global">
     
     <h1></h1>
-    <form action="/product/<%= product.id %>?_method=PUT" method="POST" class="formCreate">
+    <form action="/product/<%= product.id %>?_method=PUT" method="POST" class="formCreate" enctype="multipart/form-data">
         <h3>Editar Producto <%= product.id %></h3>   
         <div class="form-group ">
             <label class="" for="title">Nombre de producto</label>
@@ -20,7 +20,7 @@
         
         <div class="form-group ">
             <label class="" for="title">Imagen</label>
-            <input type="text" class="form-control" id="image" placeholder="Image" name="image" value="<%= product.image %>">
+            <input type="file" class="form-control" id="image" placeholder="Image" name="image" value="<%= product.image %>" accept="image/x-png,image/gif,image/jpeg, image/jpg">
         </div>
         
         <div class="form-group ">

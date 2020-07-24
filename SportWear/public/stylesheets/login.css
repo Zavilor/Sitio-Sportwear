@@ -1,3 +1,9 @@
+a.reg{
+  color: blue;
+  text-decoration: underline;
+}
+
+
 .todoLogIn{
   width: 100%;
   height: 100vh;

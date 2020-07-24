@@ -100,5 +100,21 @@
   "password": "$2b$05$7k/qEBBZT4x8cPkaB8KKB.Jc2Z3DpVVr0dUa8RQDS3.n6BPkA8tE.",
   "avatar": "/imgUsers/avatar-1595540600275.pdf",
   "id": 13
+ },
+ {
+  "name": "Santi",
+  "apellido": "Lago",
+  "email": "s.lagocurretti@gmail.com",
+  "password": "$2b$05$SHmUEiG3fGhxRoZf7JoVu.Ov0fTV1kZexiMGcIN5N.QxS.6nDnu.m",
+  "avatar": "/imgUsers/avatar-1595604235778.jpg",
+  "id": 14
+ },
+ {
+  "name": "Santi",
+  "apellido": "Lago",
+  "email": "gg@gg.com",
+  "password": "$2b$05$pMrSjGS0YDWdsuYRHkklVOaPvuehBSll2QHr4P7IFQ6KkeZO1VyUS",
+  "avatar": "",
+  "id": 15
  }
 ]

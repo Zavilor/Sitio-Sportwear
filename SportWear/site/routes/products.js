@@ -16,18 +16,22 @@ var storage = multer.diskStorage({
 
 });
   
-var upload = multer({ storage: storage,
+const upload = multer({
+    storage: storage,
     fileFilter: (req, file, cb) => {
-        const fileTypes = ['jepg', 'jpg', 'png'];
-        const extname = path.extname(file.originalname);
-        if(fileTypes.includes(extname)) {
+        const acceptedExtensions = ['.jpg', '.jpeg', '.png'];
+        const ext = path.extname(file.originalname);
+        if (acceptedExtensions.includes(ext)){
+            //si es correcto subo la imagen
             cb(null, true);
         } else {
+            //aqui guardo la imagen en el body
             req.file = file;
+            //le digo que no la suba
             cb(null, false);
         }
-    } 
-});
+     }
+  })
 
 const controller = require('../controllers/productController');
 const publishMdw = require('../middlewares/publish')
@@ -59,7 +63,7 @@ router.get('/:id?', controller.detail);
 // Nos lleva al formulario de edición del producto que mandemos por parametro
 router.get('/:id/edit', publishMdw, controller.formEdit);
 // Actualizar el producto editado
-router.put('/:id', controller.update);
+router.put('/:id', upload.any(), controller.update); //ESTA RUTA NO TIENE QUE SER /:ID/EDIT COMO LA DEL GET???
 
 // Eliminar el producto que mandamos por parametro
 router.delete('/:id', controller.delete);
