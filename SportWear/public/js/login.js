@@ -25,25 +25,20 @@ window.addEventListener('load', function(){
          event.preventDefault();
          campoPass.classList.add('is-invalid');
          alert('la contraseña debe tener al menos 5 caracteres')
-     }       
-   /* 
-    verPassword.onmousedown = () => {
-        campoPass.type = 'text';
-    }   
-    verPassword.onmouseup = () => {
-        campoPass.type = 'password';
-    }   
+     }
+  
+/*
+     let verPass = formularioLogin.querySelector('#pass-mostrar');
+     
+     verPass.onclick = function(){
+         if (verPassword.contains('password')){
+            campoPass.type = 'text';
+         }else{
+            campoPass.type = 'password';
+         }
 
-
-   verPassword.onclick = function() {
-
-    if (campoPass.type.contains("password")){        
-        campoPass.type.toggle('text')
-    }else{
-        campoPass.classList.toggle('password')
-        }
-    }
-    */
+     }
+*/
     }
 })
 

@@ -24,8 +24,14 @@
   background-color: white; 
 }
 
+.btnEliminar{
+  margin-top: 5px;
+}
+
 
 @media (min-width : 426px){
   
 }
+
+
 

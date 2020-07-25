@@ -63,12 +63,6 @@ display: none
   display: none;
 }
 
-.btn-light{
-  box-sizing: content-box;
-  color: white;
-}
-
-
 
 @media(min-width : 426px){
 

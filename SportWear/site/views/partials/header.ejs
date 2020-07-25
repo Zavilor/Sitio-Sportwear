@@ -43,16 +43,16 @@
 
                 <% if (locals.logeado) {%>
                     <div class="botonLogReg">
-                        <button ><a  href="/auth/profile">Perfil</a></button>
+                        <button class="botonLogRed btn btn-secondary" ><a  href="/auth/profile">Perfil</a></button>
                     </div>
 
                     <div class="botonLogReg">
                         <form class="formulario" action="/auth/LogOut" method="POST">
-                            <button type="submit" class="ConfLogIn" >LogOut</button>
+                            <button type="submit" class=" botonLogRed btn btn-secondary" >LogOut</button>
                         </form>                        
                     </div>
                     <div class="botonLogReg">
-                        <button><a href="/cart/index"><i class="fas fa-shopping-cart"></i></a></button>
+                        <button class="ConfLogInbotonLogRed btn btn-secondary"><a href="/cart/index"><i class="fas fa-shopping-cart"></i></a></button>
                     </div>
                     
                 <% } else { %>

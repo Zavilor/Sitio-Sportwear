@@ -1,7 +1,11 @@
 <%- include('../partials/header'); %> 
 
-<link rel="stylesheet" href='/stylesheets/productAdd.css'>
+<link rel="stylesheet" href='/stylesheets/productAddEdit.css'>
 <script src="/js/create.js"></script>
+
+<section class="todoCreate">
+
+    <div class="create">
 
 <div class="global">
     
@@ -55,4 +59,8 @@
             
         </form>
         
-        <a class="btn btn-danger" href="/product/<%= product.id %>?_method=DELETE">Eliminar</a>
+        <a class="btnEliminar btn btn-danger" href="/product/<%= product.id %>?_method=DELETE">Eliminar</a>
+
+    </div>
+    
+    </section>
