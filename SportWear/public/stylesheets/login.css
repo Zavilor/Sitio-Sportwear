@@ -59,6 +59,10 @@ a.reg{
   }
 }
 
+#hide1{
+  display: none;
+}
+
 @media(min-width: 469px){
   .cajaLogIn{
     width: 60%;

@@ -43,24 +43,24 @@
                     
                     <% if (locals.logeado) {%>
                         <div class="botonLogReg">
-                            <button class="botonLogRed btn btn-secondary" ><a  href="/auth/profile">Perfil</a></button>
+                            <button class="botonLogRed btn btn-secondary" ><a class="btnColor"  href="/auth/profile">Perfil</a></button>
                         </div>
                         
                         <div class="botonLogReg">
                             <form class="formulario" action="/auth/LogOut" method="POST">
-                                <button type="submit" class=" botonLogRed btn btn-secondary" >LogOut</button>
+                                <button type="submit" class=" botonLogRed btn btn-secondary">LogOut</button>
                             </form>                        
                         </div>
                         <div class="botonLogReg">
-                            <button class="ConfLogInbotonLogRed btn btn-secondary"><a href="/cart/index"><i class="fas fa-shopping-cart"></i></a></button>
+                            <button class="botonLogRed btn btn-secondary"><a a class="btnColor" href="/cart/index"><i class="fas fa-shopping-cart"></i></a></button>
                         </div>
                         
                         <% } else { %>
                             <div class="botonesLogReg">
-                                <button class="botonLogRed btn btn-secondary"><a href="/auth/login">LogIn</a></button>
+                                <button class="botonLogRed btn btn-secondary"><a a class="btnColor" href="/auth/login">LogIn</a></button>
                             </div>
                             <div class="botonesLogReg">
-                                <button class=" botonLogRed btn btn-secondary" ><a href="/auth/register">Registro</a></button>
+                                <button class=" botonLogRed btn btn-secondary" ><a a class="btnColor" href="/auth/register">Registro</a></button>
                             </div>
                             <% } %>
                             

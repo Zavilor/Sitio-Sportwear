@@ -1,6 +1,7 @@
 
 .todoCreate{
   width: 100%;
+  height: max-content;
   display: flex;
   flex-wrap: wrap;
   background-image: url(../imagenes/fondo.jpeg);

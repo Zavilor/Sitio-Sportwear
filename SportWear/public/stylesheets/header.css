@@ -84,8 +84,17 @@ display: none
     flex-direction: row;
   }
 
-  .botonLogRed{
+  button.botonLogRed{
     margin: 2px;
+    
+  }
+
+  a.btnColor{
+    color: white;
+  }
+
+  a.btnColor:hover{
+    color: white;
   }
 
   .buscador{

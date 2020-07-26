@@ -25,21 +25,61 @@ window.addEventListener('load', function(){
          event.preventDefault();
          campoPass.classList.add('is-invalid');
          alert('la contraseña debe tener al menos 5 caracteres')
-     }
-  
-/*
-     let verPass = formularioLogin.querySelector('#pass-mostrar');
-     
-     verPass.onclick = function(){
-         if (verPassword.contains('password')){
-            campoPass.type = 'text';
-         }else{
-            campoPass.type = 'password';
-         }
-
-     }
-*/
+        }
     }
+
+
+    
+    let passMostrar = formularioLogin.querySelector('#pass-mostrar');
+    
+    passMostrar.onmousedown  = () => {
+        campoPass.type = 'text';
+    }
+    passMostrar.onmouseup = () => {
+        campoPass.type = 'password';
+    }
+
+
 })
 
+/*
+let passMostrar = formularioLogin.querySelector('#pass-mostrar');
+    let eyeOn = formularioLogin.getElementById('hide1')
+    let eyeOff = formularioLogin.getElementById('hide2')
 
+    
+    passMostrar.onclick  = () => {
+    
+        if(login.type == 'password'){
+            campoPass.type ='text';
+            eyeOn.style.display = "block";
+            eyeOff.style.display = 'none';
+        }else{
+            campoPass.type ='password';
+            eyeOn.style.display = "none";
+            eyeOff.style.display = 'block';
+            }
+    }
+
+
+-------------------------------
+
+
+let login = formularioLogin.getElementById('inputPassword')
+let eyeOn = formularioLogin.getElementById('hide1')
+let eyeOff = formularioLogin.getElementById('hide2')
+
+formularioLogin.onclick = function(){      
+
+    if(login.type === 'password'){
+    login.type ='text';
+    eyeOn.style.display = "block";
+    eyeOff.style.display = 'none';
+}else{
+    login.type ='password';
+    eyeOn.style.display = "none";
+    eyeOff.style.display = 'block';
+    }
+}
+
+*/
