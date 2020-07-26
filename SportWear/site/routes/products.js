@@ -7,8 +7,7 @@ const multer = require('multer');
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, './public/imgProds');
-        console.log(destination + 'este es el destino de la ruta');
+        cb(null, '../public/imgProds');
     },   
     filename: function (req, file, cb) {
         return cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
@@ -53,9 +52,9 @@ router.use( function( req, res, next ) {
 router.get('/', controller.index);
 
 // Formulario de creacion de producto
-router.get('/create', publishMdw,  controller.create);
+router.get('/create', publishMdw,  controller.formCreate);
 // Guardamos la publicación
-router.post('/create', upload.any(), prodCreate, controller.save);
+router.post('/create', upload.any(), prodCreate, controller.create);
 
 // Nos muestra el detalle del producto que llega por parametro
 router.get('/:id?', controller.detail);
@@ -63,7 +62,7 @@ router.get('/:id?', controller.detail);
 // Nos lleva al formulario de edición del producto que mandemos por parametro
 router.get('/:id/edit', publishMdw, controller.formEdit);
 // Actualizar el producto editado
-router.put('/:id', upload.any(), controller.update); //ESTA RUTA NO TIENE QUE SER /:ID/EDIT COMO LA DEL GET???
+router.put('/:id', upload.any(), controller.update); 
 
 // Eliminar el producto que mandamos por parametro
 router.delete('/:id', controller.delete);

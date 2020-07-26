@@ -13,7 +13,7 @@ module.exports = {
         
         let products = []
         
-        if (req.query) {
+        if (req.query.busqueda) {
             
             db.Product.findAll({
                 
@@ -24,7 +24,7 @@ module.exports = {
                 
                 where : {
                     name : {
-                        [Op.like] : '%' + /*req.query.busqueda +*/ '%'
+                        [Op.like] : '%' + req.query.busqueda + '%'
                     }
                 },
                 order : [
@@ -40,7 +40,7 @@ module.exports = {
         } else {
             
             let offset = 0;
-            let limit = 6;
+            let limit = 30;
             //si me mandan la pagina entonces voy a calcular el offset
             if (req.query.page) {
                 
@@ -128,8 +128,8 @@ module.exports = {
         });
         
     },
-
-     /* Funcion de edición para trabajar con files
+    
+    /* Funcion de edición para trabajar con files
     formEdit : (req, res) => {
         
         // validamos que existe el id que pasó la url
@@ -140,7 +140,6 @@ module.exports = {
         
         
     },*/
-
     
     update : async (req, res) => {
         
@@ -153,15 +152,8 @@ module.exports = {
         product.name = req.body.name;
         product.price = req.body.price;
         product.image = req.body.image;
+
         
-
-        console.log("Muestro el producto");
-        console.log(product.description);
-        console.log(product.idCategory);
-        console.log(product.name);
-        console.log(product.price);
-        console.log(product.image);
-
         if (req.file) {
             
             product.image = req.file.filename;
@@ -172,8 +164,8 @@ module.exports = {
         res.redirect('/product')
         
     },
-
-       /* Update para trabajar con files
+    
+    /* Update para trabajar con files
     update : (req, res) => {
         
         // busco el producto a editar
@@ -195,14 +187,56 @@ module.exports = {
         res.redirect('/');
     },*/
     
-    create: function (req, res) {
-        res.render ('product/create')
+    formCreate: function (req, res) {
+        
+        let category = db.Category.findAll()
+        
+        Promise.all([category])
+        .then(function(datos){
+            // Acá es donde tratamos a los resultados : datos
+            
+            return res.render ('product/create', {category: datos[0]});
+        })
+    },      
+    
+    create : (req, res) => {
+        
+        const errors= validationResult(req);
+        
+        if (!errors.isEmpty()) {
+            
+            return res.send(errors.mapped());
+        }
+        
+        let image = '';
+        if (req.files[0]) {
+
+            image = '/imgProds/' + req.files[0].filename;
+
+        }
+        
+        // Armamos el objeto literal
+        
+        let product = {
+            
+            name : req.body.name,
+            description : req.body.description,
+            image : image,
+            idCategory : req.body.idCategory,
+            stock : req.body.quantity,
+            price : req.body.price
+        } 
+        
+        db.Product.create(product)
+        .then(function(){
+            return res.redirect('/');
+        }).catch(function(error){
+            console.log(error);
+            return res.redirect('product/create');
+        })
     },
     
-    newProduct: function (req, res){
-        res.send('Producto agregado exitosamente, en unos instantes podrá ver su publicación');
-    },
-    
+    /* SAVE para trabajar con files
     save: function (req, res, next){
         
         let errors= validationResult(req);
@@ -215,7 +249,7 @@ module.exports = {
                 image = req.files[0].path.replace('public\\imgUsers\\','/imgUsers/')
                 console.log(image)
             }
-                        
+            
             // Armamos el objeto literal
             
             let product = {
@@ -233,8 +267,19 @@ module.exports = {
         } else {
             res.render('product/create', {errors: errors.errors})
         }
-    },
+    },*/
     
+    delete : (req, res) => {
+
+        db.Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        });
+
+        return res.redirect('/');
+    }
+    /* DELETE para trabajar con files
     delete: (req, res) => {
         
         // validamos que existe el id que pasó la url
@@ -248,7 +293,7 @@ module.exports = {
         
         // Redireccionamos la vista
         res.redirect('/product');
-    }
+    }*/
     
     
     

@@ -1,26 +1,30 @@
-const {body,check} = require('express-validator');
-const userData = require('../models/user');
-const path = require('path');
-const bcrypt = require('bcrypt');
-module.exports = 
-    
-[
-    check('name').isLength({min: 1}).withMessage('El usuario a registrar debe tener un nombre'),
-    check('apellido').isLength({min: 1}).withMessage('El usuario a registrar debe tener un apellido'),
-    check('email').isEmail().withMessage('El email debe ser valido'),
-    body('email').custom(function (value) {
-      
-      let users = userData.findAll();
-      for (let i = 0; i < users.length; i++) {
-        if (users[i].email == value) {
-          return false;
-        }
+const db = require('./../database/models')
+const {check, validationResult, body} = require('express-validator')
+const bcryptjs = require('bcrypt');
+
+module.exports = [
+  
+  check('name').isLength({min:3}).withMessage('El nombre debe contener 3 caracteres o más'),
+  check('email').isEmail().withMessage('Formato de mail inválido')
+  .custom(function(value){
+    //validar en la base de datos que no exista
+    return db.User.findOne({where :{email : value}}).then(user => {
+      if (user != null){
+        return Promise.reject('El email ya está en uso');
       }
-      return true;
-    }).withMessage('El email ya está registrado'),
-    check('password').isLength({min:5}).withMessage('La contraseña debe contener 5 caracteres como minimo'),
-    check('password', 'Las contraseñas no coinciden')
-    .custom((value, { req }) => {
-      return value === req.body.confirmarPassword
     })
+  }),
+  check('password', 'La password debe contener 5 caracteres o más').isLength({min:5}).bail(),
+  check('password', 'Las passwords no coinciden')
+  .custom((value, { req }) => {
+    return value === req.body.confirmarPassword
+  }),
+  body('avatar').custom((value, { req }) => {
+    if(req.file != undefined){
+        const acceptedExtensions = ['.jpg', '.jpeg', '.png'];
+        const ext = path.extname(req.file.originalname)
+        return acceptedExtensions.includes(ext);
+    }
+    return false;
+    }).withMessage('Debés subir una imagen en formato JPG, JPEG o PNG para poder registrarte.'),
 ]

@@ -54,7 +54,9 @@
                 <div>
                     <button type=" submit" class="btnProdDetail btn btn-secondary">Añadir al Carrito</button> 
                     <button type="submit" class="btnProdDetail btn btn-success">Comprar Ahora</button>
+                    <% if (locals.logeado) {%>
                     <a class="btnProdDetail btn btn-link" href="/product/<%= product.id %>/edit">Editar</a>
+                    <% } %>
                 </div>
         </div> 
             

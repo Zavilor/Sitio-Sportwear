@@ -2,47 +2,51 @@ const { check, validationResult, body } = require('express-validator');
 const bcrypt = require('bcrypt');
 const userData = require('../models/user');
 
+const db = require('../database/models');
+const { Op } = require('sequelize');
+
 module.exports = {
     register: function (req, res) {
         res.render ('auth/register')
     },
     
     newUser: function (req, res, next) {
-        let errors= validationResult(req);
+
+        const errors= validationResult(req);
         
-        if (errors.isEmpty()) {
+        if (!errors.isEmpty()) {
+
+            return res.render('auth/register', {errors: errors.errors})
+        
+        }
             
             let avatar = '';
+
             if (req.files[0]) {
-                console.log("Muestro el path antes de reemplazar");
-                console.log(req.files[0].path);
-                avatar = req.files[0].path.replace('public\\imgUsers\\','/imgUsers/')
-                console.log("Muestro el path desp de reemplazar");
-                console.log(req.files[0].path);
+                
+                avatar = '/imgUsers/' + req.files[0].filename;
+                
             }
             
             
             //Genero el objeto user
             let user = {
+
                 name: req.body.name,
                 apellido: req.body.apellido,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 5),
-                avatar: avatar
+                avatar: avatar,
+                idRol : 3,
             }            
-            userData.create(user)
-            if (user) {
-                //TODO: que logee al usuario y muestre la pagina del perfil
-                res.locals.logeado = true;
-                req.session.logeado = true;
-                req.session.userEmail = user.email;
-                //enviar a otro html que se registro exitosamente
-                res.redirect('/auth/profile')
-            }             
-                   
-        } else {
-            res.render('auth/register', {errors: errors.errors})
-        }
+
+            db.User.create(user)
+                .then(function(){
+                    return res.redirect('/auth/login');
+                }).catch(function(error){
+                    console.log(error);
+                    return res.redirect('/');
+                })   
     },
     
     login: function (req, res) {

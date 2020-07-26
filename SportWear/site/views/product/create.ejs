@@ -36,13 +36,12 @@
 
         <div class="form-group ">
             <label class="" for="title">Categoria</label>
-            <select name="category" id="category" class="form-control categoriaProd">
-                <option value="">--Seleccione una categoría--</option>
-                <option value="Football">Futbol</option>
-                <option value="Hocky">Hockey</option>
-                <option value="Golf">Golf</option>
-                <option value="Tennis">Tenis</option>
-            </select>
+            <select name="idCategory" id="categoria" class="form-control categoriaProd">
+                <option value="">--Seleccione--</option>></option>
+                <% for(let categoria of category) { %>
+                    <option value="<%= categoria.id %>"><%= categoria.description %></option>
+                <% } %> 
+                </select>
         </div>
 
 

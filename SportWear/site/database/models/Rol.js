@@ -3,10 +3,9 @@ module.exports = (sequelize, DataTypes) => {
     
     const Rol = sequelize.define('Rol', {
         
-        idRol: {
+        id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true
         },
         descripction: {
             type: DataTypes.STRING(50)
@@ -20,10 +19,10 @@ module.exports = (sequelize, DataTypes) => {
     
     Rol.associate = function(models) {
         // associations can be defined here
-        /*Rol.hasMany(models.User, {
-            as : "Users",
-            foreingKey : "idRol"
-        });*/
+        Rol.hasMany(models.User, {
+            as : "users",
+            foreignKey : "idRol"
+        });
     };
     
     return Rol;
