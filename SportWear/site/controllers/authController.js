@@ -79,7 +79,7 @@ module.exports = {
             req.session.userId = req.params.id
 
             loginService.loginUser(req, res, user);
-            return res.redirect('/');
+            return res.redirect('/auth/profile');
         }).catch((error) => {
             console.error(error);
             return res.redirect('login');
