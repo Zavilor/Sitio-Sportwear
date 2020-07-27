@@ -3,21 +3,35 @@
 <section class="todoProfile">
     
     <link rel="stylesheet" href="/stylesheets/profile.css">
-
+    
     <div class="profile">
-        <img src= "<%= userLogeado.avatar %>" alt="imagen avatar">
-        <h2><%= userLogeado.name %> <%= userLogeado.apellido %></h2>
-        <h2><%= userLogeado.email %></h2>
-    </div>
-    <div class="compras">
-        <h2><a href="">Tus ultimas compras</a></h2>
 
-    </div>
+        <a class="btn btn-success" href="/auth/<%= userLogueado.id %>/edit"> Editar Perfil</a>
+        <img src= "<%= userLogueado.avatar %>" alt="imagen avatar">
+        <h2>Nombre y apellido: <%= userLogueado.name %> <%= userLogueado.apellido %></h2>
+        <h2>Email registrado: <%= userLogueado.email %></h2>
 
-</section>
+        <% let userRol %>
+        <% for(userRol of rol) { %>
+            <% if (userLogueado.idRol == userRol.id) %>
+        <% } %> 
+        
+        <h2> Rol: <%= userRol.description %></h2>
 
-</html>
-
-
-
-<%- include('../partials/footer'); %> 
+        </div>
+        <div class="compras">
+            <h2><a href="">Tus ultimas compras</a></h2>
+        </div>
+        
+        <div class="botones-product-add">
+                
+            
+      
+        </div>
+    </section>
+    
+    </html>
+    
+    
+    <%- include('../partials/footer'); %> 
+    

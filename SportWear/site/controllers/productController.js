@@ -158,7 +158,7 @@ module.exports = {
             
             product.image = req.file.filename;
         }
-        console.log("Ejecutamos el save");
+        console.log("Ejecutamos el update");
         await product.save();
         
         res.redirect('/product')

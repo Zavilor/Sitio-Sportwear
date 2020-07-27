@@ -1,30 +1,20 @@
 const {body,check} = require('express-validator');
-const userData = require('../models/user');
-const path = require('path');
-const bcrypt = require('bcrypt');
+const bcryptjs = require('bcrypt');
+const db = require('./../database/models')
+
 module.exports = 
-    
+
 [
   
-    check('password').isLength({min:5}).withMessage('Ingrese un formato de contraseña válida').bail(),
-    check('email').isEmail().withMessage('Ingrese un formato de email válido').custom((value, { req }) => {
-  
-      if (user = userData.findByEmail(req.body.email)){
-  
-        // Si el mail existe en nuestra base de datos, comprobamos la contraseña
-        let check = bcrypt.compareSync(req.body.password, user.password);
-        console.log(check);
-  
-        console.log(user.password);
-        console.log(req.body.password);
-  
-        if(check){
-          return true;
-        }
+  check('password').isLength({min:5}).withMessage('La contraseña debe contener al menos 5 caracteres').bail(),
+  check('email').isEmail().withMessage('Formato de email inválido')
+  .custom((value, { req }) => {
+    return db.User.findOne({where :{email : value}}).then(user => {
+      if (user == null) {
+        return Promise.reject('Datos erróneos');
+      } else if (user && !bcryptjs.compareSync(req.body.password , user.password)) {
+        return Promise.reject('Datos erróneos');
       }
-      else{
-        return false;
-      }
-      console.log(req.body.email);
-    
-    }).withMessage('Datos erroneos, vuelva a intentar'),]
+    })
+  }),
+]

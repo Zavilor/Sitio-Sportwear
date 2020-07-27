@@ -59,9 +59,9 @@ router.post('/create', upload.any(), prodCreate, controller.create);
 // Nos muestra el detalle del producto que llega por parametro
 router.get('/:id?', controller.detail);
 
-// Nos lleva al formulario de edición del producto que mandemos por parametro
+// Nos lleva al formulario de edición del usuario que mandemos por parametro
 router.get('/:id/edit', publishMdw, controller.formEdit);
-// Actualizar el producto editado
+// Actualizar el usuario editado
 router.put('/:id', upload.any(), controller.update); 
 
 // Eliminar el producto que mandamos por parametro

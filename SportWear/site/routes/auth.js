@@ -45,6 +45,9 @@ router.get('/register', guestMdw, controller.register);
 router.post('/register', guestMdw, upload.any(), userCreateMdw, controller.newUser);
 
 router.get('/login', guestMdw, controller.login);
+router.get('/:id/edit', controller.formEdit);
+router.put('/:id', upload.any(), controller.update); 
+
 router.post('/login', guestMdw, userLoginMdw, controller.loginExistingUser);
 
 router.get('/profile', authMdw, controller.profile);

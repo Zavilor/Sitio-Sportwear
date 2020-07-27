@@ -12,13 +12,18 @@
   }
   
   #carrouselInicio{
-    width: 50vh;
-    height: 40vh;
+    width: 80vh;
+    height: 60vh;
     margin: 20px 20px;
   }
   
   .home{
     text-align: center;
+  }
+
+  .d-block{
+    width: 80vh;
+    height: 60vh;
   }
 
   

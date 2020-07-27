@@ -20,11 +20,9 @@ module.exports = [
     return value === req.body.confirmarPassword
   }),
   body('avatar').custom((value, { req }) => {
-    if(req.file != undefined){
-        const acceptedExtensions = ['.jpg', '.jpeg', '.png'];
-        const ext = path.extname(req.file.originalname)
-        return acceptedExtensions.includes(ext);
+    if(req.file = undefined){
+        return false;
     }
-    return false;
-    }).withMessage('Debés subir una imagen en formato JPG, JPEG o PNG para poder registrarte.'),
+    return true;
+  }).withMessage('Debés subir una imagen en formato JPG, JPEG o PNG para poder registrarte.'),
 ]
