@@ -36,7 +36,7 @@ header{
 .buscadorChico{
   width: fit-content;
   flex-direction: column;
- align-items: center;
+  align-items: center;
 }
 
 .loginReg{
@@ -56,7 +56,7 @@ display: none
   flex-wrap: wrap;  
   justify-content: space-around;
   flex-direction: row;
-  padding: auto 0; 
+  padding: auto 0
 }
 
 .barraSecundaria{
@@ -112,14 +112,27 @@ display: none
   .barraSecundaria{
     width: 100%;
     display: flex;
+    justify-content: center;
   }
 
   .barraSecuncadiaList{
     width: 100%;
     justify-content: space-around
+    
   }
 
   .tituloHead{
     display: block;
   }
+
+  .botonesBarraSec{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aliceblue;
+  }
+
+  #boton{
+    margin-right: 1%;
+    
+  }
 }
+

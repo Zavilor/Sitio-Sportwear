@@ -17,10 +17,16 @@
     margin: 20px 20px;
   }
   
-  .home{
+  .lanzamientos{
+    margin-top: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
+    color: red;
   }
 
+  #span{
+    font-size: 3vh;
+  }
   .d-block{
     width: 80vh;
     height: 60vh;
