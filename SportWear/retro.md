@@ -27,3 +27,27 @@ Retro Sprint 4
 5. Dejar de hacer:
 -Dejar cosas para despues
 -
+
+Retro Sprint 5 y 6:
+
+1. Comenzar a hacer:
+
+
+2. Hacer más:
+-Preguntar mas sobre los errores a los profesores.
+-Implementar nuevo contenido en el proyecto.
+
+3. Continuar haciendo:
+-Comunicarnos de forme particular (vía WhatsApp).
+-Repasar las clases Grabadas.
+-Tener siempre listas copias del trabajo integrador.
+-Comenzar antes los sprints.
+-Trabajar de modo cooperativo mediante videollamada.
+
+
+4. Hacer menos:
+-No revisar actualizaciones hechas por otro integrante (Trabajo integrador).
+-
+
+5. Dejar de hacer:
+-Dejar cosas para despues
