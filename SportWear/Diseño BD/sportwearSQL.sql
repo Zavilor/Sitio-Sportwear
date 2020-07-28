@@ -21,31 +21,30 @@ USE `sportwear` ;
 -- Table `sportwear`.`ROLES`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sportwear`.`ROLES` (
-  `idROLES` TINYINT NOT NULL AUTO_INCREMENT,
-  `Description` VARCHAR(20) NULL,
-  PRIMARY KEY (`idROLES`))
+  `Id` TINYINT NOT NULL AUTO_INCREMENT,
+  `Description` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`Id`))
 ENGINE = InnoDB;
-
 
 -- -----------------------------------------------------
 -- Table `sportwear`.`USERS`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sportwear`.`USERS` (
-  `idUSERS` INT NOT NULL AUTO_INCREMENT,
-  `Name` VARCHAR(30) NULL,
-  `Email` VARCHAR(45) NULL,
-  `Password` VARCHAR(60) NULL,
-  `Avatar` VARCHAR(60) NULL,
-  `ROLES_idROLES` TINYINT NOT NULL,
-  PRIMARY KEY (`idUSERS`),
-  INDEX `fk_USERS_ROLES_idx` (`ROLES_idROLES` ASC) VISIBLE,
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(30) NOT NULL,
+  `Apellido` VARCHAR(30) NOT NULL,
+  `Email` VARCHAR(45) NOT NULL,
+  `Password` VARCHAR(60) NOT NULL,
+  `Avatar` VARCHAR(60) NOT NULL,
+  `idRol` TINYINT NOT NULL,
+  PRIMARY KEY (`Id`),
+  INDEX `fk_USERS_ROLES_idx` (`idRol` ASC) VISIBLE,
   CONSTRAINT `fk_USERS_ROLES`
-    FOREIGN KEY (`ROLES_idROLES`)
-    REFERENCES `sportwear`.`ROLES` (`idROLES`)
+    FOREIGN KEY (`idRol`)
+    REFERENCES `sportwear`.`ROLES` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
 
 -- -----------------------------------------------------
 -- Table `sportwear`.`SHOPPING_CART`
@@ -70,42 +69,52 @@ ENGINE = InnoDB;
 -- Table `sportwear`.`CATEGORIES`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sportwear`.`CATEGORIES` (
-  `idCATEGORIES` INT NOT NULL AUTO_INCREMENT,
-  `Description` VARCHAR(20) NULL,
-  PRIMARY KEY (`idCATEGORIES`))
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `Description` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
-
 
 -- -----------------------------------------------------
 -- Table `sportwear`.`PRODUCTS`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sportwear`.`PRODUCTS` (
-  `idPRODUCTS` INT NOT NULL AUTO_INCREMENT,
-  `Name` VARCHAR(45) NULL,
-  `Description` TEXT NULL,
-  `Image` VARCHAR(45) NULL,
-  `Price` INT NULL,
-  `PRODUCTScol` VARCHAR(45) NULL,
-  `CATEGORIES_idCATEGORIES` INT NOT NULL,
-  PRIMARY KEY (`idPRODUCTS`),
-  INDEX `fk_PRODUCTS_CATEGORIES1_idx` (`CATEGORIES_idCATEGORIES` ASC) VISIBLE,
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(45) NOT NULL,
+  `Description` VARCHAR(200) NOT NULL,
+  `Image` VARCHAR(45) NOT NULL,
+  `Price` DOUBLE NOT NULL,
+  `idCategory` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_PRODUCTS_CATEGORIES1_idx` (`idCategory` ASC) VISIBLE,
   CONSTRAINT `fk_PRODUCTS_CATEGORIES1`
-    FOREIGN KEY (`CATEGORIES_idCATEGORIES`)
-    REFERENCES `sportwear`.`CATEGORIES` (`idCATEGORIES`)
+    FOREIGN KEY (`idCategory`)
+    REFERENCES `sportwear`.`CATEGORIES` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
 
 -- -----------------------------------------------------
 -- Table `sportwear`.`SIZES`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sportwear`.`SIZES` (
-  `idSIZE` TINYINT NOT NULL,
-  `Description` VARCHAR(20) NULL,
+  `idSIZE` TINYINT NOT NULL AUTO_INCREMENT,
+  `Description` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`idSIZE`))
 ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+-- Table `sportwear`.`TOKENS`
+-- -----------------------------------------------------
+
+CREATE TABLE `tokens` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `userId` varchar(45) NOT NULL,
+  `token` varchar(80) NOT NULL,
+  `expiresAt` date NOT NULL,
+  `createdAt` date NOT NULL,
+  `updatedAt` date NOT NULL,
+  PRIMARY KEY (`id`)) 
+ENGINE=InnoDB;
 
 -- -----------------------------------------------------
 -- Table `sportwear`.`SHOPPING_CART_has_PRODUCTS`
