@@ -1,11 +1,11 @@
 const { check, validationResult, body } = require('express-validator');
 const bcrypt = require('bcrypt');
-const userData = require('../models/user');
+
 const loginService = require('../services/loginService');
 const tokenService = require('../services/tokenService');
 
 const db = require('../database/models');
-const { Op } = require('sequelize');
+
 
 module.exports = {
     register: function (req, res) {
@@ -52,7 +52,7 @@ module.exports = {
     },
     
     login: async function (req, res) {
-        res.render ('auth/login')
+        res.render ('auth/login', {errors : {}, body : {}})
     },
     
     loginExistingUser: function(req, res) {
@@ -69,16 +69,17 @@ module.exports = {
         .then(async (user) => {
             if (req.body.rememberMe){
                 
-                //await tokenService.generateToken(res, user):
-                res.cookie('recordame', req.body.email, {expires: new Date(Date.now() + 1000*60*60*24*90)});
+                await tokenService.generateToken(res, user);
+                
+                //res.cookie('recordame', req.body.email, {expires: new Date(Date.now() + 1000*60*60*24*90)});
             }
-            
-            req.session.logeado = true
-            req.session.locals = true
-            req.session.userEmail = req.body.email
-            req.session.userId = req.params.id
+
+            //req.session.logeado = true
+            //req.session.locals = true
+            //req.session.userId = req.params.id
 
             loginService.loginUser(req, res, user);
+
             return res.redirect('/auth/profile');
         }).catch((error) => {
             console.error(error);
@@ -88,14 +89,8 @@ module.exports = {
     
     logOut: function(req, res){
         
-        console.log("intentando desloguearse");
-        
-        if (req.session){
-            let date = new Date(Date.now() - 100);
-            req.session.cookie.expires = date;
-            req.session.cookie.maxAge = -100;      
-        }
-        res.redirect('/')
+        loginService.logOutSession(req, res);
+    
     },
     
     

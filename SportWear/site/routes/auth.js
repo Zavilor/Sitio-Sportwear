@@ -9,12 +9,11 @@ const userLoginMdw = require('../middlewares/userLogin');
 const userCreateMdw = require('../middlewares/userCreate');
 const path = require('path');
 const multer = require('multer');
-const bcrypt = require('bcrypt');
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
 
-    cb(null, '../public/imgUsers')
+    cb(null, 'sportwear/public/imgUsers')
   },  
   filename: function (req, file, cb) {
     return cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
@@ -51,6 +50,6 @@ router.put('/:id', upload.any(), controller.update);
 router.post('/login', guestMdw, userLoginMdw, controller.loginExistingUser);
 
 router.get('/profile', authMdw, controller.profile);
-router.post('/logOut', controller.logOut);
+router.post('/logOut', authMdw, controller.logOut);
 
 module.exports = router;
