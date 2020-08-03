@@ -35,13 +35,13 @@ module.exports = (sequelize, DataTypes) => {
             as : "category",
             foreignKey : "idCategory"
         });
-        /*Product.belongsToMany(models.ShoppingCart, {
+        Product.belongsToMany(models.ShoppingCart, {
             as : "cartProduct",
             through: "SHOPPING_CART_has_PRODUCTS",
-            foreingKey : "idProducts",
+            foreignKey : "idProducts",
             otherKey : "idSHOPPING_CART",
             timestamps : false
-        });*/
+        });
     };
     
     return Product;

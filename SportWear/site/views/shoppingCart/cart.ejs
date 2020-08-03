@@ -6,56 +6,12 @@
     <div class="product1-container" id= "product-container">
       
       <div class="imagenCarrito" class="elemento">
-        <img height="100px" src="/imagenes/botinero-mercurial-negro-1.jpg">
+        <img height="100px" src="<%= shoppingCart[0].product.image %>">
       </div>
       
       <div class="descripcionProdCarrito" id= "elemento">
-        <h2>Botinero Mercurial</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi atque voluptate nam molestias numquam fuga voluptates quam quia vitae dignissimos?</p>
-      </div>
-      
-      <div class="botonesAgregarQuitar" id ="elemento">        
-        <input type="number" name="cant" id="cant">
-        <i class="far fa-minus-square"></i>
-        <i class="far fa-plus-square"></i>
-      </div>
-      
-      <div class="precioProd" id ="elemento">
-        <h3 class="precio">$2000</h3>
-      </div>
-      
-    </div>
-    <div class="product2-container" id= "product-container">
-      
-      <div class="imagenCarrito" class="elemento">
-        <img height="100px" src="/imagenes/botines-superfly.jpg">
-      </div>
-      
-      <div class="descripcionProdCarrito" id= "elemento">
-        <h2>Botinero Mercurial</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi atque voluptate nam molestias numquam fuga voluptates quam quia vitae dignissimos?</p>
-      </div>
-      
-      <div class="botonesAgregarQuitar" id ="elemento">        
-        <input type="number" name="cant" id="cant">
-        <i class="far fa-minus-square"></i>
-        <i class="far fa-plus-square"></i>
-      </div>
-      
-      <div class="precioProd" id ="elemento">
-        <h3 class="precio">$2000</h3>
-      </div>
-      
-    </div>
-    <div class="product3-container" id= "product-container">
-      
-      <div class="imagenCarrito" class="elemento">
-        <img height="100px" src="/imagenes/botinero-mercurial-negro-1.jpg">
-      </div>
-      
-      <div class="descripcionProdCarrito" id= "elemento">
-        <h2>Botinero Mercurial</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi atque voluptate nam molestias numquam fuga voluptates quam quia vitae dignissimos?</p>
+        <h2><%= shoppingCart[0].product.name %></h2>
+        <p><%= shoppingCart[0].product.description %></p>
       </div>
       
       <div class="botonesAgregarQuitar" id ="elemento">        
@@ -70,6 +26,7 @@
       
     </div>
 
+    
     <div>
       <div class="total-container">
         <h2 class="precio">$6000</h2>
@@ -77,11 +34,11 @@
         <button class="buttons" type="submit">Seguir Comprando</button>
       </div>
     </div>
-
+    
     
     
   </div>
-
+  
 </section>
 
 <%- include('../partials/footer') %>

@@ -3,23 +3,24 @@ module.exports = (sequelize, DataTypes) => {
     
     const ShoppingCart = sequelize.define('ShoppingCart', {
         
-        idShoppingCart: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            autoIncrement: true
-        },
         date: {
             type: DataTypes.DATE
         },
-        state: {
-            type: DataTypes.INTEGER
+        Id: {
+            type: DataTypes.INTEGER,
         },
-        total: {
+        idProduct: {
             type: DataTypes.INTEGER
         },
         idUser: {
             type: DataTypes.INTEGER
-        }  
+        },  
+        state: {
+            type: DataTypes.STRING(20)
+        },
+        total: {
+            type: DataTypes.INTEGER
+        },
     },
     
     {
@@ -29,15 +30,19 @@ module.exports = (sequelize, DataTypes) => {
     
     ShoppingCart.associate = function(models) {
         // associations can be defined here
-        /*ShoppingCart.belongsTo(models.User, {
-            as : "idUser",
-            foreingKey : "idUser"
+        ShoppingCart.belongsTo(models.User, {
+            as : "user",
+            foreignKey : "idUser"
         });
-        ShoppingCart.belongsToMany(models.Product, {
-            as : "cartProduct",
+        ShoppingCart.belongsTo(models.Product, {
+            as : "product",
+            foreignKey : "idProduct"
+        });
+        /*ShoppingCart.belongsToMany(models.Product, {
+            as : "productCart",
             through: "SHOPPING_CART_has_PRODUCTS",
-            foreingKey : "idProducts",
-            otherKey : "idShoppingCart",
+            foreignKey : "idShoppingCart",
+            otherKey : "idProductCart",
             timestamps : false
         });*/
     };
