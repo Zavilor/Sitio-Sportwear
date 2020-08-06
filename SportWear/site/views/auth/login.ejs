@@ -3,80 +3,71 @@
 
 <script src="/js/login.js"></script>
 <section class="todoLogIn">
-   
+    
     <div class="cajaLogIn">
         <div class="tituloFormulario">
-            <h1>Log In</h1>
+            <div class="logo">               
+                <a href="/" ><i class="fab fa-stripe-s"></i></a>
+                <a href="/" class="tituloHead">SportWear<a>                          
+            </div>
+            <h1 id="tituloLogin">Iniciar sesión</h1>
         </div>
-
+        
         <div>
             <% if (typeof errors != 'undefined') { %>
                 <ul>
-                <% for (let i = 0; i < errors.length; i++) { %>
-                    <li>
-                        <%= errors[i].msg %>
-                    </li>
+                    <% for (let i = 0; i < errors.length; i++) { %>
+                        <li>
+                            <%= errors[i].msg %>
+                        </li>
+                        <% } %>
+                    </ul>
                     <% } %>
-                </ul>
-            <% } %>
-        </div>
-    
-
-        <form class="formulario formularioLogin" action="login" method="POST">
-         <div class="logueo">
-
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text nombreLogIn" id="inputGroup-sizing-default">Email</span>
                 </div>
-                <input type="text" class="form-control inputCompletar email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"  type="email" id="email" name="email">
                 
+                
+                <form class="formulario formularioLogin" action="login" method="POST">
+                    <div class="logueo">
+                        
+                        <div class="input-group mb-3 userImput">
+                            <div class="input-group-prepend">   
+                                <div class="input-group-text iconos far fa-envelope"></div>
+                            </div>
+                            <input type="text" class="form-control inputCompletar email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"  type="email" id="email" name="email" placeholder="username">
+                            <div class="invalid-feedback"><%= errors.email ? errors.email.msg : ''%></div>
+                        </div>
+                        
+                        <div class="input-group mb-3 loginImput passImput">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text iconos fas fa-user-lock"></div>
+                            </div>                       
+                            <input type="password" class="form-control inputCompletar password verPassword" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="password" id="inputPassword" placeholder="password">  
+                            <div id="pass-mostrar" class="far fa-eye"></div>              
+                        </div>
+                        
+                        <div class="input-group mb-3 align" id= "remember">
+                            
+                            <input type="checkbox" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" class="inputCompletar" type="rememberMe" name="rememberMe" id="rememberMe" class="rememberMe">
+                            <div class="input-group-prepend1">
+                                <label class="recordarme" id="inputGroup-sizing-default" class="nombreLogIn">Recordarme</label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="div-boton-reg boton-login">
+                        <button class="btn btn-info" type="submit" >Confirmar</button>
+                    </div>
+                    
+                    <div>
+                        <p class="align">¿No tenés cuenta? Clickeá <a href="/auth/register" class="reg">acá</a> para crearte una</p>
+                    </div>
+                    
+                    
+                </form>
             </div>
-            
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text nombreLogIn" id="inputGroup-sizing-default">Contraseña</i></span>
-                </div>                       
-                <input type="password" class="form-control inputCompletar password verPassword" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="password" id="inputPassword" placeholder="">               
-            </div>
-<!---
-            <div>
-                <label for="text">Ver Contraseña</label>
-                <div id="pass-mostrar">
-                    <i id="hide1" class="fa fa-eye"></i>
-                    <i id="hide2" class="fa fa-eye-slash"></i>
-                </div>
-            </div>
- -->           
-           
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-default" class="nombreLogIn">Recordarme</span>
-                </div>
-                <input type="checkbox" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" class="inputCompletar" type="rememberMe" name="rememberMe" id="rememberMe" class="rememberMe">
-           
-            </div>
-            <!--<div>
-                <div class="input-group-prepend">
-                    <button id="pass-mostrar" class="" type="button"><i class="fas fa-user-lock"></i></button>
-                    <label for="">Ver Password</label>        
-                  </div>
-            -->        
-            </div>
-            
-            <div class="div-boton-reg boton-login">
-                <button class="btn btn-info" type="submit" class="ConfLogIn">Confirmar</button>
-            </div>
-
-            <div>
-                <p>No tenes cuenta? Clickea <a href="/auth/register" class="reg">acá</a> para crearte una</p>
-            </div>
+        </section>
         
+        <%- include('../partials/footer'); %>
         
-        </form>
     </div>
-</section>
-
-<%- include('../partials/footer'); %>
-
-</div>

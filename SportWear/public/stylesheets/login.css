@@ -3,6 +3,48 @@ a.reg{
   text-decoration: underline;
 }
 
+#remember{
+  width: 20%;
+}
+
+#rememberMe{
+  height: 22px;
+}
+
+.recordarme{
+  margin-left: 10px;
+}
+
+.align{
+    margin: 3px;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 7vh;
+}
+
+#pass-mostrar{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.iconos{
+  width: 50px;
+}
+
+.userImput{
+  width: 75%;
+  margin: 3px;
+  margin-left: 10%;
+  margin-right: 20%;
+}
+
+.passImput{
+  width: 80%;
+  margin: 3px;
+  margin-left: 10%;
+  margin-right: 20%;
+}
 
 .todoLogIn{
   width: 100%;
@@ -12,6 +54,18 @@ a.reg{
   background-image: url(../imagenes/fondo.jpeg);
 }
 
+.boton-login{
+  margin-bottom: 20px;
+}
+
+.logueo{
+  margin-top: 10%;
+}
+
+#tituloLogin{
+  margin-left: 35%;
+  margin-right: 20%;
+}
 
 .cajaLogIn{
   width: 94%; 
@@ -39,6 +93,7 @@ a.reg{
     height: 7vh;
   
 }
+
 
 @media (min-width : 426px) {
   .cajaLogIn{
