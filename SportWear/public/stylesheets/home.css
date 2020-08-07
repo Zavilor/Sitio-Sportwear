@@ -1,29 +1,23 @@
 /* HOME ----------------------------*/
 
-.todoHome{
-    
+  .todoHome{    
   width: 100%;
-  height: 82vh;
+  height: max-content;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   flex-direction: column;
-  background-image: url(../imagenes/fondo.jpeg);
+
   }
   
   #carrouselInicio{
-    width: 80vw;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
     height: auto;
-    margin: auto 10vw;
+  
   }
   
-  .lanzamientos{
-    margin-top: 5%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    color: red;
-  }
-
   #span{
     font-size: 3vh;
   }
@@ -32,22 +26,86 @@
     height: 60vh;
   }
 
-  @media (min-width : 550px){
-    #carrouselInicio{
-      width: 60vw;
-      height: auto;
-      margin: auto 20vw;
+    
+  
+  @media (min-width : 426px){
+  
+    .productDetailMainContainer{
+      width: 100%; 
+      padding-left: 0;
+      padding-right: 0;
+  
     }
-    
-    
+  
+    .productDetailContainer{
+      width: 50%;
+      padding: auto;
+    }
   }
 
+
+  @media (min-width : 550px){
+
+    .todoHome{
+     /* width: 90%;
+      padding-left: 5%;
+      padding-right: 5%;*/
+    }
+    
+  }
 
   @media(min-width: 769px){
-    #carrouselInicio{
-      width: 40vw;
-      height: auto;
-      margin: auto 30vw;
-    }
+
+  .productDetailContainer{
+    width: 30%;
+    padding: auto;   
   }
   
+  .productDetailMainContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 94%; 
+    height: fit-content;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 5px; 
+    margin: 5vh 3%;
+    padding : 2vh 3%;
+    background-color: white; 
+    border: gray 1px solid;
+  }
+  
+  .productDetailContainer{
+    align-content: center;
+    padding-bottom: 5vh;
+  }
+  
+  .productImages{
+    display:block;
+    margin:auto;
+    height: 200px;
+  }
+      
+  .prodPrice{
+    text-align: center;
+  }
+  
+  .prodNameContainer{
+    text-align: center;
+  }
+  
+  p.prodName{
+    font-size: 30px;
+  }
+  
+  p.prodPrice{
+    font-size: 20px;
+   }
+  
+  .btnProdList{
+    justify-content: space-between; 
+    width: 80%;
+    margin : 1vh 10%
+  }
+}

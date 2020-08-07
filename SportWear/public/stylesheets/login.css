@@ -143,6 +143,19 @@ a.reg{
     margin-right: 20%;
 
   } 
+
+  .inputCompletar{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: none;
+  }
+  
+  .form-control:hover{
+    border-bottom: rgb(12, 58, 156) 2px solid ;
+  }
+ 
+
 }
 
 @media(min-width: 769px){
