@@ -2,12 +2,12 @@
 
 .footer{
     box-sizing: border-box;
-    background-color: lightskyblue;
     height: 8vh;  
     color: black;
     width: 100%; 
     font-size: 13px;
     bottom: 0px;
+    background-color: rgb(78, 162, 214);
   }
   
   .footerMenu{

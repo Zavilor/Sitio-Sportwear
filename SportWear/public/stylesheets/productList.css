@@ -5,7 +5,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  background-image: url(../imagenes/fondo.jpeg);
+  
 }
 
 .productDetailMainContainer{
@@ -26,6 +26,10 @@
 .productDetailContainer{
   align-content: center;
   padding-bottom: 5vh;
+}
+
+.productDetailContainer:hover{
+  border: black 1px solid;
 }
 
 img{
