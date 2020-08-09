@@ -4,15 +4,14 @@ a.reg{
 }
 
 #remember{
-  width: 20%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0%;
 }
 
 #rememberMe{
+  width: min-content;
   height: 22px;
-}
-
-.recordarme{
-  margin-left: 10px;
 }
 
 .align{

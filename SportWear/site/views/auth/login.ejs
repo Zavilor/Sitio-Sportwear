@@ -33,7 +33,8 @@
                             <div class="input-group-prepend">   
                                 <div class="input-group-text iconos far fa-envelope inputCompletar"></div>
                             </div>
-                            <input type="text" class="form-control inputCompletar email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"  type="email" id="email" name="email" placeholder="username">
+                            <input type="text" class="form-control inputCompletar email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"  type="email" id="email" name="email" placeholder="username" value="<%= body.email ? body.email : ''%>">
+
                             <div class="invalid-feedback"><%= errors.email ? errors.email.msg : ''%></div>
                         </div>
                         
@@ -42,14 +43,16 @@
                                 <div class="input-group-text iconos fas fa-user-lock inputCompletar"></div>
                             </div>                       
                             <input type="password" class="form-control inputCompletar password verPassword" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="password" id="inputPassword" placeholder="password">  
-                            <div id="pass-mostrar" class="far fa-eye"></div>              
+                            <div id="pass-mostrar" class="far fa-eye"></div>
+                            
+                            <div class="invalid-feedback"><%= errors.password ? errors.password.msg : ''%></div>
                         </div>
                         
                         <div class="input-group mb-3 align" id= "remember">
                             
-                            <input type="checkbox" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" class="inputCompletar" type="rememberMe" name="rememberMe" id="rememberMe" class="rememberMe">
-                            <div class="input-group-prepend1">
-                                <label class="recordarme" id="inputGroup-sizing-default" class="nombreLogIn">Recordarme</label>
+                            <input type="checkbox" class="form-control rememberMe inputCompletar" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" type="rememberMe" name="rememberMe" id="rememberMe">
+                            <div class="input-group-prepend1 ">
+                                <label class="recordarme nombreLogIn" id="inputGroup-sizing-default">Recordarme</label>
                             </div>
                             
                         </div>

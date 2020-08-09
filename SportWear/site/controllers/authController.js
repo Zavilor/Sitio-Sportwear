@@ -9,7 +9,8 @@ const db = require('../database/models');
 
 module.exports = {
     register: function (req, res) {
-        res.render ('auth/register')
+        const errors= validationResult(req);
+        res.render ('auth/register', {errors: errors.errors})
     },
     
     newUser: function (req, res, next) {

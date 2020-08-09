@@ -1,5 +1,7 @@
 window.addEventListener('load', function(){
     let formRegister = document.querySelector('form.formRegister');
+
+    
     
     formRegister.onsubmit = function (event){
         
@@ -7,27 +9,33 @@ window.addEventListener('load', function(){
         
         if (campoNombre.value == ''){
             event.preventDefault();
-            alert('el campo nombre tiene que estar completo')
-            campoNombre.classList.add('is-invalid')            
-        }
+            campoNombre.classList.add('is-invalid')   
+            let mostrarError = campoNombre.parentElement.querySelector('div.invalid-feedback');
+            mostrarError.innerText = 'El campo debe estar completo';
+                     
+        }/*
         else if(campoNombre.value.length < 3){
             event.preventDefault();
-            alert('el nombre debe tener al menos 3 caracteres')
+            let mostrarError = campoNombre.parentElement.querySelector('div.invalid-feedback');
+            mostrarError.innerText = 'El campo debe tener al menos 3 caracteres';
             campoNombre.classList.add('is-invalid') 
-        }
+        }*/
         
-        let campoApellido = document.querySelector('#apellido');
+        let campoApellido = document.querySelector('input.apellido');
         
         if (campoApellido.value == ''){
             event.preventDefault();
-            alert('el campo Apellido tiene que estar completo')
-            campoApellido.classList.add('is-invalid')            
-        }
-        else if(campoApellido.value.length < 3){
-            event.preventDefault();
-            alert('el campo Apellido debe tener al menos 3 caracteres')
             campoApellido.classList.add('is-invalid') 
+            let mostrarError = campoApellido.parentElement.querySelector('div.invalid-feedback');
+            mostrarError.innerText = 'El campo debe estar completo';
+                       
         }
+        /*else if(campoApellido.value.length < 3){
+            event.preventDefault();
+            let mostrarError = campoApellido.parentElement.querySelector('div.invalid-feedback');
+            mostrarError.innerText = 'El campo debe tener al menos 3 caracteres';
+            campoNombre.classList.add('is-invalid') 
+        }*/
         
         let campoEmail = document.querySelector('#email');
         let regexEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i 
@@ -36,20 +44,20 @@ window.addEventListener('load', function(){
         
         if (!regexEmail.test(campoEmail.value)){
             event.preventDefault();
-            //cancelo el comportamiento por defecto
-            campoEmail.classList.add('is-invalid');
-            //agrego la clase, que enmarca el inpu en rojo
-            alert('email invalido')
-            //mensaje de error
+            campoEmail.classList.add('is-invalid')
+            let mostrarError = campoEmail.parentElement.querySelector('div.invalid-feedback');
+            mostrarError.innerText = 'Debe poner un email valido';
+            
         }
         
         
         let campoContraseña = document.querySelector('.password')//agregar clase 'password' al html
         
         if (campoContraseña.value.length < 5){
-            event.preventDefault();
-            campoContraseña.classList.add('is-invalid');
-            alert('la Contraseña debe tener al menos 5 caracteres')
+           event.preventDefault();
+            let mostrarError = campoContraseña.parentElement.querySelector('div.invalid-feedback');
+            mostrarError.innerText = 'La contraseña debe tener al menos 5 caracteres';
+            campoContraseña.classList.add('is-invalid')
         }
         
         
@@ -57,8 +65,9 @@ window.addEventListener('load', function(){
         
         if (campoConfirmar.value != campoContraseña.value){
             event.preventDefault();
-            campoConfirmar.classList.add('is-invalid');
-            alert('Las dos contraseñas deben coincidir')
+            let mostrarError = campoConfirmar.parentElement.querySelector('div.invalid-feedback');
+            mostrarError.innerText = 'Las contraseñas deben coincidir';
+            campoConfirmar.classList.add('is-invalid')
             
         }
     }        

@@ -10,7 +10,7 @@
         <p><h1>Crear Perfil</h1></p>
     </div>
 
-    <div>
+    <!--<div>
         <% if (typeof errors != 'undefined') { %>
             <ul>
             <% for (let i = 0; i < errors.length; i++) { %>
@@ -20,7 +20,7 @@
                 <% } %>
             </ul>
         <% } %>
-    </div>
+    </div>-->
     
 
     <div class="cajaRegister">
@@ -31,7 +31,9 @@
                         <div class="input-group-text iconos fas fa-user inputRegister"></div>
                     </div>
                     <input type="text" class="form-control nombreUsuario inputRegister" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="text"  id="nombre" name="name" placeholder="nombre">
-                </div>
+                
+                    <div class="invalid-feedback"><%= errors.name ? errors.name.msg : ''%></div>
+                </div>  
             </div>
             
             
@@ -42,9 +44,10 @@
                     <div class="input-group-prepend">
                         <div class="input-group-text iconos fas fa-user inputRegister"></div>
                     </div>
-                    <input type="text" class="form-control inputRegister" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="text" id="apellido" name="apellido" placeholder="apellido">
-                </div>
-    
+                    <input type="text" class="form-control inputRegister apellido" aria-label="Sizing example input " aria-describedby="inputGroup-sizing-sm" type="text" id="apellido" name="apellido" placeholder="apellido">
+                
+                <div class="invalid-feedback"><%= errors.apellido ? errors.apellido.msg : ''%></div>
+            </div>
             </div>
             
            
@@ -54,8 +57,9 @@
                         <div class="input-group-text iconos far fa-envelope inputRegister"></div>
                     </div>
                     <input type="text" class="form-control inputRegister" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="email"  id="email" name="email" placeholder="email">
-                </div>
-               
+                
+                <div class="invalid-feedback"><%= errors.email ? errors.email.msg : ''%></div>
+            </div>
             </div>
            
             
@@ -66,8 +70,9 @@
                         <div class="input-group-text iconos fas fa-user-lock inputRegister"></div>
                     </div>
                     <input class="form-control password inputRegister" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="password" id="password" name="password" placeholder="password"> 
-                </div>
-
+                
+                <div class="invalid-feedback"><%= errors.password ? errors.password.msg : ''%></div>
+            </div>
             </div>
             
             
@@ -78,7 +83,9 @@
                         <div class="input-group-text iconos fas fa-user-lock inputRegister"></div>
                     </div>
                     <input class="form-control confirmarPassword inputRegister" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="password" id="password" name="confirmarPassword" placeholder="confirmar password">
-                </div>
+                
+                <div class="invalid-feedback"><%= errors.confirmarPassword ? errors.confirmarPassword.msg : ''%></div>
+            </div>
 
             </div> 
  

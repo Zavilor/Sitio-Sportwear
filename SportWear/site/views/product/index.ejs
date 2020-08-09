@@ -12,6 +12,18 @@
     <section class="sectionProductList"> 
 
         <div class="productDetailMainContainer">
+            <div>
+                <select name="showProds" id="">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="?limit=5">20</option>
+                </select>
+                <span>Ordenar:</span>
+                <a href="?LIMIT=5">Titulo</a>
+                <a href="?order=price">Rating</a>
+            </div>
+        
 
         <% products.forEach(products =>{ %>
 
@@ -29,10 +41,13 @@
                     </div>
                     <div class="precioProducto">
                         <p class="prodPrice">Precio : $<%= products.price %></p>
+                    </a>
                     </div> 
                     <div class= "buttonsProductList">
-                        <button type="submit" class="btnProdList btn btn-secondary">Añadir al Carrito</button>
-                        <button type="submit" class="btnProdList btn btn-success" >Comprar Ahora</button>
+                        <form action="cart/index" method="POST">
+                            <button type="submit" class="btnProdList btn btn-success">Añadir al Carrito</button>
+                        </form>
+                        <!--<button type="submit" class="btnProdList btn btn-success" >Comprar Ahora</button> -->
                         <% if (locals.logeado) {%>
                         <button type="submit" class="btnProdList btn btn-light"><a href="/product/<%= products.id %>/edit">Editar</a></button>
                         <% } %>                                              
@@ -42,10 +57,11 @@
                 
             </div> 
 
-            <% }) %>   
+            <% }) %>
 
-        </div>
-
+        
+         </div>  
+            
         </section>
 
         

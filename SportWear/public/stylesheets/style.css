@@ -2,7 +2,7 @@ body {
   font-family: "arial", serif;
   color: black;
   height: 100%;
-  background-image: url(../imagenes/fondo.jpeg);
+  /*background-image: url(../imagenes/fondo.jpeg);*/
 }
 
 html{

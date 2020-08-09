@@ -1,3 +1,6 @@
+body {
+  background-image: url(../imagenes/fondo.jpeg);
+}
 
 .sectionProductList{
   width: 100%;
@@ -19,8 +22,8 @@
   border-radius: 5px; 
   margin: 5vh 3%;
   padding : 2vh 3%;
-  background-color: white; 
   border: gray 1px solid;
+  background-color: white;
 }
 
 .productDetailContainer{

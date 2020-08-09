@@ -20,7 +20,6 @@ window.addEventListener('load', function(){
             //agrego la clase, que enmarca el input en rojo
             let mostrarError = campoEmail.parentElement.querySelector('div.invalid-feedback');
             mostrarError.innerText = 'Formato de email Invalido';
-            //alert('email invalido')
             //mensaje de error
 
         }
@@ -28,7 +27,8 @@ window.addEventListener('load', function(){
         if (campoPass.value.length < 5){
             event.preventDefault();
             campoPass.classList.add('is-invalid');
-            alert('la contraseña debe tener al menos 5 caracteres')
+            let mostrarError = campoPass.parentElement.querySelector('div.invalid-feedback');
+            mostrarError.innerText = 'Password incorrecta';
         }
     }
     
