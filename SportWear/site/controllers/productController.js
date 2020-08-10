@@ -294,7 +294,7 @@ module.exports = {
             }
         });
         
-        return res.redirect('/');
+        return res.redirect('/product');
     },
     /* DELETE para trabajar con files
     delete: (req, res) => {

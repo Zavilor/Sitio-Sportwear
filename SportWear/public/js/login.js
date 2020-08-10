@@ -63,4 +63,3 @@ formularioLogin.onclick = function(){
     }
 }
 
-*/
