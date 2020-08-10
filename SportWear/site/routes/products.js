@@ -50,6 +50,8 @@ router.use( function( req, res, next ) {
 });
 
 router.get('/', controller.index);
+// Agregar producto al carrito
+router.post('/:id?', controller.add);
 
 // Formulario de creacion de producto
 router.get('/create', publishMdw,  controller.formCreate);

@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/login.css">
 
 <script src="/js/login.js"></script>
+
 <section class="todoLogIn">
     
     <div class="cajaLogIn">
@@ -33,7 +34,7 @@
                             <div class="input-group-prepend">   
                                 <div class="input-group-text iconos far fa-envelope inputCompletar"></div>
                             </div>
-                            <input type="text" class="form-control inputCompletar email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"  type="email" id="email" name="email" placeholder="username" value="<%= body.email ? body.email : ''%>">
+                            <input type="text" class="form-control inputCompletar email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"  type="email" id="email" name="email" placeholder="username" value="">
 
                             <div class="invalid-feedback"><%= errors.email ? errors.email.msg : ''%></div>
                         </div>
@@ -48,11 +49,12 @@
                             <div class="invalid-feedback"><%= errors.password ? errors.password.msg : ''%></div>
                         </div>
                         
-                        <div class="input-group mb-3 align" id= "remember">
+                        <div class="input-group mb-3 align">
                             
-                            <input type="checkbox" class="form-control rememberMe inputCompletar" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" type="rememberMe" name="rememberMe" id="rememberMe">
-                            <div class="input-group-prepend1 ">
-                                <label class="recordarme nombreLogIn" id="inputGroup-sizing-default">Recordarme</label>
+                            <input type="checkbox" class="rememberMe" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" type="rememberMe" name="rememberMe" id="rememberMe">
+                            
+                            <div class="">
+                                <label class="rememberLabel" id="inputGroup-sizing-default">Recordarme</label>
                             </div>
                             
                         </div>

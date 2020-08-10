@@ -11,12 +11,15 @@
         <h2>Nombre y apellido: <%= userLogueado.name %> <%= userLogueado.apellido %></h2>
         <h2>Email registrado: <%= userLogueado.email %></h2>
 
-        <% let userRol %>
+        <% let rolDescription %>
         <% for(userRol of rol) { %>
-            <% if (userLogueado.idRol == userRol.id) %>
+            <% if (userLogueado.idRol == userRol.id) {
+                rolDescription = userRol.description;
+            } %>
+            
         <% } %> 
         
-        <h2> Rol: <%= userRol.description %></h2>
+        <h2> Perfil: <%= rolDescription %></h2>
 
         </div>
         <div class="compras">

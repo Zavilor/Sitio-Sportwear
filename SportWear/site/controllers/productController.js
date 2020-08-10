@@ -40,26 +40,40 @@ module.exports = {
         } else {
             
             let offset = 0;
-            let limit = 30;
+            let limit = parseInt(req.query.limit) || 20;
+            let dir = 'ASC'
+            
+            //let limit = 5;
             //si me mandan la pagina entonces voy a calcular el offset
             if (req.query.page) {
                 
                 offset = (req.query.page - 1) * limit;
+                
             }
+            
+            if (req.query.dir) {
+                
+                dir = req.query.dir;
+                
+            }
+            
             
             //sino las traigo a todas
             db.Product.findAndCountAll({
                 
                 order : [
-                    [(req.query.order ? req.query.order : 'Name'), 'ASC']
+                    [(req.query.order ? req.query.order : 'Name'), dir]
                 ],
                 //esto lo useré en el paginador
                 limit : limit,
                 offset : offset,
                 include : ['category']
+                
             })
             .then(function(data) {
                 
+                console.log("LIMITE " + limit);
+                console.log("OFFSET " + offset);
                 const products = data.rows;
                 const count = data.count;
                 const pages = Math.ceil(count / limit);
@@ -152,13 +166,14 @@ module.exports = {
         product.name = req.body.name;
         product.price = req.body.price;
         product.image = req.body.image;
-
+        
         
         if (req.file) {
             
             product.image = req.file.filename;
         }
         console.log("Ejecutamos el update");
+        
         await product.save();
         
         res.redirect('/product')
@@ -210,9 +225,9 @@ module.exports = {
         
         let image = '';
         if (req.files[0]) {
-
+            
             image = '/imgProds/' + req.files[0].filename;
-
+            
         }
         
         // Armamos el objeto literal
@@ -270,15 +285,15 @@ module.exports = {
     },*/
     
     delete : (req, res) => {
-
+        
         db.Product.destroy({
             where: {
                 id: req.params.id
             }
         });
-
+        
         return res.redirect('/');
-    }
+    },
     /* DELETE para trabajar con files
     delete: (req, res) => {
         
@@ -295,6 +310,45 @@ module.exports = {
         res.redirect('/product');
     }*/
     
-    
-    
+    add : async (req, res) => {
+        
+        let productId = req.params.id;
+        
+        let product = await db.Product.findByPk(productId);
+
+        if (req.session.userEmail){
+            
+            let userEmail = req.session.userEmail;
+            
+            let user = await db.User.findOne({
+                
+                where : {
+                    email : userEmail
+                }
+            })
+
+            let shoppingCartProduct = {
+                
+                State : "Pendiente",
+                Total : product.price,
+                idUser : user.id,
+                idProduct : productId,
+            } 
+            
+            console.log("GUARDAMOS EL PRODUCTO EN EL CARRITO");
+            
+            db.ShoppingCart.create(shoppingCartProduct)
+            .then(function(){
+                return res.redirect('/product');
+            }).catch(function(error){
+                console.log(error);
+                return res.redirect('/product');
+            })
+        }
+        
+        else{
+            return res.redirect('/auth/login');
+        }
+        
+    }
 }

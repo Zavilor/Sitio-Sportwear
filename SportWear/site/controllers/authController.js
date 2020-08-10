@@ -31,7 +31,6 @@ module.exports = {
             
         }
         
-        
         //Genero el objeto user
         let user = {
             
@@ -40,14 +39,14 @@ module.exports = {
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 5),
             avatar: avatar,
-            idRol : 3,
+            idRol : 1,
         }            
         
         db.User.create(user)
         .then(function(){
             return res.redirect('/auth/login');
         }).catch(function(error){
-            console.log(error);
+            console.log("ENTRAMOS AL CATCH: " + error)
             return res.redirect('/');
         })   
     },
@@ -72,12 +71,7 @@ module.exports = {
                 
                 await tokenService.generateToken(res, user);
                 
-                //res.cookie('recordame', req.body.email, {expires: new Date(Date.now() + 1000*60*60*24*90)});
             }
-
-            //req.session.logeado = true
-            //req.session.locals = true
-            //req.session.userId = req.params.id
 
             loginService.loginUser(req, res, user);
 

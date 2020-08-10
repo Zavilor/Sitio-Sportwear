@@ -3,10 +3,12 @@ const {check, validationResult, body} = require('express-validator')
 const bcryptjs = require('bcrypt');
 
 module.exports = [
+
   
   check('name').isLength({min:3}).withMessage('El nombre debe contener 3 caracteres o más'),
   check('email').isEmail().withMessage('Formato de mail inválido')
   .custom(function(value){
+    console.log("Ejecutamos el userCreateMdw");
     //validar en la base de datos que no exista
     return db.User.findOne({where :{email : value}}).then(user => {
       if (user != null){
@@ -20,7 +22,8 @@ module.exports = [
     return value === req.body.confirmarPassword
   }),
   body('avatar').custom((value, { req }) => {
-    if(req.file = undefined){
+
+    if(req.files == ''){
         return false;
     }
     return true;

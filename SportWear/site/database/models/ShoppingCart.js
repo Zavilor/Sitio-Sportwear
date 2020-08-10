@@ -3,24 +3,25 @@ module.exports = (sequelize, DataTypes) => {
     
     const ShoppingCart = sequelize.define('ShoppingCart', {
         
-        date: {
-            type: DataTypes.DATE
-        },
         Id: {
             type: DataTypes.INTEGER,
         },
-        idProduct: {
+        Date: {
+            type: DataTypes.DATE
+        },
+        State: {
+            type: DataTypes.STRING(20)
+        },
+        Total: {
             type: DataTypes.INTEGER
         },
         idUser: {
             type: DataTypes.INTEGER
         },  
-        state: {
-            type: DataTypes.STRING(20)
-        },
-        total: {
+        idProduct: {
             type: DataTypes.INTEGER
         },
+ 
     },
     
     {

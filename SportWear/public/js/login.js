@@ -46,29 +46,6 @@ window.addEventListener('load', function(){
     
 })
 
-/*
-let passMostrar = formularioLogin.querySelector('#pass-mostrar');
-let eyeOn = formularioLogin.getElementById('hide1')
-let eyeOff = formularioLogin.getElementById('hide2')
-
-
-passMostrar.onclick  = () => {
-    
-    if(login.type == 'password'){
-        campoPass.type ='text';
-        eyeOn.style.display = "block";
-        eyeOff.style.display = 'none';
-    }else{
-        campoPass.type ='password';
-        eyeOn.style.display = "none";
-        eyeOff.style.display = 'block';
-    }
-}
-
-
--------------------------------
-
-
 let login = formularioLogin.getElementById('inputPassword')
 let eyeOn = formularioLogin.getElementById('hide1')
 let eyeOff = formularioLogin.getElementById('hide2')

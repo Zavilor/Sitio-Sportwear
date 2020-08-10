@@ -3,15 +3,15 @@ a.reg{
   text-decoration: underline;
 }
 
-#remember{
-  display: flex;
-  justify-content: flex-start;
-  margin: 0%;
-}
-
-#rememberMe{
+.rememberMe{
+  
   width: min-content;
   height: 22px;
+  
+}
+
+.rememberLabel{
+  margin-left: 10px;
 }
 
 .align{

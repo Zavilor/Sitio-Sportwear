@@ -10,7 +10,7 @@
         <p><h1>Crear Perfil</h1></p>
     </div>
 
-    <!--<div>
+    <div>
         <% if (typeof errors != 'undefined') { %>
             <ul>
             <% for (let i = 0; i < errors.length; i++) { %>
@@ -20,7 +20,7 @@
                 <% } %>
             </ul>
         <% } %>
-    </div>-->
+        </div>
     
 
     <div class="cajaRegister">
@@ -92,6 +92,7 @@
             <div class="form-group" class="formRegistro">
                 <label for="exampleFormControlFile1" class="avatar">Seleccione un Avatar (.jpg, .jpeg, .gif o .png)</label>
                 <input  type="file" class="form-control-file inputRegister" id="exampleFormControlFile1" name="avatar" accept="image/x-png,image/gif,image/jpeg, image/jpg" >
+                <div class="invalid-feedback"><%= errors.avatar ? errors.avatar.msg : ''%></div>
             </div>
             
 

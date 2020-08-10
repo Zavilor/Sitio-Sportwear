@@ -1,7 +1,5 @@
 window.addEventListener('load', function(){
     let formRegister = document.querySelector('form.formRegister');
-
-    
     
     formRegister.onsubmit = function (event){
         
@@ -12,14 +10,14 @@ window.addEventListener('load', function(){
             campoNombre.classList.add('is-invalid')   
             let mostrarError = campoNombre.parentElement.querySelector('div.invalid-feedback');
             mostrarError.innerText = 'El campo debe estar completo';
-                     
-        }/*
+            
+        }
         else if(campoNombre.value.length < 3){
             event.preventDefault();
             let mostrarError = campoNombre.parentElement.querySelector('div.invalid-feedback');
             mostrarError.innerText = 'El campo debe tener al menos 3 caracteres';
             campoNombre.classList.add('is-invalid') 
-        }*/
+        }
         
         let campoApellido = document.querySelector('input.apellido');
         
@@ -28,38 +26,33 @@ window.addEventListener('load', function(){
             campoApellido.classList.add('is-invalid') 
             let mostrarError = campoApellido.parentElement.querySelector('div.invalid-feedback');
             mostrarError.innerText = 'El campo debe estar completo';
-                       
+            
         }
-        /*else if(campoApellido.value.length < 3){
+        else if(campoApellido.value.length < 3){
             event.preventDefault();
             let mostrarError = campoApellido.parentElement.querySelector('div.invalid-feedback');
             mostrarError.innerText = 'El campo debe tener al menos 3 caracteres';
-            campoNombre.classList.add('is-invalid') 
-        }*/
+            campoApellido.classList.add('is-invalid') 
+        }
         
         let campoEmail = document.querySelector('#email');
         let regexEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i 
-        
-        
         
         if (!regexEmail.test(campoEmail.value)){
             event.preventDefault();
             campoEmail.classList.add('is-invalid')
             let mostrarError = campoEmail.parentElement.querySelector('div.invalid-feedback');
-            mostrarError.innerText = 'Debe poner un email valido';
-            
+            mostrarError.innerText = 'Debe poner un email valido';   
         }
-        
         
         let campoContraseña = document.querySelector('.password')//agregar clase 'password' al html
         
         if (campoContraseña.value.length < 5){
-           event.preventDefault();
+            event.preventDefault();
             let mostrarError = campoContraseña.parentElement.querySelector('div.invalid-feedback');
             mostrarError.innerText = 'La contraseña debe tener al menos 5 caracteres';
             campoContraseña.classList.add('is-invalid')
         }
-        
         
         let campoConfirmar = document.querySelector('.confirmarPassword');
         
