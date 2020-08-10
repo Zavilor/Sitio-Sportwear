@@ -40,7 +40,7 @@
                 <div class="productDetailContainer">
                     
                     <div class="productImagen">
-                        <a href="/product/<%= products.id %>">  
+                        <a href="/product/cart/<%= products.id %>">  
                             <img src= "<%= products.image %>" class="productImages" alt="...">
                         </div>
                         
@@ -54,7 +54,7 @@
                             </a>
                         </div> 
                         <div class= "buttonsProductList">
-                            <form action="/product/<%= products.id %>" method="POST">
+                            <form action="/product/cart/<%= products.id %>" method="POST">
                                 <button type="submit" class="btnProdList btn btn-success">Añadir al Carrito</button>
                             </form>
                             <!--<button type="submit" class="btnProdList btn btn-success" >Comprar Ahora</button> -->

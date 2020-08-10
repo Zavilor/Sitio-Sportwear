@@ -7,7 +7,7 @@ const multer = require('multer');
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, '../public/imgProds');
+        cb(null, 'sportwear/public/imgProds');
     },   
     filename: function (req, file, cb) {
         return cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
@@ -51,7 +51,7 @@ router.use( function( req, res, next ) {
 
 router.get('/', controller.index);
 // Agregar producto al carrito
-router.post('/:id?', controller.add);
+router.post('/cart/:id?', controller.add);
 
 // Formulario de creacion de producto
 router.get('/create', publishMdw,  controller.formCreate);

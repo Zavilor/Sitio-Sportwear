@@ -218,6 +218,9 @@ module.exports = {
         
         const errors= validationResult(req);
         
+
+        console.log("ENTRAMOS AL CONTROLLER CREATE")
+
         if (!errors.isEmpty()) {
             
             return res.send(errors.mapped());
@@ -238,7 +241,6 @@ module.exports = {
             description : req.body.description,
             image : image,
             idCategory : req.body.idCategory,
-            stock : req.body.quantity,
             price : req.body.price
         } 
         
